@@ -15,26 +15,27 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	gap: 1rem;
 
 	/* text-transform: uppercase; */
-	font-family: inherit;
+	font-family: "Chakra Petch", sans-serif;
 	line-height: 1;
-	color: ${({ theme }) => theme.button.color};
+	color: ${({ theme }) => theme.button.default.color};
 
 	width: ${({ width }) => (width ? width : "unset")};
 
 	outline: none;
-	border-radius: ${({ rounded }) => (rounded ? "999rem" : "initial")};
+	border-radius: ${({ rounded }) => (rounded ? "999rem" : ".4rem")};
 
 	margin-top: ${({ top }) => (top ? top : "initial")};
 	margin-right: ${({ right }) => (right ? right : "initial")};
 	margin-left: ${({ left }) => (left ? left : "initial")};
 	margin-bottom: ${({ bottom }) => (bottom ? bottom : "initial")};
-	padding: 1.6rem 3.6rem;
+	padding: 1.4rem 4rem;
 
 	/* transition: all 0.3s ease-in; */
-	background-color: ${({ theme }) => theme.button.background};
+	background-color: ${({ theme }) => theme.button.default.background};
+	box-shadow: ${({ theme }) => theme.button.default.boxShaddow};
 
-	font-weight: 400;
-	font-size: 1.8rem;
+	font-weight: 600;
+	font-size: 1.6rem;
 	line-height: 2.2rem;
 
 	&:focus {
@@ -48,9 +49,6 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/*
-		font-size: 1.6rem; */
-
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		}
 	}
@@ -63,8 +61,8 @@ const disabledStyles = css<IStyledProps>`
 
 export const ButtonContainer = styled(motion.button)<IStyledProps>`
 	${PrimaryButtonStyles}
-	${({ disabled }) => disabled && disabledStyles};
 
+	${({ disabled }) => disabled && disabledStyles};
 	&:disabled {
 		${disabledStyles}
 	}
@@ -74,6 +72,7 @@ export const AContainer = styled(motion.div)<IStyledProps>`
 	a {
 		${PrimaryButtonStyles}
 		display: ${({ display }) => display || "flex"};
+
 		${({ disabled }) => disabled && disabledStyles};
 	}
 `

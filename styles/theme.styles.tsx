@@ -5,11 +5,11 @@ export const light = {
 		primary: "#85D1FF",
 	},
 	button: {
-		color: "#000",
-		background: "#fff",
 		default: {
 			color: "#fff",
 			background: "#F6297C",
+			boxShaddow:
+				"0px 0px 0px -1px rgba(195, 145, 200, 0.3), 0px 13px 47px -12px rgba(246, 41, 124, 0.66)",
 		},
 		blue: {
 			color: "#85D1FF",
