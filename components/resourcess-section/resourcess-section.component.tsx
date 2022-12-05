@@ -2,6 +2,9 @@ import styled from "styled-components"
 import localFont from "@next/font/local"
 
 import { Button } from "../button/button.component"
+import ResourcesArticle from "../resourcess-article/resourcess-article.component"
+
+import { IArticle } from "../../types/resources.types"
 
 const headerFont = localFont({
 	src: [
@@ -16,6 +19,10 @@ const headerFont = localFont({
 const ResourcessSection = () => {
 	const articles = [
 		{
+			icon: {
+				src: "/assets/resourcess-section/tok-icon.svg",
+				alt: "tokenomics icon",
+			},
 			label: "knowledge",
 			heading: "hydra tokenomics",
 			cta: {
@@ -23,6 +30,10 @@ const ResourcessSection = () => {
 			},
 		},
 		{
+			icon: {
+				src: "/assets/resourcess-section/press-kit-icon.svg",
+				alt: "press kit icon",
+			},
 			label: "resourcess",
 			heading: "press kit resourcess",
 			cta: {
@@ -30,6 +41,10 @@ const ResourcessSection = () => {
 			},
 		},
 		{
+			icon: {
+				src: "/assets/resourcess-section/github-icon.svg",
+				alt: "github icon",
+			},
 			label: "chain",
 			heading: "Hydra Github",
 			cta: {
@@ -46,11 +61,7 @@ const ResourcessSection = () => {
 
 			<Flex>
 				{articles.map((article, index) => (
-					<Article key={index}>
-						<P>{article.label}</P>
-						<H3>{article.heading}</H3>
-						<Button>{article.cta.label}</Button>
-					</Article>
+					<ResourcesArticle key={index} article={article} />
 				))}
 			</Flex>
 		</Section>
