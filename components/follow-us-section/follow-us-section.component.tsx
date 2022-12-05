@@ -2,6 +2,7 @@ import styled from "styled-components"
 import localFont from "@next/font/local"
 
 import Image from "../image/image.component"
+import Link from "next/link"
 
 const headerFont = localFont({
 	src: [
@@ -16,24 +17,28 @@ const headerFont = localFont({
 const FollowUsSection = () => {
 	const socials = [
 		{
+			href: "#",
 			icon: {
 				src: "/assets/socials/facebook-circle.svg",
 				alt: "facebook",
 			},
 		},
 		{
+			href: "#",
 			icon: {
 				src: "/assets/socials/instagram-circle.svg",
 				alt: "instagram",
 			},
 		},
 		{
+			href: "#",
 			icon: {
 				src: "/assets/socials/youtube-circle.svg",
 				alt: "youtube",
 			},
 		},
 		{
+			href: "#",
 			icon: {
 				src: "/assets/socials/twitter-circle.svg",
 				alt: "twitter",
@@ -56,12 +61,14 @@ const FollowUsSection = () => {
 			<SocialsDirectory>
 				{socials.map((social, index) => (
 					<SocialFigure key={index}>
-						<Image
-							src={social.icon.src}
-							alt={social.icon.alt}
-							width={54}
-							height={54}
-						/>
+						<Link href={social.href}>
+							<Image
+								src={social.icon.src}
+								alt={social.icon.alt}
+								width={54}
+								height={54}
+							/>
+						</Link>
 					</SocialFigure>
 				))}
 			</SocialsDirectory>
