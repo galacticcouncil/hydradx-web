@@ -72,6 +72,7 @@ const HeaderContainer = styled.header`
 	background-color: ${({ theme }) => theme.header.background};
 	z-index: 9999;
 	backdrop-filter: blur(2.7rem);
+	border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
 `
 
 const Container = styled.div`
