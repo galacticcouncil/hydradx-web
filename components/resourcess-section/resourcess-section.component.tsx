@@ -24,7 +24,7 @@ const ResourcessSection = () => {
 				alt: "tokenomics icon",
 			},
 			label: "knowledge",
-			heading: "hydra tokenomics",
+			heading: "hydra<sup>DX</sup> tokenomics",
 			cta: {
 				label: "open",
 			},
@@ -46,7 +46,7 @@ const ResourcessSection = () => {
 				alt: "github icon",
 			},
 			label: "chain",
-			heading: "Hydra Github",
+			heading: "Join our Newsletter ",
 			cta: {
 				label: "open",
 			},
@@ -56,7 +56,7 @@ const ResourcessSection = () => {
 	return (
 		<Section>
 			<H2 className={headerFont.className}>
-				Dive into Hydra <br /> Resourcess
+				Dive into Hydra<sup>DX</sup> <br /> Resourcess
 			</H2>
 
 			<Flex>
@@ -72,7 +72,7 @@ export default ResourcessSection
 
 const Section = styled.section`
 	max-width: 110rem;
-	margin: 0 auto;
+	margin: 0 auto 24.9rem;
 `
 
 const H2 = styled.h2`
@@ -83,19 +83,14 @@ const H2 = styled.h2`
 	letter-spacing: 0.02em;
 
 	color: #ffffff;
+
+	margin-bottom: 8.3rem;
 `
 
 const Flex = styled.div`
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	display: flex;
 	justify-content: center;
 	gap: 4.5rem;
+	flex-wrap: wrap;
 `
-
-const Article = styled.article`
-	border: 1px solid red;
-`
-
-const P = styled.p``
-
-const H3 = styled.h3``

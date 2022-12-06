@@ -58,7 +58,7 @@ const Footer = () => {
 							style={{ objectFit: "contain" }}
 						/>
 					</LogoFigure>
-					<p>© 2022 HydraDX. All rights reserved.</p>
+					{/* <p>© 2022 HydraDX. All rights reserved.</p> */}
 				</LogoContainer>
 
 				<Nav>
