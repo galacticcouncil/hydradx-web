@@ -15,7 +15,7 @@ const PageLayout = ({ children }: IProps) => {
 	const navItems: INavItem[] = [
 		{
 			label: "Start",
-			href: "/sad",
+			href: "/",
 		},
 		{
 			label: "Socials",
