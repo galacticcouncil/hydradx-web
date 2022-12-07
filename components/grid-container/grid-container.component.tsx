@@ -17,6 +17,8 @@ const Container = styled(motion.div)`
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
 
-	border: 1px solid green;
+	/* border: 1px solid green; */
+	margin-bottom: 9.2rem;
 `

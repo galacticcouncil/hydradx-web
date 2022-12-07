@@ -64,16 +64,17 @@ const HeroSection = () => {
 	return (
 		<Section>
 			<H1 className={headerFont.className}>
-				An Ocean of Liquidity
-				<br /> for Polkadot
+				An Ocean of
+				<br /> Liquidity for Polkadot
 			</H1>
 			<P>
 				Trade abundance of assets in a single pool.
-				<br /> The HydraDX Omnipool is efficient, sustainable and trustless.
+				<br /> The HydraDX Omnipool is efficient,
+				<br /> sustainable and trustless.
 			</P>
 
 			<Button left="auto" right="auto">
-				OPEN HYDRA APP
+				ENTER OMNIPOOL
 			</Button>
 
 			<SocialDirectory>
@@ -125,8 +126,11 @@ const H1 = styled.h1`
 const P = styled.p`
 	text-align: center;
 	font-family: "Chakra Petch", sans-serif;
-	font-size: 2.4rem;
+	font-size: 2.8rem;
 	line-height: 150%;
+
+	text-align: center;
+	color: #ffffff;
 	opacity: 0.8;
 	margin-bottom: 4.8rem;
 `

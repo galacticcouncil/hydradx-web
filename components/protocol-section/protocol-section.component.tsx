@@ -306,6 +306,7 @@ const Article3 = styled.article`
 	position: relative;
 	border: 1px solid #7a43f0;
 	overflow: hidden;
+	border-radius: 0.8rem;
 
 	display: grid;
 	gap: 5.3rem;
