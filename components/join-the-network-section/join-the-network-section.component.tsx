@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
 
-import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 
 const headerFont = localFont({
@@ -17,9 +16,9 @@ const headerFont = localFont({
 const articleHFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-RegularWide.woff2",
-			weight: "600",
-			style: "normal",
+			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-Black.woff2",
+			weight: "900",
+			style: "bold",
 		},
 	],
 })
@@ -31,6 +30,14 @@ const JoinTheNetworkSection = () => {
 
 			<Grid>
 				<Article>
+					<IluFigure>
+						<Image
+							src="/assets/join-the-netwrok-section/ilu-left.png"
+							alt="list actions"
+							width={"100%"}
+							height={"100%"}
+						/>
+					</IluFigure>
 					<IconFigure>
 						<Image
 							src="/assets/join-the-netwrok-section/list-actions.svg"
@@ -40,7 +47,8 @@ const JoinTheNetworkSection = () => {
 						/>
 					</IconFigure>
 					<H3 className={articleHFont.className}>
-						Explore Hydra<sup>DX</sup> docs
+						Explore
+						<br /> Hydra<sup>DX</sup> docs
 					</H3>
 					<P>
 						Learn more about Hydra<sup>DX</sup> Protocol & join the fun!
@@ -48,6 +56,14 @@ const JoinTheNetworkSection = () => {
 					<Button>explore</Button>
 				</Article>
 				<Article>
+					<IluFigure>
+						<Image
+							src="/assets/join-the-netwrok-section/ilu-right.png"
+							alt="list actions"
+							width={"100%"}
+							height={"100%"}
+						/>
+					</IluFigure>
 					<IconFigure>
 						<Image
 							src="/assets/join-the-netwrok-section/discord.svg"
@@ -56,7 +72,10 @@ const JoinTheNetworkSection = () => {
 							height={52}
 						/>
 					</IconFigure>
-					<H3 className={articleHFont.className}>Join discord community</H3>
+					<H3 className={articleHFont.className}>
+						Join
+						<br /> discord community
+					</H3>
 					<P>Innovative control panel for all your spendings is here.</P>
 					<Button>JOIN DISCORD</Button>
 				</Article>
@@ -85,7 +104,7 @@ const H2 = styled.h2`
 const Grid = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	grid-gap: 4.7rem;
 `
 
@@ -96,6 +115,7 @@ const H3 = styled.h3`
 	letter-spacing: 0.005em;
 	text-transform: capitalize;
 
+	margin-bottom: 2.9rem;
 	/* color: #000000; */
 `
 
@@ -107,19 +127,51 @@ const P = styled.p`
 	line-height: 150%;
 
 	letter-spacing: 0.005em;
+	margin-bottom: 8.3rem;
 
 	/* color: #ffffff; */
 `
 
+const IluFigure = styled.figure`
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+`
+
+const Button = styled.button`
+	background: transparent;
+	display: block;
+
+	border: 1px solid #ffffff;
+	border-radius: 0.4rem;
+	padding: 1.234rem 3.29rem;
+	width: 100%;
+	text-align: start;
+	font-family: "Chakra Petch";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.43726rem;
+	line-height: 150%;
+
+	letter-spacing: 0.105em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+`
+
 const Article = styled.article`
+	overflow: hidden;
 	padding: 5.5rem;
+	position: relative;
+	z-index: 1;
 
 	&:nth-of-type(1) {
 		margin-top: 7.2rem;
 		background: linear-gradient(
 			180deg,
-			#85d1ff 58.16%,
-			rgba(0, 115, 199, 0) 100%
+			rgba(61, 88, 104, 0) 19.75%,
+			rgba(133, 209, 255, 0.592) 100%
 		);
 		filter: drop-shadow(0px 47px 200px rgba(41, 172, 246, 0.18));
 		border-radius: 4px;
@@ -131,10 +183,38 @@ const Article = styled.article`
 		${P} {
 			color: #000;
 		}
+
+		${IluFigure} {
+			top: 5rem;
+			right: -0.5rem;
+			width: 50%;
+		}
+
+		${Button} {
+			max-width: 26.2rem;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 1px;
+			left: 1px;
+			right: 1px;
+			bottom: 1px;
+			border-radius: 4px;
+
+			background: linear-gradient(180deg, #85d1ff 58.16%, #040713 100%);
+		}
 	}
 	&:nth-of-type(2) {
-		background: linear-gradient(180deg, #f6297c 38.8%, rgba(5, 11, 26, 0) 100%);
 		filter: drop-shadow(-7px 7px 0px rgba(7, 11, 31, 0.13));
+		background: linear-gradient(
+			180deg,
+			rgba(246, 42, 125, 0) 12.41%,
+			#f62a7d 100%
+		);
+
 		border-radius: 4px;
 		margin-bottom: 7.2rem;
 
@@ -144,6 +224,29 @@ const Article = styled.article`
 
 		${P} {
 			color: #ffffff;
+		}
+
+		${IluFigure} {
+			top: 2rem;
+			/* right: -0.5rem; */
+			width: 70%;
+		}
+
+		${Button} {
+			max-width: 28.5rem;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 1px;
+			left: 1px;
+			right: 1px;
+			bottom: 1px;
+			border-radius: 4px;
+
+			background: linear-gradient(180deg, #f6297c 38.8%, #040713 100%);
 		}
 	}
 `
