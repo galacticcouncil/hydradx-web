@@ -93,7 +93,7 @@ export default Footer
 
 const FooterContainer = styled.footer`
 	border-top: 0.5px solid rgba(255, 255, 255, 0.2);
-	margin: 0 -2rem;
+	margin: 5rem -2rem;
 	padding: 0 2rem;
 `
 

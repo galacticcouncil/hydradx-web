@@ -10,11 +10,20 @@ import Image from "../image/image.component"
 const OmnipoolSection = () => {
 	return (
 		<Section>
+			<IluFigure>
+				<Image
+					src={"/assets/hero-section/destop-app-ilu-v2.png"}
+					alt={"desktop app ilu"}
+					width="100%"
+					height="100%"
+				/>
+			</IluFigure>
+
 			<H2 variant="LIGHTBLUE">
 				Hydra<sup>dx</sup> <span>omnipool</span>
 			</H2>
 
-			<GridContainer>
+			{/* <GridContainer>
 				<ContentFigure>
 					<FirstIlu>
 						<Image
@@ -106,7 +115,7 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-			</GridContainer>
+			</GridContainer> */}
 		</Section>
 	)
 }
@@ -114,8 +123,14 @@ const OmnipoolSection = () => {
 export default OmnipoolSection
 
 const Section = styled.section`
-	padding-top: 25rem;
+	padding-top: 9.156rem;
 	margin-bottom: 25rem;
+`
+
+const IluFigure = styled.figure`
+	width: 100%;
+	max-width: 102.9rem;
+	margin: 0 auto 12.1rem;
 `
 
 const Content = styled.div`
@@ -144,4 +159,11 @@ const ThirdIlu = styled.figure`
 
 const FourthIlu = styled.figure`
 	max-width: 49.2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `

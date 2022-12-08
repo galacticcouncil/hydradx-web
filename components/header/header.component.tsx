@@ -3,6 +3,11 @@ import localFont from "@next/font/local"
 
 import Image from "../image/image.component"
 import Link from "next/link"
+import HamMenuButton from "../ham-menu-button/ham-menu-button.component"
+import { Button } from "../button/button.component"
+
+import { useBoolean } from "usehooks-ts"
+import { useEffect } from "react"
 
 import { INavItem } from "../../types/nav.types"
 
@@ -21,6 +26,22 @@ const navFont = localFont({
 })
 
 const Header = ({ navItems }: IProps) => {
+	const { value: isOpen, toggle: toggleMenu } = useBoolean(false)
+	const { value: showCta, setValue: setShowCta } = useBoolean(false)
+
+	useEffect(() => {
+		window.onscroll = () => {
+			let currentScrollPos = window.pageYOffset
+
+			if (currentScrollPos > 600) {
+				setShowCta(true)
+			} else {
+				if (currentScrollPos <= 0) return
+				setShowCta(false)
+			}
+		}
+	})
+
 	return (
 		<HeaderContainer>
 			<Container>
@@ -54,7 +75,14 @@ const Header = ({ navItems }: IProps) => {
 					</Ul>
 				</Nav>
 
-				<CtaContainer>{/* cta */}</CtaContainer>
+				<CtaContainer>
+					{showCta && <Button>ENTER OMNIPOOL</Button>}
+				</CtaContainer>
+				<HamMenuButton
+					className="ham"
+					onClick={() => toggleMenu()}
+					isOpen={isOpen}
+				/>
 			</Container>
 		</HeaderContainer>
 	)
@@ -73,6 +101,18 @@ const HeaderContainer = styled.header`
 	z-index: 9999;
 	backdrop-filter: blur(2.7rem);
 	border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			.ham {
+				display: none;
+				visibility: hidden;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Container = styled.div`
@@ -90,7 +130,20 @@ const LogoFigure = styled.figure`
 	justify-content: center;
 `
 
-const Nav = styled.nav``
+const Nav = styled.nav`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			visibility: visible;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
 
 const Ul = styled.ul`
 	display: flex;
@@ -114,4 +167,18 @@ const Li = styled.ul`
 	}
 `
 
-const CtaContainer = styled.div``
+const CtaContainer = styled.div`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			visibility: visible;
+			width: 21.45rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
