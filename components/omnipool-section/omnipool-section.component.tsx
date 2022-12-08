@@ -26,6 +26,24 @@ const OmnipoolSection = () => {
 				/>
 			</IluFigure>
 
+			<BlueBlur>
+				<Image
+					className="desktop"
+					src="/assets/omnipool/blue-blue.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+				<Image
+					className="mobile"
+					src="/assets/omnipool/blue-blue-mobile.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+			</BlueBlur>
 			<H2 variant="LIGHTBLUE">
 				Hydra<sup>dx</sup> <span>omnipool</span>
 			</H2>
@@ -85,10 +103,50 @@ const OmnipoolSection = () => {
 								objectFit: "contain",
 							}}
 						/>
+						<LineFigure>
+							<Image
+								src="/assets/omnipool/second-ilu-line.svg"
+								alt="line ilu"
+								width={"100%"}
+								height={"100%"}
+								style={{
+									objectFit: "contain",
+								}}
+							/>
+						</LineFigure>
 					</SecondIlu>
+					<ChartFigure>
+						<Image
+							src="/assets/omnipool/second-ilu-chart.svg"
+							alt="chart ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "contain",
+							}}
+						/>
+					</ChartFigure>
 				</ContentFigure>
 			</GridContainer>
 
+			<BlueBlur2>
+				<Image
+					className="desktop"
+					src="/assets/omnipool/blue-blur-2.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+				<Image
+					className="mobile"
+					src="/assets/omnipool/blue-blur-2-mobile.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+			</BlueBlur2>
 			<GridContainer>
 				<Content>
 					<H3>Experience less impermanent loss.</H3>
@@ -122,9 +180,18 @@ const OmnipoolSection = () => {
 					<Button>LEARN MORE</Button>
 				</Content>
 				<ContentFigure>
+					<FourthIluCoin>
+						<Image
+							src="/assets/omnipool/fourth-ilu-coin.svg"
+							alt="fourth ilu coin"
+							width={"100%"}
+							height={"100%"}
+							style={{ objectFit: "contain" }}
+						/>
+					</FourthIluCoin>
 					<FourthIlu>
 						<Image
-							src="/assets/omnipool/fourth-ilu.png"
+							src="/assets/omnipool/fourth-ilu-v2.png"
 							alt="fourth ilu"
 							width={"100%"}
 							height={"100%"}
@@ -138,7 +205,74 @@ const OmnipoolSection = () => {
 
 export default OmnipoolSection
 
+const BlueBlur = styled.figure`
+	position: absolute;
+	/* border: 1px solid red; */
+	/* top: 15%; */
+	top: 50rem;
+	left: -2rem;
+	right: -2rem;
+	z-index: -2;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			top: 50rem;
+
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const BlueBlur2 = styled.figure`
+	position: absolute;
+	/* border: 1px solid red; */
+	top: 55%;
+	/* top: 0rem; */
+	left: -2rem;
+	right: -2rem;
+	z-index: -2;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			/* top: 50rem; */
+
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
 const Section = styled.section`
+	position: relative;
 	padding-top: 6.6rem;
 	margin-bottom: 25rem;
 
@@ -154,7 +288,7 @@ const Section = styled.section`
 const IluFigure = styled.figure`
 	width: 100%;
 	max-width: 34.543rem;
-	margin: 0 auto 12.1rem;
+	margin: 0 auto 4rem;
 
 	.desktop-app-ilu {
 		display: none;
@@ -163,6 +297,7 @@ const IluFigure = styled.figure`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin: 0 auto 12.1rem;
 			max-width: 102.9rem;
 
 			.desktop-app-ilu {
@@ -201,9 +336,13 @@ const GridContainer = styled.div`
 	&:nth-of-type(2) {
 		/* border: 1px solid green; */
 		flex-direction: column;
+		overflow: hidden;
+		margin: 0 -2rem 9.2rem -2rem;
+		padding: 0 2rem;
 	}
 
 	&:nth-of-type(3) {
+		position: relative;
 		/* border: 1px solid blue; */
 		flex-direction: column;
 	}
@@ -247,7 +386,7 @@ const GridContainer = styled.div`
 const Content = styled.div`
 	/* border: 1px solid red; */
 	align-self: center;
-	max-width: 45.3rem;
+	max-width: 46.3rem;
 	width: 100%;
 `
 
@@ -292,11 +431,42 @@ const FirstIluCoin = styled.figure`
 `
 
 const SecondIlu = styled.figure`
+	position: relative;
 	width: 100%;
 	max-width: 47.408rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+`
+const LineFigure = styled.figure`
+	position: absolute;
+	/* width: 100%; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	top: 50%;
+	left: 2.2rem;
+	right: 0.6rem;
+	transform: translateY(-50%);
+
+	z-index: 2;
+`
+
+const ChartFigure = styled.figure`
+	position: absolute;
+	/* width: 100%; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* top: 50%; */
+	left: -25%;
+	right: -6rem;
+	bottom: 10%;
+	/* transform: translateY(-50%); */
+
+	z-index: 1;
 `
 
 const ThirdIlu = styled.figure`
@@ -316,6 +486,33 @@ const FourthIlu = styled.figure`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const FourthIluCoin = styled.figure`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	z-index: -1;
+
+	width: 18.252rem;
+	height: 18.173rem;
+
+	top: -5rem;
+	left: -10rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: 26.702rem;
+			height: 26.586rem;
+
+			top: -8rem;
+			left: -14rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
 		}
