@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
+import { AnimatePresence, motion } from "framer-motion"
 
 import Image from "../image/image.component"
 import Link from "next/link"
@@ -76,7 +77,17 @@ const Header = ({ navItems }: IProps) => {
 				</Nav>
 
 				<CtaContainer>
-					{showCta && <Button>ENTER OMNIPOOL</Button>}
+					<AnimatePresence>
+						{showCta && (
+							<motion.div
+								initial={{ opacity: 0, y: -50 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -50 }}
+							>
+								<Button className="btn">ENTER OMNIPOOL</Button>
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</CtaContainer>
 				<HamMenuButton
 					className="ham"
@@ -176,6 +187,11 @@ const CtaContainer = styled.div`
 			display: block;
 			visibility: visible;
 			width: 21.45rem;
+
+			.btn {
+				padding: 1.2rem 3.6rem;
+				font-size: 1.4rem;
+			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
