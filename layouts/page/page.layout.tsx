@@ -2,6 +2,7 @@
 import styled from "styled-components"
 
 // Components
+
 import Header from "../../components/header/header.component"
 import Footer from "../../components/footer/footer.component"
 
