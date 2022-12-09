@@ -23,8 +23,8 @@ export default function Home() {
 
 			<HeroSection />
 			<OmnipoolSection />
-			{/*
 			<ProtocolSection />
+			{/*
 			<RoadmapSection />
 			<JoinTheNetworkSection />
 			<ResourcessSection />

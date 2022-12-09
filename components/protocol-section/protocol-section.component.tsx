@@ -59,7 +59,8 @@ const ProtocolSection = () => {
 
 				<ContentContainer>
 					<H3 className={headerFont.className}>
-						Take a Glimpse Into the Future.
+						Take a Glimpse
+						<br /> Into the Future.
 					</H3>
 					<P>
 						Backed by an extensive body of research. Stableswap, order matching,
@@ -70,12 +71,23 @@ const ProtocolSection = () => {
 
 				<EyeFigure>
 					<Image
+						className="desktop"
 						src="/assets/protocol-section/second-ilu-eye.png"
 						alt="eye ilu"
 						width={"100%"}
 						height={"100%"}
 						style={{
-							objectFit: "cover",
+							objectFit: "contain",
+						}}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/protocol-section/second-ilu-eye-mobile.png"
+						alt="eye ilu"
+						width={"100%"}
+						height={"100%"}
+						style={{
+							objectFit: "contain",
 						}}
 					/>
 				</EyeFigure>
@@ -86,7 +98,18 @@ const ProtocolSection = () => {
 
 				<CoinFigure>
 					<Image
+						className="desktop"
 						src="/assets/protocol-section/third-ilu-coin.png"
+						alt="coin ilu"
+						width={"100%"}
+						height={"100%"}
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/protocol-section/third-ilu-coin-mobile.png"
 						alt="coin ilu"
 						width={"100%"}
 						height={"100%"}
@@ -120,8 +143,7 @@ const Section = styled.section`
 `
 
 const H3 = styled.h3`
-	font-size: 4.2rem;
-	line-height: 130%;
+	font-size: 2.8rem;
 
 	text-transform: capitalize;
 
@@ -131,36 +153,81 @@ const H3 = styled.h3`
 	text-shadow: 3px 3px 0px rgba(11, 2, 5, 0.66);
 
 	margin-bottom: 1.6rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 4.2rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const P = styled.p`
 	font-family: "Chakra Petch";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	line-height: 150%;
 
 	color: #ffffff;
 
 	opacity: 0.8;
 
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 1.8rem;
+			margin-bottom: 4rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const TowerFigure = styled.figure`
 	position: relative;
 	max-width: 86.933rem;
-	margin: 0 auto;
+	/* border: 1px solid blue; */
+	margin: 0 -2.5rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin: 0 auto;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const DragonFigure = styled.figure`
 	position: absolute;
-	top: -12rem;
+	top: -13%;
 	left: 50%;
 	z-index: 1;
 	transform: translateX(-50%);
 	/* max-width: 86.933rem;
 	margin: 0 auto; */
+	width: 65vw;
+	max-width: 47.704rem;
+	/* 
+	margin: 0 auto; */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 55vw;
+		/* top: -22%; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			top: -8rem;
+			width: 100%;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const OverlayBackground = styled.div`
@@ -173,13 +240,63 @@ const ContentContainer = styled.div`
 `
 
 const EyeFigure = styled.figure`
-	/* height: 100%; */
-	max-width: 60.1rem;
+	/* max-width: 60.1rem; */
+	/* width: 100%; */
+	/* border: 1px solid red; */
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const CoinFigure = styled.figure`
-	/* height: 100%; */
-	max-width: 60.1rem;
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Button = styled.button`
@@ -213,20 +330,19 @@ const Article1 = styled.article`
 	border-radius: 0.8rem;
 	background-color: #040713;
 
-	padding: 0 2rem 5.6rem;
+	padding: 0 2.5rem 5.6rem;
 	margin-bottom: 2.3rem;
 
 	${H3} {
-		text-align: center;
+		margin-top: 5rem;
+		text-align: start;
 	}
 
 	${P} {
-		text-align: center;
+		text-align: start;
 	}
 
 	${Button} {
-		margin: 0 auto;
-
 		background: rgba(255, 3, 103, 0.27);
 
 		border: 1px solid #fc408c;
@@ -236,7 +352,7 @@ const Article1 = styled.article`
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 50%;
+		height: 40%;
 		/* z-index: -1; */
 
 		background: linear-gradient(180deg, #f6297c 0%, #040713 100%);
@@ -260,6 +376,33 @@ const Article1 = styled.article`
 			rgba(246, 41, 124, 0.08) 55.98%
 		);
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			${H3} {
+				text-align: center;
+				margin-top: -5rem;
+			}
+
+			${P} {
+				text-align: center;
+			}
+
+			${Button} {
+				margin: 0 auto;
+			}
+
+			${OverlayBackground} {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60%;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 const Article2 = styled.article`
 	position: relative;
@@ -267,39 +410,66 @@ const Article2 = styled.article`
 	border-radius: 0.8rem;
 	overflow: hidden;
 
-	display: grid;
-	gap: 5.3rem;
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
 
-	grid-template-columns: 1fr auto;
 	margin-bottom: 2.3rem;
 
 	${Button} {
-		/* margin: 0 auto; */
-
 		background: rgba(163, 62, 235, 0.2);
 		border: 1px solid #ac41ef;
 	}
 
 	${ContentContainer} {
-		align-self: center;
-		margin-left: 4.289rem;
+		max-width: 42.3rem;
+		margin: 0 2.5rem 4.289rem;
 	}
 
 	${OverlayBackground} {
-		top: -10rem;
-		left: -40rem;
-		right: -20rem;
-		/* width: 70%; */
-		bottom: -10rem;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		bottom: -15%;
 
 		z-index: -1;
 
 		background: radial-gradient(
-			29.7% 54.39% at 73.98% 50.89%,
+			89.18% 56.35% at 54.46% 11.87%,
 			rgba(181, 51, 226, 0.83) 0%,
 			rgba(203, 52, 227, 0) 100%
 		);
-		/* border: 1px solid green; */
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			flex-direction: row;
+			gap: 5.3rem;
+
+			${ContentContainer} {
+				align-self: center;
+				margin: 12.1rem 0 12.1rem 4.289rem;
+			}
+
+			${OverlayBackground} {
+				top: -10rem;
+				left: -25rem;
+				right: -20rem;
+				/* width: 70%; */
+				bottom: -10rem;
+
+				z-index: -1;
+
+				background: radial-gradient(
+					29.7% 54.39% at 73.98% 50.89%,
+					rgba(181, 51, 226, 0.83) 0%,
+					rgba(203, 52, 227, 0) 100%
+				);
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
 	}
 `
 const Article3 = styled.article`
@@ -308,10 +478,10 @@ const Article3 = styled.article`
 	overflow: hidden;
 	border-radius: 0.8rem;
 
-	display: grid;
-	gap: 5.3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 
-	grid-template-columns: auto 1fr;
 	margin-bottom: 13.4rem;
 
 	${Button} {
@@ -322,24 +492,56 @@ const Article3 = styled.article`
 	}
 
 	${ContentContainer} {
-		align-self: center;
-		margin-right: 4.289rem;
+		max-width: 42.3rem;
+
+		margin: 0 2.5rem 4.289rem;
 	}
 
 	${OverlayBackground} {
 		top: 0rem;
 		left: 0rem;
-		right: -15rem;
+		right: 0rem;
 		/* width: 70%; */
-		bottom: 0rem;
+		bottom: -15%;
 
 		z-index: -1;
 
 		background: linear-gradient(
-			90deg,
+			0deg,
 			rgba(140, 52, 227, 0) 40.73%,
 			rgba(139, 51, 226, 0.83) 97.75%
 		);
 		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			gap: 5.3rem;
+
+			${ContentContainer} {
+				align-self: center;
+				margin: 12.1rem 4.289rem 12.1rem auto;
+			}
+
+			${OverlayBackground} {
+				top: 0rem;
+				left: 0rem;
+				right: -15rem;
+				/* width: 70%; */
+				bottom: 0rem;
+
+				z-index: -1;
+
+				background: linear-gradient(
+					90deg,
+					rgba(140, 52, 227, 0) 40.73%,
+					rgba(139, 51, 226, 0.83) 97.75%
+				);
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
 	}
 `
