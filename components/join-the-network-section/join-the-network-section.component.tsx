@@ -42,18 +42,33 @@ const JoinTheNetworkSection = () => {
 						<Image
 							src="/assets/join-the-netwrok-section/list-actions.svg"
 							alt="list actions"
-							width={61}
-							height={61}
+							width={"100%"}
+							height={"100%"}
 						/>
 					</IconFigure>
-					<H3 className={articleHFont.className}>
-						Explore
-						<br /> Hydra<sup>DX</sup> docs
-					</H3>
-					<P>
-						Learn more about Hydra<sup>DX</sup> Protocol & join the fun!
-					</P>
-					<Button>explore</Button>
+					<Content>
+						<H3 className={articleHFont.className}>
+							Explore
+							<br /> Hydra<sup>DX</sup> docs
+						</H3>
+						<P>
+							Learn more about Hydra<sup>DX</sup> Protocol & join the fun!
+						</P>
+						<Button>
+							<p>explore</p>{" "}
+							<Arrow>
+								<Line />
+								<figure>
+									<Image
+										src="/assets/join-the-netwrok-section/right-arrow.svg"
+										alt="right arrow"
+										width={"100%"}
+										height={"100%"}
+									/>
+								</figure>
+							</Arrow>
+						</Button>
+					</Content>
 				</Article>
 				<Article>
 					<IluFigure>
@@ -68,16 +83,31 @@ const JoinTheNetworkSection = () => {
 						<Image
 							src="/assets/join-the-netwrok-section/discord.svg"
 							alt="discord"
-							width={52}
-							height={52}
+							width={"100%"}
+							height={"100%"}
 						/>
 					</IconFigure>
-					<H3 className={articleHFont.className}>
-						Join
-						<br /> discord community
-					</H3>
-					<P>Innovative control panel for all your spendings is here.</P>
-					<Button>JOIN DISCORD</Button>
+					<Content>
+						<H3 className={articleHFont.className}>
+							Join
+							<br /> discord community
+						</H3>
+						<P>Innovative control panel for all your spendings is here.</P>
+						<Button>
+							<p>JOIN DISCORD</p>
+							<Arrow>
+								<Line />
+								<figure>
+									<Image
+										src="/assets/join-the-netwrok-section/right-arrow.svg"
+										alt="right arrow"
+										width={"100%"}
+										height={"100%"}
+									/>
+								</figure>
+							</Arrow>
+						</Button>
+					</Content>
 				</Article>
 			</Grid>
 		</Section>
@@ -86,50 +116,108 @@ const JoinTheNetworkSection = () => {
 
 export default JoinTheNetworkSection
 
+const Arrow = styled.span`
+	/* width: 100%; */
+	display: flex;
+	/* grid-template-columns: 1fr auto; */
+	align-items: center;
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 0.68rem;
+		height: 0.68rem;
+	}
+`
+
+const Line = styled.span`
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #ffffff;
+`
+
 const Section = styled.section`
 	max-width: 110rem;
 	margin: 0 auto 12.396rem;
 `
 
 const H2 = styled.h2`
-	font-size: 5.2rem;
+	font-size: 3.4rem;
 	line-height: 110%;
+	max-width: 32rem;
 
 	letter-spacing: 0.02em;
-	margin-bottom: 1.235rem;
+	margin-bottom: 4.4rem;
 
 	color: #ffffff;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 1.235rem;
+			max-width: unset;
+			font-size: 5.2rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Grid = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	/* border: 1px solid green; */
+	grid-template-columns: 1fr;
 	grid-gap: 4.7rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			grid-template-columns: 6fr 5fr;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const H3 = styled.h3`
-	font-size: 4.2rem;
+	font-size: 3.2rem;
 	line-height: 120%;
 
 	letter-spacing: 0.005em;
 	text-transform: capitalize;
 
-	margin-bottom: 2.9rem;
-	/* color: #000000; */
+	margin-bottom: 1.6rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 4.2rem;
+			margin-bottom: 2.9rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const P = styled.p`
 	font-family: "Chakra Petch";
 	font-style: normal;
 	font-weight: 500;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	line-height: 150%;
 
 	letter-spacing: 0.005em;
-	margin-bottom: 8.3rem;
+	margin-bottom: 3.4rem;
 
-	/* color: #ffffff; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 8.3rem;
+			font-size: 2rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const IluFigure = styled.figure`
@@ -140,12 +228,16 @@ const IluFigure = styled.figure`
 `
 
 const Button = styled.button`
+	cursor: pointer;
 	background: transparent;
-	display: block;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 2.5rem;
 
 	border: 1px solid #ffffff;
 	border-radius: 0.4rem;
-	padding: 1.234rem 3.29rem;
+	padding: 1.234rem 2.3rem;
 	width: 100%;
 	text-align: start;
 	font-family: "Chakra Petch";
@@ -160,14 +252,43 @@ const Button = styled.button`
 	color: #ffffff;
 `
 
+const IconFigure = styled.figure`
+	/* width: 6.1rem;
+	height: 6.1rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center; */
+	margin-bottom: 13.2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 15rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const Content = styled.div`
+	padding: 0 2.2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding: unset;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
 const Article = styled.article`
 	overflow: hidden;
-	padding: 5.5rem;
+	padding: 2.6rem 2.3rem;
 	position: relative;
 	z-index: 1;
 
 	&:nth-of-type(1) {
-		margin-top: 7.2rem;
+		/* margin-top: 7.2rem; */
 		background: linear-gradient(
 			180deg,
 			rgba(61, 88, 104, 0) 19.75%,
@@ -191,7 +312,29 @@ const Article = styled.article`
 		}
 
 		${Button} {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+					max-width: 26.2rem;
+
+					@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+					}
+				}
+			}
+		}
+
+		${IconFigure} {
 			max-width: 26.2rem;
+			width: 3.2rem;
+			height: 3.2rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+					width: 6.1rem;
+					height: 6.1rem;
+					@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+					}
+				}
+			}
 		}
 
 		&:before {
@@ -216,7 +359,7 @@ const Article = styled.article`
 		);
 
 		border-radius: 4px;
-		margin-bottom: 7.2rem;
+		/* margin-bottom: 7.2rem; */
 
 		${H3} {
 			color: #ffffff;
@@ -233,7 +376,29 @@ const Article = styled.article`
 		}
 
 		${Button} {
-			max-width: 28.5rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+					max-width: 28.5rem;
+
+					@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+					}
+				}
+			}
+		}
+
+		${IconFigure} {
+			max-width: 26.2rem;
+			width: 3.003rem;
+			height: 2.133rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+					width: 5.3rem;
+					height: 5.3rem;
+					@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+					}
+				}
+			}
 		}
 
 		&:before {
@@ -249,8 +414,19 @@ const Article = styled.article`
 			background: linear-gradient(180deg, #f6297c 38.8%, #040713 100%);
 		}
 	}
-`
 
-const IconFigure = styled.figure`
-	margin-bottom: 15rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			&:nth-of-type(1) {
+				margin-top: 7.2rem;
+			}
+			&:nth-of-type(2) {
+				margin-bottom: 7.2rem;
+			}
+
+			padding: 5.5rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `

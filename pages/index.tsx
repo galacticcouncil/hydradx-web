@@ -25,8 +25,8 @@ export default function Home() {
 			<OmnipoolSection />
 			<ProtocolSection />
 			<RoadmapSection />
-			{/*
 			<JoinTheNetworkSection />
+			{/*
 			<ResourcessSection />
 			<FollowUsSection /> */}
 		</>

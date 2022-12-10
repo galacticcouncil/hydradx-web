@@ -237,6 +237,15 @@ export default RoadmapSection
 
 const Section = styled.section`
 	position: relative;
+	margin-bottom: 6.9rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 24.9rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Container = styled.div`
