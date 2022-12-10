@@ -17,7 +17,7 @@ const headerFont = localFont({
 })
 
 const ResourcessSection = () => {
-	const articles = [
+	const articles: IArticle[] = [
 		{
 			icon: {
 				src: "/assets/resourcess-section/tok-icon.svg",
@@ -56,7 +56,7 @@ const ResourcessSection = () => {
 	return (
 		<Section>
 			<H2 className={headerFont.className}>
-				Hydra<sup>DX</sup> <br /> Resourcess
+				Hydra <sup>DX</sup> Resourcess
 			</H2>
 
 			<Flex>
@@ -72,7 +72,15 @@ export default ResourcessSection
 
 const Section = styled.section`
 	max-width: 110rem;
-	margin: 0 auto 24.9rem;
+	margin: 0 auto 4.1rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin: 0 auto 8.1rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const H2 = styled.h2`

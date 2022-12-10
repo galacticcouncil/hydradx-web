@@ -27,8 +27,7 @@ export default function Home() {
 			<RoadmapSection />
 			<JoinTheNetworkSection />
 			<ResourcessSection />
-			{/*
-			<FollowUsSection /> */}
+			<FollowUsSection />
 		</>
 	)
 }

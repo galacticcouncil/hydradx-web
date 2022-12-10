@@ -51,7 +51,7 @@ const ResourcesArticle = ({ article, ...props }: IProps) => {
 					<Line />
 					<figure>
 						<Image
-							src="/assets/join-the-netwrok-section/right-arrow.svg"
+							src="/assets/resourcess-section/right-arrow.svg"
 							alt="right arrow"
 							width={"100%"}
 							height={"100%"}
@@ -140,7 +140,7 @@ const Line = styled.span`
 	display: block;
 	width: 100%;
 	height: 1px;
-	background-color: #ffffff;
+	background-color: #85d1ff;
 `
 
 const Button = styled.button`
