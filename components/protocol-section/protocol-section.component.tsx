@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import localFont from "@next/font/local"
 
 import H2 from "../h2/content-h2.component"
@@ -78,15 +78,28 @@ const ProtocolSection = () => {
 
 					<ContentContainer>
 						<H3 className={headerFont.className}>
-							Take a Glimpse
-							<br /> Into the Future.
+							Enjoy state of the art security.
 						</H3>
 						<P>
-							Backed by an extensive body of research. Stableswap, order
-							matching, bonds and liquidation mechanisms - we are just getting
-							started.
+							The HydraDX Omnipool is fully audited and supported by a generous
+							bug bounty program. Cutting-edge mechanisms such as liquidity
+							caps, protocol fees and circuit-breakers work together to protect
+							your liquidity.
 						</P>
-						<Button>Learn more</Button>
+						<ButtonsContainer>
+							<Button>Learn more</Button>
+							<IconButton>
+								<figure>
+									<Image
+										src="/assets/protocol-section/bug-icon.svg"
+										alt="bug icon"
+										width={"100%"}
+										height={"100%"}
+									/>
+								</figure>
+								<p>bug bounties</p>
+							</IconButton>
+						</ButtonsContainer>
 					</ContentContainer>
 
 					<EyeFigure>
@@ -97,7 +110,7 @@ const ProtocolSection = () => {
 							width={"100%"}
 							height={"100%"}
 							style={{
-								objectFit: "contain",
+								objectFit: "cover",
 							}}
 						/>
 						<Image
@@ -107,7 +120,7 @@ const ProtocolSection = () => {
 							width={"100%"}
 							height={"100%"}
 							style={{
-								objectFit: "contain",
+								objectFit: "cover",
 							}}
 						/>
 					</EyeFigure>
@@ -294,6 +307,12 @@ const ContentContainer = styled.div`
 	z-index: 1;
 `
 
+const ButtonsContainer = styled.div`
+	display: flex;
+	gap: 3rem;
+	flex-wrap: wrap;
+`
+
 const EyeFigure = styled.figure`
 	/* max-width: 60.1rem; */
 	/* width: 100%; */
@@ -306,6 +325,7 @@ const EyeFigure = styled.figure`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			max-width: 55rem;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -334,6 +354,7 @@ const CoinFigure = styled.figure`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			max-width: 55rem;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -354,17 +375,13 @@ const CoinFigure = styled.figure`
 	}
 `
 
-const Button = styled.button`
+const buttonStyles = css`
 	cursor: pointer;
 	background: transparent;
 	display: block;
 
-	border: 1px solid #ffffff;
 	border-radius: 0.4rem;
-	padding: 12px 40px;
-	/* padding: 1.234rem 3.29rem; */
-	/* width: 100%; */
-	text-align: start;
+	padding: 12px 3.7rem;
 	font-family: "Chakra Petch";
 	font-style: normal;
 	font-weight: 700;
@@ -372,10 +389,26 @@ const Button = styled.button`
 	line-height: 150%;
 
 	letter-spacing: 0.105em;
-	text-align: center;
 	text-transform: uppercase;
 
 	color: #ffffff;
+`
+
+const Button = styled.button`
+	${buttonStyles}
+
+	text-align: center;
+	text-transform: uppercase;
+`
+
+const IconButton = styled.button`
+	${buttonStyles}
+	text-align: start;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	text-transform: uppercase;
 `
 
 const Article1 = styled.article`
@@ -471,7 +504,7 @@ const Article2 = styled.article`
 
 	margin-bottom: 2.3rem;
 
-	${Button} {
+	${Button}, ${IconButton} {
 		background: rgba(163, 62, 235, 0.2);
 		border: 1px solid #ac41ef;
 	}

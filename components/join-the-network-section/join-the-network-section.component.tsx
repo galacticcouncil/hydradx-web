@@ -285,16 +285,19 @@ const Article = styled.article`
 	overflow: hidden;
 	padding: 2.6rem 2.3rem 4.6rem;
 	position: relative;
+	z-index: 1;
 
 	&:nth-of-type(1) {
-		z-index: 2;
 		/* margin-top: 7.2rem; */
 		background: linear-gradient(
 			180deg,
 			rgba(61, 88, 104, 0) 19.75%,
 			rgba(133, 209, 255, 0.592) 100%
 		);
-		filter: drop-shadow(0px 47px 200px rgba(41, 172, 246, 0.18));
+
+		box-shadow: 0px 47px 200px rgba(41, 172, 246, 0.18);
+
+		/* filter: drop-shadow(0px 47px 200px rgba(41, 172, 246, 0.18)); */
 		border-radius: 4px;
 
 		${H3} {
@@ -357,7 +360,6 @@ const Article = styled.article`
 			rgba(246, 42, 125, 0) 12.41%,
 			#f62a7d 100%
 		);
-		z-index: 2;
 
 		border-radius: 4px;
 		/* margin-bottom: 7.2rem; */
