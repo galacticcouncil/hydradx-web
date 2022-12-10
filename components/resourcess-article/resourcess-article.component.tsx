@@ -45,7 +45,20 @@ const ResourcesArticle = ({ article, ...props }: IProps) => {
 				className={headerFont.className}
 				dangerouslySetInnerHTML={{ __html: article.heading }}
 			/>
-			<Button>{article.cta.label}</Button>
+			<Button>
+				<p>{article.cta.label}</p>
+				<Arrow>
+					<Line />
+					<figure>
+						<Image
+							src="/assets/join-the-netwrok-section/right-arrow.svg"
+							alt="right arrow"
+							width={"100%"}
+							height={"100%"}
+						/>
+					</figure>
+				</Arrow>
+			</Button>
 		</Article>
 	)
 }
@@ -108,9 +121,34 @@ const H3 = styled.h3`
 	color: #ffffff;
 `
 
+const Arrow = styled.span`
+	/* width: 100%; */
+	display: flex;
+	/* grid-template-columns: 1fr auto; */
+	align-items: center;
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 0.68rem;
+		height: 0.68rem;
+	}
+`
+
+const Line = styled.span`
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #ffffff;
+`
+
 const Button = styled.button`
 	background: rgba(76, 213, 243, 0.12);
-	display: block;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 2.5rem;
 
 	border: 1px solid #85d1ff;
 	border-radius: 0.4rem;

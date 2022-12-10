@@ -46,7 +46,7 @@ const ResourcessSection = () => {
 				alt: "github icon",
 			},
 			label: "chain",
-			heading: "Join our Newsletter ",
+			heading: "Follow our Newsletter",
 			cta: {
 				label: "open",
 			},
@@ -56,7 +56,7 @@ const ResourcessSection = () => {
 	return (
 		<Section>
 			<H2 className={headerFont.className}>
-				Dive into Hydra<sup>DX</sup> <br /> Resourcess
+				Hydra<sup>DX</sup> <br /> Resourcess
 			</H2>
 
 			<Flex>
@@ -76,7 +76,7 @@ const Section = styled.section`
 `
 
 const H2 = styled.h2`
-	font-size: 5.2rem;
+	font-size: 3.4rem;
 	line-height: 130%;
 
 	text-align: center;
@@ -84,7 +84,16 @@ const H2 = styled.h2`
 
 	color: #ffffff;
 
-	margin-bottom: 8.3rem;
+	margin-bottom: 4.4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 8.3rem;
+			font-size: 5.2rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Flex = styled.div`

@@ -283,7 +283,7 @@ const Content = styled.div`
 
 const Article = styled.article`
 	overflow: hidden;
-	padding: 2.6rem 2.3rem;
+	padding: 2.6rem 2.3rem 4.6rem;
 	position: relative;
 	z-index: 1;
 
