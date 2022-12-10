@@ -285,9 +285,9 @@ const Article = styled.article`
 	overflow: hidden;
 	padding: 2.6rem 2.3rem 4.6rem;
 	position: relative;
-	z-index: 1;
 
 	&:nth-of-type(1) {
+		z-index: 2;
 		/* margin-top: 7.2rem; */
 		background: linear-gradient(
 			180deg,
@@ -357,6 +357,7 @@ const Article = styled.article`
 			rgba(246, 42, 125, 0) 12.41%,
 			#f62a7d 100%
 		);
+		z-index: 2;
 
 		border-radius: 4px;
 		/* margin-bottom: 7.2rem; */
