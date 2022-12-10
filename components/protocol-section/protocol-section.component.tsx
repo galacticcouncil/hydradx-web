@@ -17,127 +17,182 @@ const headerFont = localFont({
 
 const ProtocolSection = () => {
 	return (
-		<Section>
-			<H2 variant="RED">
-				Hydra<sup>dx</sup> <span>protocol</span>
-			</H2>
+		<div style={{ position: "relative" }}>
+			<RedBlur>
+				<Image
+					className="desktop"
+					src="/assets/protocol-section/red-blur.svg"
+					alt="red blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+				<Image
+					className="mobile"
+					src="/assets/protocol-section/red-blur-mobile.svg"
+					alt="red blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+			</RedBlur>
+			<Section>
+				<H2 variant="RED">
+					Hydra<sup>dx</sup> <span>protocol</span>
+				</H2>
 
-			<Article1>
-				<OverlayBackground />
-				<DragonFigure>
-					<Image
-						src="/assets/protocol-section/first-ilu-dragon.png"
-						alt="dragon ilu"
-						width={"100%"}
-						height={"100%"}
-					/>
-				</DragonFigure>
-				<TowerFigure>
-					<Image
-						src="/assets/protocol-section/first-ilu-tower.png"
-						alt="tower ilu"
-						width={"100%"}
-						height={"100%"}
-					/>
-				</TowerFigure>
-				<ContentContainer>
-					<H3 className={headerFont.className}>
-						Embrace sustainable
-						<br /> protocol design.
-					</H3>
-					<P>
-						HydraDX is designed and built to last.
-						<br /> Offering a value proposition for everyone: Traders, LPs and
-						HDX hodlers.
-					</P>
-					<Button>Learn more</Button>
-				</ContentContainer>
-			</Article1>
+				<Article1>
+					<OverlayBackground />
+					<DragonFigure>
+						<Image
+							src="/assets/protocol-section/first-ilu-dragon.png"
+							alt="dragon ilu"
+							width={"100%"}
+							height={"100%"}
+						/>
+					</DragonFigure>
+					<TowerFigure>
+						<Image
+							src="/assets/protocol-section/first-ilu-tower.png"
+							alt="tower ilu"
+							width={"100%"}
+							height={"100%"}
+						/>
+					</TowerFigure>
+					<ContentContainer>
+						<H3 className={headerFont.className}>
+							Embrace sustainable
+							<br /> protocol design.
+						</H3>
+						<P>
+							HydraDX is designed and built to last.
+							<br /> Offering a value proposition for everyone: Traders, LPs and
+							HDX hodlers.
+						</P>
+						<Button>Learn more</Button>
+					</ContentContainer>
+				</Article1>
 
-			<Article2>
-				<OverlayBackground />
+				<Article2>
+					<OverlayBackground />
 
-				<ContentContainer>
-					<H3 className={headerFont.className}>
-						Take a Glimpse
-						<br /> Into the Future.
-					</H3>
-					<P>
-						Backed by an extensive body of research. Stableswap, order matching,
-						bonds and liquidation mechanisms - we are just getting started.
-					</P>
-					<Button>Learn more</Button>
-				</ContentContainer>
+					<ContentContainer>
+						<H3 className={headerFont.className}>
+							Take a Glimpse
+							<br /> Into the Future.
+						</H3>
+						<P>
+							Backed by an extensive body of research. Stableswap, order
+							matching, bonds and liquidation mechanisms - we are just getting
+							started.
+						</P>
+						<Button>Learn more</Button>
+					</ContentContainer>
 
-				<EyeFigure>
-					<Image
-						className="desktop"
-						src="/assets/protocol-section/second-ilu-eye.png"
-						alt="eye ilu"
-						width={"100%"}
-						height={"100%"}
-						style={{
-							objectFit: "contain",
-						}}
-					/>
-					<Image
-						className="mobile"
-						src="/assets/protocol-section/second-ilu-eye-mobile.png"
-						alt="eye ilu"
-						width={"100%"}
-						height={"100%"}
-						style={{
-							objectFit: "contain",
-						}}
-					/>
-				</EyeFigure>
-			</Article2>
+					<EyeFigure>
+						<Image
+							className="desktop"
+							src="/assets/protocol-section/second-ilu-eye.png"
+							alt="eye ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "contain",
+							}}
+						/>
+						<Image
+							className="mobile"
+							src="/assets/protocol-section/second-ilu-eye-mobile.png"
+							alt="eye ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "contain",
+							}}
+						/>
+					</EyeFigure>
+				</Article2>
 
-			<Article3>
-				<OverlayBackground />
+				<Article3>
+					<OverlayBackground />
 
-				<CoinFigure>
-					<Image
-						className="desktop"
-						src="/assets/protocol-section/third-ilu-coin.png"
-						alt="coin ilu"
-						width={"100%"}
-						height={"100%"}
-						style={{
-							objectFit: "cover",
-						}}
-					/>
-					<Image
-						className="mobile"
-						src="/assets/protocol-section/third-ilu-coin-mobile.png"
-						alt="coin ilu"
-						width={"100%"}
-						height={"100%"}
-						style={{
-							objectFit: "cover",
-						}}
-					/>
-				</CoinFigure>
+					<CoinFigure>
+						<Image
+							className="desktop"
+							src="/assets/protocol-section/third-ilu-coin.png"
+							alt="coin ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "cover",
+							}}
+						/>
+						<Image
+							className="mobile"
+							src="/assets/protocol-section/third-ilu-coin-mobile.png"
+							alt="coin ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "cover",
+							}}
+						/>
+					</CoinFigure>
 
-				<ContentContainer>
-					<H3 className={headerFont.className}>
-						Decentralized and Community-first.
-					</H3>
-					<P>
-						HydraDX is a decentralized protocol with a community-first approach.
-						All decisions affecting the protocol are adopted in a democratic
-						process.
-					</P>
-					<Button>Learn more</Button>
-				</ContentContainer>
-			</Article3>
-		</Section>
+					<ContentContainer>
+						<H3 className={headerFont.className}>
+							Decentralized and Community-first.
+						</H3>
+						<P>
+							HydraDX is a decentralized protocol with a community-first
+							approach. All decisions affecting the protocol are adopted in a
+							democratic process.
+						</P>
+						<Button>Learn more</Button>
+					</ContentContainer>
+				</Article3>
+			</Section>
+		</div>
 	)
 }
 
 export default ProtocolSection
 
+const RedBlur = styled.figure`
+	position: absolute;
+	/* border: 1px solid red; */
+	/* top: 15%; */
+	top: -15%;
+	left: -2rem;
+	right: -2rem;
+	z-index: -2;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			top: -18rem;
+
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
 const Section = styled.section`
+	position: relative;
 	max-width: 110rem;
 	margin: 0 auto;
 `
