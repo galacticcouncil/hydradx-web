@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 import H2 from "../h2/content-h2.component"
+import RoadmapItem from "../roadmap-item/roadmap-item.component"
+import Image from "../image/image.component"
 
 import { IRoadmapItem } from "../../types/roadmap-item.types"
 
@@ -9,181 +11,181 @@ const RoadmapSection = () => {
 		{
 			titleColor: "#9CDDFF",
 			title: "Omnipool",
-			status: "SoonTM",
-			process: "25%",
+			status: "Soon<sup>TM</sup>",
+			process: "100%",
 			barColor:
 				"linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/1.svg",
+				alt: "1",
 			},
 		},
 		{
 			titleColor: "#9CDDFF",
-			title: "DAI<sup>(Wormhole)</sup>",
-			status: "SoonTM",
-			process: "25%",
+			title: "DAI <sup>(Wormhole)</sup>",
+			status: "Soon<sup>TM</sup>",
+			process: "100%",
 			barColor:
 				"linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/2.svg",
+				alt: "2",
 			},
 		},
 		{
 			titleColor: "#5FC7FF",
 			title: "DOT",
-			status: "SoonTM",
-			process: "25%",
+			status: "Soon<sup>TM</sup>",
+			process: "90%",
 			barColor:
 				"linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/3.svg",
+				alt: "3",
 			},
 		},
 		{
 			titleColor: "#2AB4FF",
 			title: "Liquidity Provisioning",
-			status: "SoonTM",
-			process: "25%",
+			status: "Soon<sup>TM</sup>",
+			process: "80%",
 			barColor:
 				"linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/4.svg",
+				alt: "4",
 			},
 		},
 		{
 			titleColor: "#07A8FF",
-			title: "USDT<sup>(Native)</sup>",
-			status: "SoonTM",
-			process: "25%",
+			title: "USDT <sup>(Native)</sup>",
+			status: "Soon<sup>TM</sup>",
+			process: "65%",
 			barColor:
 				"linear-gradient(270deg, #07A8FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/5.svg",
+				alt: "5",
 			},
 		},
 		{
 			titleColor: "#07A8FF",
 			title: "Liquidity Mining",
-			status: "SoonTM",
-			process: "25%",
+			status: "Soon<sup>TM</sup>",
+			process: "60%",
 			barColor:
 				"linear-gradient(270deg, #2A99FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/6.svg",
+				alt: "6",
 			},
 		},
 		{
 			titleColor: "#127FFF",
 			title: "Stableswap Subpols",
-			status: "SoonTM",
-			process: "25%",
+			status: "Soon<sup>TM</sup>",
+			process: "55%",
 			barColor:
 				"linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/7.svg",
+				alt: "7",
 			},
 		},
 		{
 			titleColor: "#1263FF",
-			title: "USDC<sup>(Native)</sup>",
+			title: "USDC <sup>(Native)</sup>",
 			status: "Working on it",
-			process: "25%",
+			process: "50%",
 			barColor:
 				"linear-gradient(270deg, #1263FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/8.svg",
+				alt: "8",
 			},
 		},
 		{
 			titleColor: "#1263FF",
-			title: "ETH<sup>(Snowbridge)</sup>",
+			title: "ETH <sup>(Snowbridge)</sup>",
 			status: "Working on it",
-			process: "25%",
+			process: "45%",
 			barColor:
 				"linear-gradient(270deg, #1246FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/9.svg",
+				alt: "9",
 			},
 		},
 		{
 			titleColor: "#1263FF",
 			title: "Slip-based Fees",
 			status: "Working on it",
-			process: "25%",
+			process: "45%",
 			barColor:
 				"linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/10.svg",
+				alt: "10",
 			},
 		},
 		{
 			titleColor: "#0057FF",
 			title: "Fee Disribution 2.0",
 			status: "Working on it",
-			process: "25%",
+			process: "45%",
 			barColor:
 				"linear-gradient(270deg, #0057FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/11.svg",
+				alt: "11",
 			},
 		},
 		{
 			titleColor: "#0047FF",
 			title: "Omnipool Bond AMM",
 			status: "Working on it",
-			process: "25%",
+			process: "35%",
 			barColor:
 				"linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/12.svg",
+				alt: "12",
 			},
 		},
 		{
 			titleColor: "#0047FF",
 			title: "Order Batching",
 			status: "Working on it",
-			process: "25%",
+			process: "30%",
 			barColor:
 				"linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/13.svg",
+				alt: "13",
 			},
 		},
 		{
 			titleColor: "#1425BB",
 			title: "Liquidation Engine",
 			status: "Working on it",
-			process: "25%",
+			process: "20%",
 			barColor:
 				"linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/14.svg",
+				alt: "14",
 			},
 		},
 		{
 			titleColor: "#1425BB",
 			title: "Lending",
 			status: "Working on it",
-			process: "25%",
+			process: "20%",
 			barColor:
 				"linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
 			icon: {
-				src: "",
-				alt: "",
+				src: "/assets/roadmap-section/15.svg",
+				alt: "15",
 			},
 		},
 	]
@@ -194,13 +196,38 @@ const RoadmapSection = () => {
 				Hydra<sup>dx</sup> <span>roadmap</span>
 			</H2>
 
+			<BlueBlur>
+				<Image
+					className="desktop"
+					src="/assets/roadmap-section/blue-blur.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+				<Image
+					className="mobile"
+					src="/assets/roadmap-section/blue-blur-mobile.svg"
+					alt="blue blur"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+				/>
+			</BlueBlur>
+
 			<Container>
-				{roadmapItems.map((item, index) => (
-					<div key={index}>
-						<h3>{item.title}</h3>
-						<h3>{item.status}</h3>
-					</div>
-				))}
+				<LineFigure>
+					<Image
+						src="/assets/roadmap-section/line.svg"
+						alt="line"
+						height={"100%"}
+					/>
+				</LineFigure>
+				<Content>
+					{roadmapItems.map((item, index) => (
+						<RoadmapItem key={index} item={item} />
+					))}
+				</Content>
 			</Container>
 		</Section>
 	)
@@ -208,17 +235,94 @@ const RoadmapSection = () => {
 
 export default RoadmapSection
 
-const Section = styled.section``
+const Section = styled.section`
+	position: relative;
+`
 
 const Container = styled.div`
+	position: relative;
 	max-width: 110rem;
 	margin: 0 auto;
-	padding: 4rem;
 
-	background: linear-gradient(
-		180deg,
-		rgba(0, 178, 255, 0.102) 0%,
-		rgba(0, 0, 0, 0) 70.45%
-	);
-	border-radius: 0.8rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding: 4rem;
+
+			background: linear-gradient(180deg, #04192b 0%, #040713 70.45%);
+			border-radius: 0.8rem;
+
+			&:before {
+				content: "";
+				position: absolute;
+				z-index: -2;
+				top: -1px;
+				left: -1px;
+				right: -1px;
+				bottom: -1px;
+				border-radius: 0.8rem;
+
+				background: linear-gradient(
+					180deg,
+					rgba(100, 152, 230, 0.5) 0%,
+					rgba(106, 206, 237, 0.17) 72.11%,
+					rgba(158, 167, 180, 0) 100%
+				);
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
+
+const BlueBlur = styled.figure`
+	position: absolute;
+	/* border: 1px solid red; */
+	/* top: 15%; */
+	top: 0rem;
+	left: -2rem;
+	right: -2rem;
+	z-index: -2;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			.desktop {
+				display: block;
+				visibility: visible;
+			}
+
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const Content = styled.div`
+	display: flex;
+	flex-direction: column;
+	/* height: 100%; */
+	justify-content: space-between;
+	/* border: 1px solid red; */
+	margin: 7rem 0;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin: 4.5rem 0;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const LineFigure = styled.figure``
