@@ -87,20 +87,121 @@ const HeroSection = () => {
 		},
 	]
 
+	const bgVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			scale: 1.2,
+		},
+		visible: {
+			opacity: 1,
+			scale: 1,
+			transition: {
+				ease: [0.12, 0.23, 0.34, 1],
+				duration: 1.4,
+			},
+		},
+	}
+
 	const socialVariants: Variants = {
 		hidden: {
 			opacity: 0,
 			y: 100,
-			transition: {
-				duration: 0.5,
-			},
 		},
 		visible: {
 			y: 0,
 			opacity: 1,
 			transition: {
 				duration: 0.5,
-				delay: 0.5,
+				delay: 1.5,
+			},
+		},
+	}
+
+	const heroVariants: Variants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.3,
+			},
+		},
+	}
+
+	const logoVariants: Variants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				ease: [0.12, 0.23, 0, 1.01],
+				duration: 2.4,
+				delay: 1.2,
+			},
+		},
+	}
+
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -40,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: [0.12, 0.23, 0, 1.01],
+				duration: 1.4,
+			},
+		},
+	}
+
+	const pVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -20,
+		},
+		visible: {
+			opacity: 0.8,
+			y: 0,
+			transition: {
+				ease: [0.12, 0.23, 0, 1.01],
+				duration: 1.8,
+				delay: 0.3,
+			},
+		},
+	}
+
+	const buttonsContainerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -20,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: [0.12, 0.23, 0, 1.01],
+				duration: 2,
+				delay: 0.6,
+			},
+		},
+	}
+
+	const footerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -20,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: [0.12, 0.23, 0, 1.01],
+				duration: 1.8,
+				delay: 0.8,
 			},
 		},
 	}
@@ -108,7 +209,11 @@ const HeroSection = () => {
 	return (
 		<>
 			<Section>
-				<OverlayBackground>
+				<OverlayBackground
+					variants={bgVariants}
+					initial="hidden"
+					animate="visible"
+				>
 					<Image
 						src={"/assets/hero-section/bg-ilu-v2.png"}
 						alt={"Background ilu"}
@@ -126,41 +231,43 @@ const HeroSection = () => {
 					/>
 				</OverlayBackground>
 
-				<LogoFigure>
-					<Image
-						src={"/assets/hero-section/hydra-logo.svg"}
-						alt={"Hydra logo"}
-						width={"100%"}
-						height={"100%"}
-						style={{ objectFit: "contain" }}
-					/>
-				</LogoFigure>
-
-				<H1 className={headerFont.className}>
-					An Ocean of
-					<br /> Liquidity for Polkadot
-				</H1>
-				<P>
-					Trade abundance of assets in a single pool.
-					<br /> The HydraDX Omnipool is efficient,
-					<br /> sustainable and trustless.
-				</P>
-
-				<Button left="auto" right="auto">
-					ENTER OMNIPOOL
-				</Button>
-
-				<Footer>
-					<p>Secured by</p>
-					<figure>
+				<motion.div variants={heroVariants} initial="hidden" animate="visible">
+					<LogoFigure variants={logoVariants}>
 						<Image
-							src={"/assets/hero-section/polkadot-v2.svg"}
-							alt={"polkadot logo"}
+							src={"/assets/hero-section/hydra-logo.svg"}
+							alt={"Hydra logo"}
 							width={"100%"}
 							height={"100%"}
+							style={{ objectFit: "contain" }}
 						/>
-					</figure>
-				</Footer>
+					</LogoFigure>
+
+					<H1 variants={titleVariants} className={headerFont.className}>
+						An Ocean of
+						<br /> Liquidity for Polkadot
+					</H1>
+					<P variants={pVariants}>
+						Trade abundance of assets in a single pool.
+						<br /> The HydraDX Omnipool is efficient,
+						<br /> sustainable and trustless.
+					</P>
+
+					<ButtonsContainer variants={buttonsContainerVariants}>
+						<Button>ENTER OMNIPOOL</Button>
+					</ButtonsContainer>
+
+					<Footer variants={footerVariants}>
+						<p>Secured by</p>
+						<figure>
+							<Image
+								src={"/assets/hero-section/polkadot-v2.svg"}
+								alt={"polkadot logo"}
+								width={"100%"}
+								height={"100%"}
+							/>
+						</figure>
+					</Footer>
+				</motion.div>
 			</Section>
 			<SocialDirectory
 				variants={socialVariants}
@@ -216,7 +323,7 @@ const Section = styled.section`
 	}
 `
 
-const OverlayBackground = styled.div`
+const OverlayBackground = styled(motion.div)`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -233,7 +340,7 @@ const OverlayBackground = styled.div`
 	}
 `
 
-const LogoFigure = styled.figure`
+const LogoFigure = styled(motion.figure)`
 	width: 5.808rem;
 	height: 4.748rem;
 	margin: 0 auto 3.4rem;
@@ -250,7 +357,7 @@ const LogoFigure = styled.figure`
 	}
 `
 
-const H1 = styled.h1`
+const H1 = styled(motion.h1)`
 	text-align: center;
 	margin-bottom: 2rem;
 
@@ -274,7 +381,7 @@ const H1 = styled.h1`
 	}
 `
 
-const P = styled.p`
+const P = styled(motion.p)`
 	text-align: center;
 	font-family: "Chakra Petch", sans-serif;
 	font-size: 1.6rem;
@@ -293,6 +400,11 @@ const P = styled.p`
 			}
 		}
 	}
+`
+
+const ButtonsContainer = styled(motion.div)`
+	display: flex;
+	justify-content: center;
 `
 
 const SocialDirectory = styled(motion.div)`
@@ -354,7 +466,7 @@ const SocialFigure = styled.figure`
 	align-items: center;
 `
 
-const Footer = styled.div`
+const Footer = styled(motion.div)`
 	display: none;
 	visibility: hidden;
 
