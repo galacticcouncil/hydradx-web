@@ -20,9 +20,62 @@ const titleFont = localFont({
 })
 
 const RoadmapItem = ({ item }: IProps) => {
+	const itemVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 75,
+			width: "0%",
+		},
+		visible: {
+			opacity: 1,
+			width: item.process,
+			// y: 0,
+			transition: {
+				delay: 0.3,
+				ease: "easeOut",
+				duration: 1.5,
+				// duration: isMobile ? 1 : 1.5,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 115,
+				// damping: 30,
+			},
+		},
+	}
+
+	const titleVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 75,
+			// width: "0%",
+		},
+		visible: {
+			opacity: 1,
+			// width: item.process,
+			// y: 0,
+			transition: {
+				delay: 1,
+				ease: "easeOut",
+				duration: 1.5,
+				// duration: isMobile ? 1 : 1.5,
+				// type: "spring",
+				// mass: 1,
+				// stiffness: 115,
+				// damping: 30,
+			},
+		},
+	}
+
 	return (
 		<Item>
-			<ProgressContainer>
+			<ProgressContainer
+				variants={itemVariants}
+				// process={process}
+				// variant={variant}
+				initial={"hidden"}
+				whileInView={"visible"}
+				viewport={{ once: true }}
+			>
 				<ProgressBar width={item.process} color={item.barColor}></ProgressBar>
 				<ProgressBarFigure>
 					<Image
@@ -34,7 +87,12 @@ const RoadmapItem = ({ item }: IProps) => {
 					/>
 				</ProgressBarFigure>
 			</ProgressContainer>
-			<Content>
+			<Content
+				variants={titleVariants}
+				initial={"hidden"}
+				whileInView={"visible"}
+				viewport={{ once: true }}
+			>
 				<Title
 					className={titleFont.className}
 					color={item.titleColor}

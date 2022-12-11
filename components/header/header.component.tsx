@@ -33,16 +33,18 @@ const Header = ({ navItems }: IProps) => {
 	const ctaContainerVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: -50,
+			y: -20,
 			transition: {
-				duration: 0.3,
+				ease: [0.12, 0.23, 0.06, 1.09],
+				duration: 0.5,
 			},
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
 			transition: {
-				duration: 0.3,
+				ease: [0.12, 0.23, 0.06, 1.09],
+				duration: 0.5,
 			},
 		},
 	}
