@@ -14,27 +14,41 @@ export interface IProps {
 
 const PageLayout = ({ children }: IProps) => {
 	const navItems: INavItem[] = [
-		{
-			label: "Start",
-			href: "/",
-		},
-		{
-			label: "Socials",
-			href: "/#socials",
-		},
+		// {
+		// 	label: "Start",
+		// 	href: "/",
+		// },
+		// {
+		// 	label: "Socials",
+		// 	href: "/#socials",
+		// },
 		{
 			label: "Docs",
 			href: "/#",
-			hasIcon: true,
-			rel: "noopener noreferrer",
-			target: "_blank",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 		{
 			label: "Tokenomics",
 			href: "/#",
-			hasIcon: true,
-			rel: "noopener noreferrer",
-			target: "_blank",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
+		},
+		{
+			label: "Github",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
+		},
+		{
+			label: "Newsletter",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 	]
 
