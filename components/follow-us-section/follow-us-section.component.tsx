@@ -82,7 +82,8 @@ const FollowUsSection = () => {
 					alt="follow us ilu"
 					width={"100%"}
 					height={"100%"}
-					style={{ objectFit: "cover" }}
+					style={{ objectFit: "contain", objectPosition: "bottom" }}
+					// style={{ objectFit: "cover" }}
 				/>
 			</IluFigure>
 
@@ -132,15 +133,24 @@ const IluFigure = styled.figure`
 const Section = styled.section`
 	margin: 0 -2rem 0;
 	position: relative;
-	min-height: 40rem;
+	/* min-height: 40rem; */
+	/* border: 1px solid red; */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				/* min-height: 60rem; */
+			}
+		}
+	}
 `
 
 const Content = styled.div`
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 0; */
 
 	display: flex;
 	align-items: center;
@@ -148,7 +158,7 @@ const Content = styled.div`
 
 	.content {
 		margin-top: 6rem;
-		padding: 0 2rem;
+		padding: 4rem 2rem;
 	}
 `
 

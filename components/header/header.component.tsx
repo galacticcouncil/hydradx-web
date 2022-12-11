@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, Variants } from "framer-motion"
 
 import Image from "../image/image.component"
 import Link from "next/link"
@@ -29,6 +29,23 @@ const navFont = localFont({
 const Header = ({ navItems }: IProps) => {
 	const { value: isOpen, toggle: toggleMenu } = useBoolean(false)
 	const { value: showCta, setValue: setShowCta } = useBoolean(false)
+
+	const ctaContainerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -50,
+			transition: {
+				duration: 0.3,
+			},
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 0.3,
+			},
+		},
+	}
 
 	useEffect(() => {
 		window.onscroll = () => {
@@ -89,9 +106,10 @@ const Header = ({ navItems }: IProps) => {
 					<AnimatePresence>
 						{showCta && (
 							<motion.div
-								initial={{ opacity: 0, y: -50 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -50 }}
+								variants={ctaContainerVariants}
+								initial={"hidden"}
+								animate={"visible"}
+								exit={"hidden"}
 							>
 								<Button className="btn">ENTER OMNIPOOL</Button>
 							</motion.div>

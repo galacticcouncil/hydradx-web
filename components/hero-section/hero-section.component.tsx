@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
+import { motion, Variants } from "framer-motion"
 
 import { Button } from "../button/button.component"
 import Image from "../image/image.component"
@@ -86,12 +87,38 @@ const HeroSection = () => {
 		},
 	]
 
+	const socialVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 100,
+			transition: {
+				duration: 0.5,
+			},
+		},
+		visible: {
+			y: 0,
+			opacity: 1,
+			transition: {
+				duration: 0.5,
+				delay: 0.5,
+			},
+		},
+	}
+
 	return (
 		<>
 			<Section>
 				<OverlayBackground>
 					<Image
 						src={"/assets/hero-section/bg-ilu-v2.png"}
+						alt={"Background ilu"}
+						width={"100%"}
+						height={"100%"}
+						style={{ objectFit: "cover" }}
+					/>
+					<Image
+						className="snake"
+						src={"/assets/hero-section/snake-ilu.png"}
 						alt={"Background ilu"}
 						width={"100%"}
 						height={"100%"}
@@ -135,7 +162,11 @@ const HeroSection = () => {
 					</figure>
 				</Footer>
 			</Section>
-			<SocialDirectory>
+			<SocialDirectory
+				variants={socialVariants}
+				initial="hidden"
+				animate="visible"
+			>
 				{socials.map((social, index) => (
 					<Link href={social.href} key={index}>
 						<SocialFigure>
@@ -192,6 +223,14 @@ const OverlayBackground = styled.div`
 	width: 100%;
 	height: 100%;
 	z-index: -1;
+
+	.snake {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 `
 
 const LogoFigure = styled.figure`
@@ -256,7 +295,7 @@ const P = styled.p`
 	}
 `
 
-const SocialDirectory = styled.div`
+const SocialDirectory = styled(motion.div)`
 	display: none;
 	visibility: hidden;
 
