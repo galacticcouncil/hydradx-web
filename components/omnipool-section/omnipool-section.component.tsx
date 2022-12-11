@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-import { Button } from "../button/button.component"
+// import { Button } from "../button/button.component"
 import H2 from "../h2/content-h2.component"
 import H3 from "../content-h3/content-h3.component"
 import P from "../content-p/content-p.component"
@@ -342,6 +342,32 @@ const IluFigure = styled.figure`
 	}
 `
 
+const buttonStyles = css`
+	cursor: pointer;
+	background: transparent;
+	display: block;
+
+	border-radius: 0.4rem;
+	padding: 12px 3.7rem;
+	font-family: "Chakra Petch";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 150%;
+
+	letter-spacing: 0.105em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+`
+
+const Button = styled.button`
+	${buttonStyles}
+
+	text-align: center;
+	text-transform: uppercase;
+`
+
 const GridContainer = styled.div`
 	/* max-width: 32.4rem;
 	margin: 0 auto; */
@@ -359,6 +385,13 @@ const GridContainer = styled.div`
 		overflow: hidden;
 		margin: 0 -2rem 9.2rem -2rem;
 		padding: 0 2rem;
+
+		${Button} {
+			background: rgba(76, 213, 243, 0.12);
+
+			border: 1px solid #85d1ff;
+			color: #85d1ff;
+		}
 	}
 
 	&:nth-of-type(2) {
@@ -367,23 +400,47 @@ const GridContainer = styled.div`
 		overflow: hidden;
 		margin: 0 -2rem 9.2rem -2rem;
 		padding: 0 2rem;
+
+		${Button} {
+			background: rgba(76, 213, 243, 0.12);
+			border: 1px solid #85d1ff;
+			color: #85d1ff;
+		}
 	}
 
 	&:nth-of-type(3) {
 		position: relative;
 		/* border: 1px solid blue; */
 		flex-direction: column;
+
+		${Button} {
+			background: rgba(76, 213, 243, 0.12);
+			border: 1px solid #85d1ff;
+			color: #85d1ff;
+		}
 	}
 
 	&:nth-of-type(4) {
 		position: relative;
 		/* border: 1px solid blue; */
 		flex-direction: column;
+
+		${Button} {
+			background: rgba(76, 213, 243, 0.12);
+			border: 1px solid #a6ddff;
+			color: #a6ddff;
+		}
 	}
 
 	&:nth-of-type(5) {
 		/* border: 1px solid yellow; */
 		flex-direction: column;
+
+		${Button} {
+			background: rgba(76, 213, 243, 0.12);
+			border: 1px solid #a6ddff;
+			color: #ffffff;
+		}
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

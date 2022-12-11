@@ -1,15 +1,26 @@
 // Utils
 import styled from "styled-components"
+import localFont from "@next/font/local"
 
 // Types
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	isOpen: boolean
 }
 
+const labelFont = localFont({
+	src: [
+		{
+			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+			weight: "500",
+			style: "normal",
+		},
+	],
+})
+
 const HamMenuButton: React.FC<IProps> = ({ isOpen, onClick, ...props }) => {
 	return (
 		<ToggleButton {...props} onClick={onClick}>
-			<Label>Menu</Label>
+			<Label className={labelFont.className}>Menu</Label>
 			<Hamburger className={isOpen ? "open" : ""}>
 				<Left />
 				<Right />
@@ -26,14 +37,15 @@ const ToggleButton = styled.button`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.1rem;
 `
 
 const Label = styled.p`
 	color: ${({ theme }) => theme.hamMenu.labelColor};
 	font-weight: 500;
 	font-size: 1.6rem;
-	/* margin-bottom: 0.2rem; */
+	margin-top: 0.4rem;
+	text-transform: uppercase;
 `
 
 const Left = styled.div`

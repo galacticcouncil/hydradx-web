@@ -1,10 +1,21 @@
 import styled from "styled-components"
+import localFont from "@next/font/local"
 
 import Image from "../image/image.component"
 import Link from "next/link"
 
+const headerFont = localFont({
+	src: [
+		{
+			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+			weight: "500",
+			style: "normal",
+		},
+	],
+})
+
 const Footer = () => {
-	const col1 = [
+	const aboutItems = [
 		{
 			label: "About us",
 			href: "#",
@@ -23,7 +34,7 @@ const Footer = () => {
 		},
 	]
 
-	const col2 = [
+	const socialItems = [
 		{
 			label: "Privacy",
 			href: "#",
@@ -58,26 +69,36 @@ const Footer = () => {
 							style={{ objectFit: "contain" }}
 						/>
 					</LogoFigure>
-					{/* <p>© 2022 HydraDX. All rights reserved.</p> */}
+					<PContainer>
+						<p>Secured by</p>
+						<figure>
+							<Image
+								src={"/assets/hero-section/polkadot-v2.svg"}
+								alt={"polkadot logo"}
+								width={"100%"}
+								height={"100%"}
+							/>
+						</figure>
+					</PContainer>
 				</LogoContainer>
 
 				<Nav>
 					<Ul>
-						{col1.map((item, index) => (
+						<Li>
+							<h3 className={headerFont.className}>About</h3>
+						</Li>
+						{aboutItems.map((item, index) => (
 							<Li key={index}>
 								<Link href={item.href}>{item.label}</Link>
 							</Li>
 						))}
 					</Ul>
 					<Ul>
-						{col2.map((item, index) => (
-							<Li key={index}>
-								<Link href={item.href}>{item.label}</Link>
-							</Li>
-						))}
-					</Ul>
-					<Ul>
-						{col3.map((item, index) => (
+						<Li>
+							<h3 className={headerFont.className}>Find us on</h3>
+						</Li>
+
+						{socialItems.map((item, index) => (
 							<Li key={index}>
 								<Link href={item.href}>{item.label}</Link>
 							</Li>
@@ -138,6 +159,39 @@ const Nav = styled.div`
 	gap: 9.2rem;
 `
 
+const PContainer = styled.div`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			visibility: visible;
+			/* margin-top: 8.6rem; */
+			display: flex;
+			/* justify-content: center; */
+			/* align-items: center; */
+			gap: 0.83rem;
+
+			font-family: "Chakra Petch";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.44553rem;
+			line-height: 150%;
+
+			color: #fff3f3;
+
+			figure {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
 const Ul = styled.ul`
 	display: flex;
 	flex-direction: column;
@@ -153,5 +207,16 @@ const Li = styled.li`
 		line-height: 2.4rem;
 
 		color: #ffffff;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		line-height: 130%;
+
+		display: flex;
+		align-items: center;
+
+		color: #676c80;
+		margin-bottom: 1.5rem;
 	}
 `
