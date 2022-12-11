@@ -48,7 +48,16 @@ const Header = ({ navItems }: IProps) => {
 			<Container>
 				<LogoFigure>
 					<Image
+						className="desktop"
 						src="/assets/logo-v2.svg"
+						alt="HydraDX"
+						width={"100%"}
+						height={"100%"}
+						style={{ objectFit: "contain" }}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/logo-mobile.svg"
 						alt="HydraDX"
 						width={"100%"}
 						height={"100%"}
@@ -127,7 +136,7 @@ const HeaderContainer = styled.header`
 `
 
 const Container = styled.div`
-	max-width: 110rem;
+	max-width: 163.4rem;
 	margin: 0 auto;
 	height: 100%;
 	display: flex;
@@ -138,7 +147,28 @@ const Container = styled.div`
 const LogoFigure = styled.figure`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			.desktop {
+				display: flex;
+				visibility: visible;
+			}
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Nav = styled.nav`
@@ -189,7 +219,7 @@ const CtaContainer = styled.div`
 			width: 21.45rem;
 
 			.btn {
-				padding: 1.2rem 3.6rem;
+				padding: 0.8rem 3.6rem;
 				font-size: 1.4rem;
 			}
 

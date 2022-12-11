@@ -42,7 +42,7 @@ const HeroSection = () => {
 		{
 			href: "#",
 			icon: {
-				src: "/assets/hero-section/socials/twitter-desktop.svg",
+				src: "/assets/hero-section/socials/twitter-desktop-v4.png",
 				alt: "twitter",
 			},
 			mobileIcon: {
@@ -123,34 +123,32 @@ const HeroSection = () => {
 					ENTER OMNIPOOL
 				</Button>
 
-				<SocialDirectory>
-					{socials.map((social, index) => (
-						<Link href={social.href} key={index}>
-							<SocialFigure>
-								<Image
-									src={social.icon.src}
-									alt={social.icon.alt}
-									width={30}
-									height={30}
-								/>
-							</SocialFigure>
-						</Link>
-					))}
-				</SocialDirectory>
-
 				<Footer>
 					<p>Secured by</p>
 					<figure>
 						<Image
-							src={"/assets/hero-section/polkadot.svg"}
+							src={"/assets/hero-section/polkadot-v2.svg"}
 							alt={"polkadot logo"}
-							width={23}
-							height={23}
+							width={"100%"}
+							height={"100%"}
 						/>
 					</figure>
-					<p>Polkadot</p>
 				</Footer>
 			</Section>
+			<SocialDirectory>
+				{socials.map((social, index) => (
+					<Link href={social.href} key={index}>
+						<SocialFigure>
+							<Image
+								src={social.icon.src}
+								alt={social.icon.alt}
+								width={30}
+								height={30}
+							/>
+						</SocialFigure>
+					</Link>
+				))}
+			</SocialDirectory>
 			<MobileSocialDirectory>
 				{socials.map((social, index) => (
 					<Link href={social.href} key={index}>
@@ -266,6 +264,7 @@ const SocialDirectory = styled.div`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			visibility: visible;
 			display: flex;
+
 			flex-direction: row;
 			justify-content: flex-end;
 			align-items: center;
@@ -281,9 +280,10 @@ const SocialDirectory = styled.div`
 			backdrop-filter: blur(2rem);
 			border-radius: 8.57262px;
 
-			position: absolute;
+			position: fixed;
 			bottom: 2.6rem;
 			right: 2.6rem;
+			z-index: 99;
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
@@ -326,13 +326,13 @@ const Footer = styled.div`
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			gap: 0.83rem;
 
 			font-family: "Chakra Petch";
 			font-style: normal;
 			font-weight: 500;
 			font-size: 1.44553rem;
 			line-height: 150%;
-			text-transform: uppercase;
 
 			color: #fff3f3;
 

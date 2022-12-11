@@ -28,7 +28,7 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	margin-right: ${({ right }) => (right ? right : "initial")};
 	margin-left: ${({ left }) => (left ? left : "initial")};
 	margin-bottom: ${({ bottom }) => (bottom ? bottom : "initial")};
-	padding: 1.4rem 4rem;
+	padding: 1.4rem 3.1rem;
 
 	/* transition: all 0.3s ease-in; */
 	background-color: ${({ theme }) => theme.button.default.background};

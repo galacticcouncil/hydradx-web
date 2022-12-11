@@ -129,6 +129,33 @@ const OmnipoolSection = () => {
 				</ContentFigure>
 			</GridContainer>
 
+			<GridContainer>
+				<Content>
+					<H3>Hydrate your Treasury.</H3>
+					<P>
+						Built for B2B. Any project/DAO Treasury can provide liquidity using
+						XCM and gain instant exposure to an ocean of assets. Trustless,
+						without hidden costs and while accumulating (diversified) POL from
+						trading fees.
+					</P>
+
+					<Button>LEARN MORE</Button>
+				</Content>
+				<ContentFigure>
+					<HydrateIlu>
+						<Image
+							src="/assets/omnipool/hydrate-ilu-v2.png"
+							alt="second ilu"
+							width={"100%"}
+							height={"100%"}
+							style={{
+								objectFit: "contain",
+							}}
+						/>
+					</HydrateIlu>
+				</ContentFigure>
+			</GridContainer>
+
 			<BlueBlur2>
 				<Image
 					className="desktop"
@@ -254,6 +281,7 @@ const BlueBlur2 = styled.figure`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			top: 65%;
 			/* top: 50rem; */
 
 			.desktop {
@@ -321,8 +349,8 @@ const GridContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	gap: 5rem;
 
+	gap: 5rem;
 	margin-bottom: 9.2rem;
 
 	&:nth-of-type(1) {
@@ -348,12 +376,19 @@ const GridContainer = styled.div`
 	}
 
 	&:nth-of-type(4) {
+		position: relative;
+		/* border: 1px solid blue; */
+		flex-direction: column;
+	}
+
+	&:nth-of-type(5) {
 		/* border: 1px solid yellow; */
 		flex-direction: column;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			gap: 5rem;
 			max-width: 110rem;
 
 			&:nth-of-type(1) {
@@ -368,11 +403,16 @@ const GridContainer = styled.div`
 			}
 
 			&:nth-of-type(3) {
-				flex-direction: row;
+				flex-direction: row-reverse;
 				margin: 0 auto 9.2rem;
 			}
 
 			&:nth-of-type(4) {
+				flex-direction: row;
+				margin: 0 auto 9.2rem;
+			}
+
+			&:nth-of-type(5) {
 				flex-direction: row-reverse;
 				margin: 0 auto 9.2rem;
 			}
@@ -438,6 +478,16 @@ const SecondIlu = styled.figure`
 	align-items: center;
 	justify-content: center;
 `
+
+const HydrateIlu = styled.figure`
+	position: relative;
+	width: 100%;
+	max-width: 47.408rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`
+
 const LineFigure = styled.figure`
 	position: absolute;
 	/* width: 100%; */
