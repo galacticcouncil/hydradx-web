@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	// publicRuntimeConfig: {
-	// 	NEXT_PUBLIC_FE_ENV: process.env.NEXT_PUBLIC_FE_ENV,
-	// 	BE_ENV: process.env.BE_ENV,
-	// },
 	reactStrictMode: true,
 	swcMinify: true,
 	compiler: {

@@ -25,7 +25,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/.env.production ./.env.production
+# COPY --from=builder /app/.env.production ./.env.production
 # RUN addgroup --group 1001 --system nodejs
 # RUN adduser --system nextjs -u 1001
 # RUN chown -R nextjs:nodejs /app/.next
