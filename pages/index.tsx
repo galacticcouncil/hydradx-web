@@ -13,9 +13,20 @@ import JoinTheNetworkSection from "../components/join-the-network-section/join-t
 import ResourcessSection from "../components/resourcess-section/resourcess-section.component"
 import FollowUsSection from "../components/follow-us-section/follow-us-section.component"
 
-import { GetStaticProps } from "next"
+import { GetStaticProps, GetServerSideProps } from "next"
 
-export const getStaticProps: GetStaticProps = async () => {
+// export const getStaticProps: GetStaticProps = async () => {
+// 	console.log({
+// 		NEXT_PUBLIC_FE_ENV: process.env.NEXT_PUBLIC_FE_ENV,
+// 		BE_ENV: process.env.BE_ENV,
+// 	})
+
+// 	return {
+// 		props: {},
+// 	}
+// }
+
+export const getServerSideProps: GetServerSideProps = async () => {
 	console.log({
 		NEXT_PUBLIC_FE_ENV: process.env.NEXT_PUBLIC_FE_ENV,
 		BE_ENV: process.env.BE_ENV,
