@@ -18,8 +18,9 @@ export const light = {
 		},
 	},
 	hamMenu: {
-		color: "#FFFFFF",
-		bottomColor: "#9EA9B1",
+		labelColor: "#fff",
+		color: "#FC408C",
+		bottomColor: "rgba(255, 3, 105, 0.46)",
 	},
 	header: {
 		background: "rgba(4, 7, 19, 0.6)",

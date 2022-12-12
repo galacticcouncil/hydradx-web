@@ -17,14 +17,14 @@ const headerFont = localFont({
 })
 
 const ResourcessSection = () => {
-	const articles = [
+	const articles: IArticle[] = [
 		{
 			icon: {
 				src: "/assets/resourcess-section/tok-icon.svg",
 				alt: "tokenomics icon",
 			},
 			label: "knowledge",
-			heading: "hydra tokenomics",
+			heading: "hydra<sup>DX</sup> tokenomics",
 			cta: {
 				label: "open",
 			},
@@ -46,7 +46,7 @@ const ResourcessSection = () => {
 				alt: "github icon",
 			},
 			label: "chain",
-			heading: "Hydra Github",
+			heading: "Follow our Newsletter",
 			cta: {
 				label: "open",
 			},
@@ -56,7 +56,7 @@ const ResourcessSection = () => {
 	return (
 		<Section>
 			<H2 className={headerFont.className}>
-				Dive into Hydra <br /> Resourcess
+				Hydra <sup>DX</sup> Resourcess
 			</H2>
 
 			<Flex>
@@ -72,30 +72,42 @@ export default ResourcessSection
 
 const Section = styled.section`
 	max-width: 110rem;
-	margin: 0 auto;
+	margin: 0 auto 4.1rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin: 0 auto 8.1rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const H2 = styled.h2`
-	font-size: 5.2rem;
+	font-size: 3.4rem;
 	line-height: 130%;
 
 	text-align: center;
 	letter-spacing: 0.02em;
 
 	color: #ffffff;
+
+	margin-bottom: 4.4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 8.3rem;
+			font-size: 5.2rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Flex = styled.div`
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	display: flex;
 	justify-content: center;
 	gap: 4.5rem;
+	flex-wrap: wrap;
 `
-
-const Article = styled.article`
-	border: 1px solid red;
-`
-
-const P = styled.p``
-
-const H3 = styled.h3``

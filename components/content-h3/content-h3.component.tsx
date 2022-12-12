@@ -32,7 +32,22 @@ export default H3
 const H3Styles = styled(motion.h3)`
 	color: #ebebeb;
 	font-stretch: 125;
-	font-size: 38px;
+	font-size: 2.8rem;
 	line-height: 130%;
 	margin-bottom: 1.6rem;
+
+	/* or 36px */
+
+	/* basic/gray-soft */
+
+	color: #ebebeb;
+	font-stretch: 125;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 3.8rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `

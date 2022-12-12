@@ -13,9 +13,9 @@ export interface IProps extends HTMLMotionProps<"h2">, IContainerProps {
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/neue-plak-cufonfonts/Neue-Plak-Bold.ttf",
-			weight: "700",
-			style: "bold",
+			path: "../../public/fonts/neue-plak-cufonfonts/Neue-Plak-Regular.ttf",
+			weight: "400",
+			style: "nomrmal",
 		},
 	],
 })

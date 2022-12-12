@@ -1,8 +1,14 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
+import { AnimatePresence, motion, Variants } from "framer-motion"
 
 import Image from "../image/image.component"
 import Link from "next/link"
+import HamMenuButton from "../ham-menu-button/ham-menu-button.component"
+import { Button } from "../button/button.component"
+
+import { useBoolean } from "usehooks-ts"
+import { useEffect } from "react"
 
 import { INavItem } from "../../types/nav.types"
 
@@ -21,12 +27,56 @@ const navFont = localFont({
 })
 
 const Header = ({ navItems }: IProps) => {
+	const { value: isOpen, toggle: toggleMenu } = useBoolean(false)
+	const { value: showCta, setValue: setShowCta } = useBoolean(false)
+
+	const ctaContainerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: -20,
+			transition: {
+				ease: [0.12, 0.23, 0.06, 1.09],
+				duration: 0.5,
+			},
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: [0.12, 0.23, 0.06, 1.09],
+				duration: 0.5,
+			},
+		},
+	}
+
+	useEffect(() => {
+		window.onscroll = () => {
+			let currentScrollPos = window.pageYOffset
+
+			if (currentScrollPos > 600) {
+				setShowCta(true)
+			} else {
+				if (currentScrollPos <= 0) return
+				setShowCta(false)
+			}
+		}
+	})
+
 	return (
 		<HeaderContainer>
 			<Container>
 				<LogoFigure>
 					<Image
+						className="desktop"
 						src="/assets/logo-v2.svg"
+						alt="HydraDX"
+						width={"100%"}
+						height={"100%"}
+						style={{ objectFit: "contain" }}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/logo-mobile.svg"
 						alt="HydraDX"
 						width={"100%"}
 						height={"100%"}
@@ -54,7 +104,25 @@ const Header = ({ navItems }: IProps) => {
 					</Ul>
 				</Nav>
 
-				<CtaContainer>{/* cta */}</CtaContainer>
+				<CtaContainer>
+					<AnimatePresence>
+						{showCta && (
+							<motion.div
+								variants={ctaContainerVariants}
+								initial={"hidden"}
+								animate={"visible"}
+								exit={"hidden"}
+							>
+								<Button className="btn">ENTER OMNIPOOL</Button>
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</CtaContainer>
+				<HamMenuButton
+					className="ham"
+					onClick={() => toggleMenu()}
+					isOpen={isOpen}
+				/>
 			</Container>
 		</HeaderContainer>
 	)
@@ -73,10 +141,22 @@ const HeaderContainer = styled.header`
 	z-index: 9999;
 	backdrop-filter: blur(2.7rem);
 	border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			.ham {
+				display: none;
+				visibility: hidden;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Container = styled.div`
-	max-width: 110rem;
+	max-width: 163.4rem;
 	margin: 0 auto;
 	height: 100%;
 	display: flex;
@@ -87,10 +167,44 @@ const Container = styled.div`
 const LogoFigure = styled.figure`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			.desktop {
+				display: flex;
+				visibility: visible;
+			}
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
-const Nav = styled.nav``
+const Nav = styled.nav`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			visibility: visible;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
 
 const Ul = styled.ul`
 	display: flex;
@@ -114,4 +228,23 @@ const Li = styled.ul`
 	}
 `
 
-const CtaContainer = styled.div``
+const CtaContainer = styled.div`
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			visibility: visible;
+			width: 21.45rem;
+
+			.btn {
+				padding: 0.8rem 3.6rem;
+				font-size: 1.4rem;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`

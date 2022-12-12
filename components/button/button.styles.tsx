@@ -28,9 +28,9 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	margin-right: ${({ right }) => (right ? right : "initial")};
 	margin-left: ${({ left }) => (left ? left : "initial")};
 	margin-bottom: ${({ bottom }) => (bottom ? bottom : "initial")};
-	padding: 1.4rem 4rem;
+	padding: 1.4rem 3.1rem;
 
-	/* transition: all 0.3s ease-in; */
+	/* transition: all 0.2s ease-in; */
 	background-color: ${({ theme }) => theme.button.default.background};
 	box-shadow: ${({ theme }) => theme.button.default.boxShaddow};
 
@@ -38,11 +38,38 @@ const PrimaryButtonStyles = css<IStyledProps>`
 	font-size: 1.6rem;
 	line-height: 2.2rem;
 
+	/* &:before {
+		transition: all 0.2s ease-in;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background-color: #fff;
+		border-radius: ${({ rounded }) => (rounded ? "999rem" : ".4rem")};
+	} */
+
 	&:focus {
 		outline: none;
 	}
 
 	&:hover {
+		/* transform: translate(-0.4rem, -0.4rem); */
+		/* margin: 0 0.4rem 0.4rem 0; */
+		/* transform: translateZ(1); */
+		/* box-shadow: 4px 4px 0px 1px #fff; */
+
+		/* &:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: -0.4rem;
+			bottom: -0.4rem;
+			background-color: #fff;
+		} */
 	}
 
 	&:active {
@@ -75,4 +102,17 @@ export const AContainer = styled(motion.div)<IStyledProps>`
 
 		${({ disabled }) => disabled && disabledStyles};
 	}
+`
+
+export const ButtonBackground = styled(motion.div)<IStyledProps>`
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* right: 0;
+	bottom: 0; */
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: rgb(246 40 124 / 45%);
+	border-radius: ${({ rounded }) => (rounded ? "999rem" : ".4rem")};
 `
