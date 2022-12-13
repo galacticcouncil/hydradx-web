@@ -17,4 +17,5 @@ export const Default = Template.bind({})
 
 Default.args = {
 	isOpen: false,
+	onClick: () => {},
 }

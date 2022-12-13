@@ -5,13 +5,29 @@ export const light = {
 		primary: "#85D1FF",
 	},
 	button: {
-		color: "#000",
-		background: "#fff",
+		default: {
+			color: "#fff",
+			background: "#F6297C",
+			boxShaddow:
+				"0px 0px 0px -1px rgba(195, 145, 200, 0.3), 0px 13px 47px -12px rgba(246, 41, 124, 0.66)",
+		},
+		blue: {
+			color: "#85D1FF",
+			background: "rgba(76, 213, 243, 0.12)",
+			border: "1px solid #85D1FF",
+		},
 	},
-
 	hamMenu: {
-		color: "#FFFFFF",
-		bottomColor: "#9EA9B1",
+		labelColor: "#fff",
+		color: "#FC408C",
+		bottomColor: "rgba(255, 3, 105, 0.46)",
+	},
+	header: {
+		background: "rgba(4, 7, 19, 0.6)",
+		navItem: {
+			color: "#999ba7",
+			hoverColor: "#fff",
+		},
 	},
 	backgrounds: {},
 	fonts: {

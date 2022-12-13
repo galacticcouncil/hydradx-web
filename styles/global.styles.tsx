@@ -14,7 +14,8 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     font-size: 1.6rem;
     line-height: 1.5;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
+    background: linear-gradient(0deg, #040713, #040713), #070B1F;
     color: #EBEBEB;
   }
 

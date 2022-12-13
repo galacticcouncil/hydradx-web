@@ -2,30 +2,53 @@
 import styled from "styled-components"
 
 // Components
+
 import Header from "../../components/header/header.component"
 import Footer from "../../components/footer/footer.component"
 
 // Types
+import { INavItem } from "../../types/nav.types"
 export interface IProps {
 	children: React.ReactNode | React.ReactNode[]
 }
 
 const PageLayout = ({ children }: IProps) => {
-	const navItems = [
+	const navItems: INavItem[] = [
+		// {
+		// 	label: "Start",
+		// 	href: "/",
+		// },
+		// {
+		// 	label: "Socials",
+		// 	href: "/#socials",
+		// },
 		{
-			label: "Locations",
-			href: "/#cascais",
-			width: "7.3rem",
+			label: "Docs",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 		{
-			label: "About us",
-			href: "/#about-us",
-			width: "7.2rem",
+			label: "Tokenomics",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 		{
-			label: "Mission",
-			href: "/#mission",
-			width: "6rem",
+			label: "Github",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
+		},
+		{
+			label: "Newsletter",
+			href: "/#",
+			// hasIcon: true,
+			// rel: "noopener noreferrer",
+			// target: "_blank",
 		},
 	]
 
@@ -38,8 +61,8 @@ const PageLayout = ({ children }: IProps) => {
 	return (
 		<PageLayoutContainer>
 			<Header
-			// navItems={navItems}
-			// cta={cta}
+				navItems={navItems}
+				// cta={cta}
 			/>
 
 			<Main>{children}</Main>
