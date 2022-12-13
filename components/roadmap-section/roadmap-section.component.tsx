@@ -192,9 +192,7 @@ const RoadmapSection = () => {
 
 	return (
 		<Section>
-			<H2 variant="BLUE">
-				Hydra<sup>dx</sup> <span>roadmap</span>
-			</H2>
+			<H2 variant="BLUE" />
 
 			<BlueBlur>
 				<Image
@@ -238,9 +236,11 @@ export default RoadmapSection
 const Section = styled.section`
 	position: relative;
 	margin-bottom: 6.9rem;
+	padding: 0 0 0 0.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding: 0;
 			margin-bottom: 24.9rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}

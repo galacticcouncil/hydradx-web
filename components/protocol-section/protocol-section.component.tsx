@@ -8,7 +8,7 @@ import Image from "../image/image.component"
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-Medium.woff2",
+			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-Medium.woff2",
 			weight: "550",
 			style: "normal",
 		},
@@ -37,9 +37,7 @@ const ProtocolSection = () => {
 				/>
 			</RedBlur>
 			<Section>
-				<H2 variant="RED">
-					Hydra<sup>dx</sup> <span>protocol</span>
-				</H2>
+				<H2 variant="RED" />
 
 				<Article1>
 					<OverlayBackground />
@@ -69,7 +67,7 @@ const ProtocolSection = () => {
 							<br /> Offering a value proposition for everyone: Traders, LPs and
 							HDX hodlers.
 						</P>
-						<Button>Learn more</Button>
+						{/* <Button>Learn more</Button> */}
 					</ContentContainer>
 				</Article1>
 
@@ -208,6 +206,7 @@ const Section = styled.section`
 	position: relative;
 	max-width: 110rem;
 	margin: 0 auto;
+	/* padding: 0 0.5rem; */
 `
 
 const H3 = styled.h3`
@@ -309,8 +308,28 @@ const ContentContainer = styled.div`
 
 const ButtonsContainer = styled.div`
 	display: flex;
-	gap: 3rem;
+	gap: 1rem;
 	flex-wrap: wrap;
+
+	button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			gap: 3rem;
+			button {
+				width: initial;
+				display: flex;
+				justify-content: unset;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const EyeFigure = styled.figure`
@@ -392,6 +411,21 @@ const buttonStyles = css`
 	text-transform: uppercase;
 
 	color: #ffffff;
+
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: initial;
+			display: flex;
+			justify-content: unset;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Button = styled.button`
@@ -412,7 +446,7 @@ const IconButton = styled.button`
 `
 
 const Article1 = styled.article`
-	margin-top: 8.6rem;
+	margin-top: 6rem;
 	position: relative;
 	/* border: 1px solid red; */
 	border-radius: 0.8rem;

@@ -6,7 +6,7 @@ import Image from "../image/image.component"
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
 			weight: "700",
 			style: "bold",
 		},
@@ -16,8 +16,8 @@ const headerFont = localFont({
 const articleHFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-Black.woff2",
-			weight: "900",
+			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+			weight: "799",
 			style: "bold",
 		},
 	],
@@ -40,7 +40,7 @@ const JoinTheNetworkSection = () => {
 					</IluFigure>
 					<IconFigure>
 						<Image
-							src="/assets/join-the-netwrok-section/list-actions.svg"
+							src="/assets/join-the-netwrok-section/list-actions-v2.png"
 							alt="list actions"
 							width={"100%"}
 							height={"100%"}
@@ -155,7 +155,7 @@ const H2 = styled.h2`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			margin-bottom: 1.235rem;
+			margin-bottom: 1.5rem;
 			max-width: unset;
 			font-size: 5.2rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -189,10 +189,23 @@ const H3 = styled.h3`
 
 	margin-bottom: 1.6rem;
 
+	sup {
+		vertical-align: top;
+		font-size: 2.3rem;
+		position: relative;
+		top: -0.4rem;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 4.2rem;
 			margin-bottom: 2.9rem;
+			sup {
+				vertical-align: top;
+				font-size: 3rem;
+				position: relative;
+				top: -0.7rem;
+			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
@@ -206,14 +219,28 @@ const P = styled.p`
 	font-weight: 500;
 	font-size: 1.6rem;
 	line-height: 150%;
+	max-width: 26rem;
 
 	letter-spacing: 0.005em;
 	margin-bottom: 3.4rem;
+
+	sup {
+		vertical-align: top;
+		font-size: 0.8rem;
+		position: relative;
+		top: -0.3rem;
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			margin-bottom: 8.3rem;
 			font-size: 2rem;
+			sup {
+				vertical-align: top;
+				font-size: 1.2rem;
+				position: relative;
+				top: -0.3rem;
+			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
 		}

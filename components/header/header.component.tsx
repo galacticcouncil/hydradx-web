@@ -20,7 +20,7 @@ export interface IProps {
 const navFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/blender-pro/BlenderPro-Book.woff2",
+			path: "../../assets/fonts/blender-pro/BlenderPro-Book.woff2",
 			weight: "500",
 			style: "normal",
 		},

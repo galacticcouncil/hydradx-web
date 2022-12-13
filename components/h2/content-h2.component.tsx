@@ -1,70 +1,116 @@
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 import styled from "styled-components"
 import { HTMLMotionProps, motion } from "framer-motion"
+
+import Image from "../image/image.component"
 
 interface IContainerProps {
 	variant?: "LIGHTBLUE" | "BLUE" | "RED"
 }
 
-export interface IProps extends HTMLMotionProps<"h2">, IContainerProps {
-	children: React.ReactNode | React.ReactNode[]
-}
+export interface IProps extends HTMLMotionProps<"h2">, IContainerProps {}
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../public/fonts/neue-plak-cufonfonts/Neue-Plak-Regular.ttf",
-			weight: "400",
-			style: "nomrmal",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../public/fonts/neue-plak-cufonfonts/Neue-Plak-Regular.ttf",
+// 			weight: "400",
+// 			style: "nomrmal",
+// 		},
+// 	],
+// })
 
 const H2 = ({ children, ...props }: IProps) => {
 	return (
-		<H2Styles
+		<Figure
 			{...props}
-			className={`${headerFont.className} ${props.className}`}
+			// className={`${headerFont.className} ${props.className}`}
 		>
-			{children}
-		</H2Styles>
+			{props.variant === "LIGHTBLUE" && (
+				<>
+					<Image
+						className="desktop"
+						src="/assets/headings/hydra-omnipool.svg"
+						alt="Hydra Omnipool"
+						width={"100%"}
+						height={"100%"}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/headings/hydra-omnipool-mobile.svg"
+						alt="Hydra Omnipool"
+						width={"100%"}
+						height={"100%"}
+					/>
+				</>
+			)}
+			{props.variant === "BLUE" && (
+				<>
+					<Image
+						className="desktop"
+						src="/assets/headings/hydradx-roadmap.svg"
+						alt="Hydra Roadmap"
+						width={"100%"}
+						height={"100%"}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/headings/hydradx-roadmap-mobile-v2.svg"
+						alt="Hydra Roadmap"
+						width={"100%"}
+						height={"100%"}
+					/>
+				</>
+			)}
+			{props.variant === "RED" && (
+				<>
+					<Image
+						className="desktop"
+						src="/assets/headings/hydra-protocol.svg"
+						alt="Hydra Protocol"
+						width={"100%"}
+						height={"100%"}
+					/>
+					<Image
+						className="mobile"
+						src="/assets/headings/hydra-protocol-mobile.svg"
+						alt="Hydra Protocol"
+						width={"100%"}
+						height={"100%"}
+					/>
+				</>
+			)}
+		</Figure>
 	)
 }
 
 export default H2
 
-const H2Styles = styled(motion.h2)<IContainerProps>`
-	text-transform: uppercase;
-	font-size: 5.594rem;
-	text-align: center;
-	margin-bottom: 6rem;
+const Figure = styled(motion.figure)<IContainerProps>`
+	max-width: 22.8rem;
+	margin: 0 auto 6rem;
 
-	sup {
-		background: linear-gradient(
-			180deg,
-			#ffffff -1.86%,
-			rgba(0, 148, 255, 0) 45.19%
-		);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
-
-		-webkit-text-stroke: 0.3px #555;
+	.desktop {
+		display: none;
+		visibility: hidden;
 	}
 
-	span {
-		${({ variant }) =>
-			variant === "LIGHTBLUE" &&
-			`background: linear-gradient(180deg, #ade0ff 0%, #85d1ff 100%);`}
-		${({ variant }) =>
-			variant === "BLUE" &&
-			`background: linear-gradient(180deg, #70B2FF 0%, #127FFF 100%);`}
-		${({ variant }) => variant === "RED" && `background-color: #FC408C;`}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		max-width: 36.1rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			max-width: 59.5rem;
 
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
+			.desktop {
+				display: flex;
+				visibility: visible;
+			}
+			.mobile {
+				display: none;
+				visibility: hidden;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
 	}
 `

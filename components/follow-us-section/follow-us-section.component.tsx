@@ -7,7 +7,7 @@ import Link from "next/link"
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/font_over/Font-Over.otf",
+			path: "../../assets/fonts/font_over/Font-Over.otf",
 			weight: "700",
 			style: "bold",
 		},
@@ -40,15 +40,15 @@ const FollowUsSection = () => {
 		{
 			href: "#",
 			icon: {
-				src: "/assets/socials/github-circle.svg",
-				alt: "github",
+				src: "/assets/socials/telegram-circle.svg",
+				alt: "telegram",
 			},
 		},
 		{
 			href: "#",
 			icon: {
-				src: "/assets/socials/telegram-circle.svg",
-				alt: "telegram",
+				src: "/assets/socials/github-circle.svg",
+				alt: "github",
 			},
 		},
 		// {
@@ -115,6 +115,16 @@ const FollowUsSection = () => {
 					</SocialsDirectory>
 				</div>
 			</Content>
+			<MobileIluFigure>
+				<Image
+					src="/assets/follow-us-section/ilu-mobile.png"
+					alt="follow us ilu"
+					width={"100%"}
+					height={"100%"}
+					style={{ objectFit: "contain" }}
+					// style={{ objectFit: "cover" }}
+				/>
+			</MobileIluFigure>
 		</Section>
 	)
 }
@@ -128,6 +138,40 @@ const IluFigure = styled.figure`
 	right: 0;
 	bottom: 0;
 	height: 100%;
+	z-index: -1;
+
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: flex;
+			visibility: visible;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`
+
+const MobileIluFigure = styled.figure`
+	/* position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: -1; */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: none;
+			visibility: hidden;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
 const Section = styled.section`
@@ -163,20 +207,19 @@ const Content = styled.div`
 `
 
 const H2 = styled.h2`
-	font-size: 3.4rem;
-
-	text-align: center;
 	letter-spacing: 0.005em;
 	text-transform: capitalize;
 	color: #9cddff;
 
 	margin-bottom: 2.4rem;
+	font-size: 3.65966rem;
 	span {
 		color: rgba(246, 41, 124, 1);
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			text-align: center;
 			font-size: 5.2rem;
 			margin-bottom: 3rem;
 
@@ -203,9 +246,30 @@ const H2 = styled.h2`
 
 const SocialsDirectory = styled.div`
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
-	gap: 1.4rem;
+	gap: 1.9rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			justify-content: center;
+			gap: 2.4rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
 `
 
-const SocialFigure = styled.figure``
+const SocialFigure = styled.figure`
+	width: 3.8rem;
+	height: 3.8rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: 5.4rem;
+			height: 5.4rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
+	}
+`

@@ -10,7 +10,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const labelFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
 			weight: "500",
 			style: "normal",
 		},

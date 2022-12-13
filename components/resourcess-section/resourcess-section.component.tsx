@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import localFont from "@next/font/local"
 
-import { Button } from "../button/button.component"
+// import { Button } from "../button/button.component"
 import ResourcesArticle from "../resourcess-article/resourcess-article.component"
 
 import { IArticle } from "../../types/resources.types"
@@ -9,7 +9,7 @@ import { IArticle } from "../../types/resources.types"
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
 			weight: "700",
 			style: "bold",
 		},
@@ -56,7 +56,7 @@ const ResourcessSection = () => {
 	return (
 		<Section>
 			<H2 className={headerFont.className}>
-				Hydra <sup>DX</sup> Resourcess
+				Hydra<sup>DX</sup> Resourcess
 			</H2>
 
 			<Flex>
@@ -94,10 +94,24 @@ const H2 = styled.h2`
 
 	margin-bottom: 4.4rem;
 
+	sup {
+		vertical-align: top;
+		font-size: 2.2rem;
+		position: relative;
+		top: -0.5rem;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			margin-bottom: 8.3rem;
 			font-size: 5.2rem;
+
+			sup {
+				vertical-align: top;
+				font-size: 3.2rem;
+				position: relative;
+				top: -1rem;
+			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
 		}

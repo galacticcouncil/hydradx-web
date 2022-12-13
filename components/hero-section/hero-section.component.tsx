@@ -9,7 +9,7 @@ import Link from "next/link"
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2",
+			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2",
 			weight: "900",
 			style: "bold",
 		},
@@ -47,7 +47,7 @@ const HeroSection = () => {
 				alt: "twitter",
 			},
 			mobileIcon: {
-				src: "/assets/socials/twitter.svg",
+				src: "/assets/socials/twitter-v2.png",
 				alt: "twitter",
 			},
 		},
@@ -215,7 +215,16 @@ const HeroSection = () => {
 					animate="visible"
 				>
 					<Image
+						className="desktop"
 						src={"/assets/hero-section/bg-ilu-v2.png"}
+						alt={"Background ilu"}
+						width={"100%"}
+						height={"100%"}
+						style={{ objectFit: "cover" }}
+					/>
+					<Image
+						className="mobile"
+						src={"/assets/hero-section/bg-ilu-mobile-v2.png"}
 						alt={"Background ilu"}
 						width={"100%"}
 						height={"100%"}
@@ -310,6 +319,7 @@ export default HeroSection
 const Section = styled.section`
 	padding: 8.1rem 2rem 13.1rem 2rem;
 	position: relative;
+	overflow: hidden;
 	/* border: 1px solid red; */
 	margin: -2.5rem -2rem 0 -2rem;
 
@@ -332,11 +342,38 @@ const OverlayBackground = styled(motion.div)`
 	z-index: -1;
 
 	.snake {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		display: none;
+		visibility: hidden;
+	}
+
+	.desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		.snake {
+			display: block;
+			visibility: visible;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.desktop {
+			display: flex;
+			visibility: visible;
+		}
+		.mobile {
+			display: none;
+			visibility: hidden;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			}
+		}
 	}
 `
 

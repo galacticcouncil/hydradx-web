@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { motion, Variants } from "framer-motion"
 
 // import { Button } from "../button/button.component"
 import H2 from "../h2/content-h2.component"
@@ -7,6 +8,45 @@ import P from "../content-p/content-p.component"
 import Image from "../image/image.component"
 
 const OmnipoolSection = () => {
+	const variants: Variants = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.6,
+			},
+		},
+	}
+
+	const iluVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 50,
+		},
+		visible: {
+			y: 0,
+			opacity: 1,
+			transition: {
+				ease: [0.22, 1.09, 0.59, 0.95],
+				duration: 0.8,
+				delay: 0.3,
+			},
+		},
+	}
+
+	const coinVariants: Variants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				ease: [0.5, 0, 0.88, 0.77],
+				duration: 0.6,
+				delay: 0.6,
+			},
+		},
+	}
+
 	return (
 		<Section>
 			<IluFigure>
@@ -44,9 +84,7 @@ const OmnipoolSection = () => {
 					style={{ objectFit: "contain" }}
 				/>
 			</BlueBlur>
-			<H2 variant="LIGHTBLUE">
-				Hydra<sup>dx</sup> <span>omnipool</span>
-			</H2>
+			<H2 variant="LIGHTBLUE" />
 
 			<GridContainer>
 				<Content>
@@ -58,17 +96,13 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-				<ContentFigure>
-					<FirstIluCoin>
-						<Image
-							src="/assets/omnipool/first-ilu-coin.svg"
-							alt="first ilu coin"
-							width={"100%"}
-							height={"100%"}
-							style={{ objectFit: "contain" }}
-						/>
-					</FirstIluCoin>
-					<FirstIlu>
+				<ContentFigure
+					variants={variants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<FirstIlu variants={iluVariants}>
 						<Image
 							src="/assets/omnipool/first-ilu-v2.png"
 							alt="first ilu"
@@ -79,6 +113,15 @@ const OmnipoolSection = () => {
 							}}
 						/>
 					</FirstIlu>
+					<FirstIluCoin variants={coinVariants}>
+						<Image
+							src="/assets/omnipool/first-ilu-coin.svg"
+							alt="first ilu coin"
+							width={"100%"}
+							height={"100%"}
+							style={{ objectFit: "contain" }}
+						/>
+					</FirstIluCoin>
 				</ContentFigure>
 			</GridContainer>
 
@@ -92,8 +135,13 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-				<ContentFigure>
-					<SecondIlu>
+				<ContentFigure
+					variants={variants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<SecondIlu variants={iluVariants}>
 						<Image
 							src="/assets/omnipool/second-ilu-v2.png"
 							alt="second ilu"
@@ -141,8 +189,13 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-				<ContentFigure>
-					<HydrateIlu>
+				<ContentFigure
+					variants={variants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<HydrateIlu variants={iluVariants}>
 						<Image
 							src="/assets/omnipool/hydrate-ilu-v2.png"
 							alt="second ilu"
@@ -184,8 +237,13 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-				<ContentFigure>
-					<ThirdIlu>
+				<ContentFigure
+					variants={variants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<ThirdIlu variants={iluVariants}>
 						<Image
 							src="/assets/omnipool/third-ilu.png"
 							alt="third ilu"
@@ -206,8 +264,13 @@ const OmnipoolSection = () => {
 
 					<Button>LEARN MORE</Button>
 				</Content>
-				<ContentFigure>
-					<FourthIluCoin>
+				<ContentFigure
+					variants={variants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<FourthIluCoin variants={coinVariants}>
 						<Image
 							src="/assets/omnipool/fourth-ilu-coin.svg"
 							alt="fourth ilu coin"
@@ -216,7 +279,7 @@ const OmnipoolSection = () => {
 							style={{ objectFit: "contain" }}
 						/>
 					</FourthIluCoin>
-					<FourthIlu>
+					<FourthIlu variants={iluVariants}>
 						<Image
 							src="/assets/omnipool/fourth-ilu-v2.png"
 							alt="fourth ilu"
@@ -302,10 +365,11 @@ const BlueBlur2 = styled.figure`
 const Section = styled.section`
 	position: relative;
 	padding-top: 6.6rem;
-	margin-bottom: 25rem;
+	margin-bottom: 15rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 25rem;
 			padding-top: 9.156rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
@@ -351,7 +415,7 @@ const buttonStyles = css`
 	padding: 12px 3.7rem;
 	font-family: "Chakra Petch";
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 1.4rem;
 	line-height: 150%;
 
@@ -359,6 +423,8 @@ const buttonStyles = css`
 	text-transform: uppercase;
 
 	color: #ffffff;
+
+	transition: all 0.3s ease-out;
 `
 
 const Button = styled.button`
@@ -376,14 +442,14 @@ const GridContainer = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 
-	gap: 5rem;
-	margin-bottom: 9.2rem;
+	gap: 6rem;
+	margin-bottom: 10rem;
 
 	&:nth-of-type(1) {
 		/* border: 1px solid red; */
 		flex-direction: column;
 		overflow: hidden;
-		margin: 0 -2rem 9.2rem -2rem;
+		margin: 0 -2rem 10rem -2rem;
 		padding: 0 2rem;
 
 		${Button} {
@@ -391,6 +457,17 @@ const GridContainer = styled.div`
 
 			border: 1px solid #85d1ff;
 			color: #85d1ff;
+
+			&:hover {
+				background-color: rgba(1, 107, 172, 0.9);
+				color: #ffffff;
+			}
+
+			&:active {
+				background-color: #3192cd;
+				border: 1px solid #a6ddff;
+				color: #ffffff;
+			}
 		}
 	}
 
@@ -398,13 +475,24 @@ const GridContainer = styled.div`
 		/* border: 1px solid green; */
 		flex-direction: column;
 		overflow: hidden;
-		margin: 0 -2rem 9.2rem -2rem;
+		margin: 0 -2rem 10rem -2rem;
 		padding: 0 2rem;
 
 		${Button} {
 			background: rgba(76, 213, 243, 0.12);
 			border: 1px solid #85d1ff;
 			color: #85d1ff;
+
+			&:hover {
+				background-color: rgba(1, 107, 172, 0.9);
+				color: #ffffff;
+			}
+
+			&:active {
+				background-color: #3192cd;
+				border: 1px solid #a6ddff;
+				color: #ffffff;
+			}
 		}
 	}
 
@@ -417,6 +505,17 @@ const GridContainer = styled.div`
 			background: rgba(76, 213, 243, 0.12);
 			border: 1px solid #85d1ff;
 			color: #85d1ff;
+
+			&:hover {
+				color: #ffffff;
+				background-color: rgba(1, 107, 172, 0.9);
+			}
+
+			&:active {
+				background-color: #3192cd;
+				border: 1px solid #a6ddff;
+				color: #ffffff;
+			}
 		}
 	}
 
@@ -429,6 +528,17 @@ const GridContainer = styled.div`
 			background: rgba(76, 213, 243, 0.12);
 			border: 1px solid #a6ddff;
 			color: #a6ddff;
+
+			&:hover {
+				background-color: rgba(1, 107, 172, 0.9);
+				color: #ffffff;
+			}
+
+			&:active {
+				background-color: #3192cd;
+				color: #ffffff;
+				border: 1px solid #a6ddff;
+			}
 		}
 	}
 
@@ -440,6 +550,17 @@ const GridContainer = styled.div`
 			background: rgba(76, 213, 243, 0.12);
 			border: 1px solid #a6ddff;
 			color: #ffffff;
+
+			&:hover {
+				background-color: rgba(1, 107, 172, 0.9);
+				color: #ffffff;
+			}
+
+			&:active {
+				background-color: #3192cd;
+				border: 1px solid #a6ddff;
+				color: #ffffff;
+			}
 		}
 	}
 
@@ -447,6 +568,7 @@ const GridContainer = styled.div`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			gap: 5rem;
 			max-width: 110rem;
+			margin-bottom: 9.2rem;
 
 			&:nth-of-type(1) {
 				flex-direction: row-reverse;
@@ -480,19 +602,19 @@ const GridContainer = styled.div`
 	}
 `
 
-const Content = styled.div`
+const Content = styled(motion.div)`
 	/* border: 1px solid red; */
 	align-self: center;
 	max-width: 46.3rem;
 	width: 100%;
 `
 
-const ContentFigure = styled.figure`
+const ContentFigure = styled(motion.figure)`
 	/* border: 1px solid blue; */
 	position: relative;
 `
 
-const FirstIlu = styled.figure`
+const FirstIlu = styled(motion.figure)`
 	width: 100%;
 	max-width: 47.408rem;
 	display: flex;
@@ -500,7 +622,7 @@ const FirstIlu = styled.figure`
 	justify-content: center;
 `
 
-const FirstIluCoin = styled.figure`
+const FirstIluCoin = styled(motion.figure)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -527,7 +649,7 @@ const FirstIluCoin = styled.figure`
 	}
 `
 
-const SecondIlu = styled.figure`
+const SecondIlu = styled(motion.figure)`
 	position: relative;
 	width: 100%;
 	max-width: 47.408rem;
@@ -536,7 +658,7 @@ const SecondIlu = styled.figure`
 	justify-content: center;
 `
 
-const HydrateIlu = styled.figure`
+const HydrateIlu = styled(motion.figure)`
 	position: relative;
 	width: 100%;
 	max-width: 47.408rem;
@@ -545,7 +667,7 @@ const HydrateIlu = styled.figure`
 	justify-content: center;
 `
 
-const LineFigure = styled.figure`
+const LineFigure = styled(motion.figure)`
 	position: absolute;
 	/* width: 100%; */
 	display: flex;
@@ -560,7 +682,7 @@ const LineFigure = styled.figure`
 	z-index: 2;
 `
 
-const ChartFigure = styled.figure`
+const ChartFigure = styled(motion.figure)`
 	position: absolute;
 	/* width: 100%; */
 	display: flex;
@@ -576,7 +698,7 @@ const ChartFigure = styled.figure`
 	z-index: 1;
 `
 
-const ThirdIlu = styled.figure`
+const ThirdIlu = styled(motion.figure)`
 	width: 100%;
 	max-width: 47.408rem;
 	display: flex;
@@ -584,7 +706,7 @@ const ThirdIlu = styled.figure`
 	justify-content: center;
 `
 
-const FourthIlu = styled.figure`
+const FourthIlu = styled(motion.figure)`
 	width: 100%;
 	max-width: 49.2rem;
 	display: flex;
@@ -599,7 +721,7 @@ const FourthIlu = styled.figure`
 	}
 `
 
-const FourthIluCoin = styled.figure`
+const FourthIluCoin = styled(motion.figure)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
