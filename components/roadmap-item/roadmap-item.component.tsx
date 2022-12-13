@@ -12,7 +12,7 @@ export interface IProps {
 const titleFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
+			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
 			weight: "600",
 			style: "medium",
 		},
@@ -32,8 +32,9 @@ const RoadmapItem = ({ item }: IProps) => {
 			// y: 0,
 			transition: {
 				delay: 0.3,
-				ease: "easeOut",
-				duration: 1.5,
+				ease: [0.12, 0.23, 0.34, 1],
+				// ease: "easeOut",
+				duration: 1.7,
 				// duration: isMobile ? 1 : 1.5,
 				// type: "spring",
 				// mass: 1,
@@ -54,9 +55,10 @@ const RoadmapItem = ({ item }: IProps) => {
 			// width: item.process,
 			// y: 0,
 			transition: {
-				delay: 1,
-				ease: "easeOut",
-				duration: 1.5,
+				delay: 1.3,
+				ease: [0.12, 0.23, 0.34, 1],
+				// ease: "easeOut",
+				duration: 1.7,
 				// duration: isMobile ? 1 : 1.5,
 				// type: "spring",
 				// mass: 1,
@@ -115,7 +117,7 @@ const Item = styled(motion.div)`
 	gap: 0.8rem;
 
 	&:not(:last-child) {
-		margin-bottom: 0.7rem;
+		margin-bottom: 1.5rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -163,6 +165,13 @@ const Title = styled(motion.h3)<ITitle>`
 
 	font-size: 2rem;
 	line-height: 100%;
+
+	sup {
+		vertical-align: top;
+		font-size: 1rem;
+		position: relative;
+		top: -0.4rem;
+	}
 `
 
 const P = styled(motion.p)`
@@ -171,6 +180,14 @@ const P = styled(motion.p)`
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 150%;
+	/* border: 1px solid red; */
+	/* vertical-align: top; */
+	sup {
+		vertical-align: top;
+		font-size: 0.7rem;
+		position: relative;
+		top: -0.2rem;
+	}
 
 	color: #999ba7;
 `

@@ -5,7 +5,12 @@ import { Variants } from "framer-motion"
 import Link from "next/link"
 
 // Styles
-import { ButtonContainer, AContainer, ButtonBackground } from "./button.styles"
+import {
+	ButtonContainer,
+	AContainer,
+	ButtonBackground,
+	ButtonBorder,
+} from "./button.styles"
 
 // Types
 import { IButtonLinkProps, IButtonProps } from "./button.types"
@@ -21,6 +26,14 @@ export const Button: React.FC<IButtonProps> = (props) => {
 			top: "-0.4rem",
 			left: "-0.4rem",
 			// boxShadow: "4px 4px 0px 1px #fff",
+			transition: {
+				staggerDirection: -1,
+			},
+		},
+		active: {
+			top: 0,
+			left: 0,
+			backgroundColor: "#FC408C",
 		},
 	}
 
@@ -37,6 +50,33 @@ export const Button: React.FC<IButtonProps> = (props) => {
 			right: "-0.4rem",
 			bottom: "-0.4rem",
 		},
+		active: {
+			top: 0,
+			left: 0,
+			right: 0,
+			bottom: 0,
+		},
+	}
+
+	const borderVariants: Variants = {
+		initial: {
+			top: 0,
+			left: 0,
+			right: 0,
+			bottom: 0,
+		},
+		hover: {
+			top: "-0.1rem",
+			left: "-0.1rem",
+			right: "-0.1rem",
+			bottom: "-0.1rem",
+		},
+		active: {
+			top: 0,
+			left: 0,
+			right: 0,
+			bottom: 0,
+		},
 	}
 
 	return (
@@ -44,9 +84,11 @@ export const Button: React.FC<IButtonProps> = (props) => {
 			variants={variants}
 			initial={"initial"}
 			whileHover={"hover"}
+			whileTap={"active"}
 			{...props}
 		>
 			<span>{props.children}</span>
+			<ButtonBorder variants={borderVariants} />
 			<ButtonBackground variants={backgroundVariants} />
 		</ButtonContainer>
 	)

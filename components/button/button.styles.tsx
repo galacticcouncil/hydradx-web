@@ -113,6 +113,38 @@ export const ButtonBackground = styled(motion.div)<IStyledProps>`
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	background-color: rgb(246 40 124 / 45%);
+	/* background-color: rgb(246 40 124 / 45%); */
+	/* background-color: rgb(246 40 124 / 45%); */
+	background: conic-gradient(
+			from 123.55deg at 68.24% 47.82%,
+			#516dff -1.83deg,
+			rgba(0, 0, 0, 0) 350.05deg,
+			#516dff 358.17deg,
+			rgba(0, 0, 0, 0) 710.05deg
+		),
+		rgba(195, 145, 200, 0.35);
 	border-radius: ${({ rounded }) => (rounded ? "999rem" : ".4rem")};
+`
+
+export const ButtonBorder = styled(motion.div)<IStyledProps>`
+	position: absolute;
+	/* top: 0;
+	left: 0; */
+	/* top: -0.1rem;
+	left: -0.1rem;
+	right: -0.1rem;
+	bottom: -0.1rem; */
+	/* width: 100%;
+	height: 100%; */
+	z-index: -1;
+	/* background-color: rgb(246 40 124 / 45%); */
+	/* background-color: rgb(246 40 124 / 45%); */
+	background: linear-gradient(
+		7.66deg,
+		rgba(255, 212, 222, 0.2) -6.04%,
+		rgba(255, 255, 255, 0.53) 92.74%
+	);
+	/* border: 1px solid green; */
+	border-radius: ${({ rounded }) => (rounded ? "999rem" : ".4rem")};
+	transition: all 0.2s ease-in;
 `

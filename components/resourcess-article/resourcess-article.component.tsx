@@ -12,7 +12,7 @@ export interface IProps extends HTMLMotionProps<"article"> {
 const pFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumSemi.woff2",
+			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumSemi.woff2",
 			weight: "550",
 			style: "normal",
 		},
@@ -22,7 +22,7 @@ const pFont = localFont({
 const headerFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/mona-sans/WOFF-2/Mona-Sans-RegularWide.woff2",
+			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
 			weight: "600",
 			style: "normal",
 		},
@@ -119,6 +119,13 @@ const H3 = styled.h3`
 	margin-bottom: 5rem;
 
 	color: #ffffff;
+
+	sup {
+		vertical-align: top;
+		font-size: 2rem;
+		position: relative;
+		top: -0.85rem;
+	}
 `
 
 const Arrow = styled.span`
@@ -144,6 +151,7 @@ const Line = styled.span`
 `
 
 const Button = styled.button`
+	cursor: pointer;
 	background: rgba(76, 213, 243, 0.12);
 	display: grid;
 	grid-template-columns: auto 1fr;

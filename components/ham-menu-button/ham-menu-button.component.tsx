@@ -10,7 +10,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const labelFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
 			weight: "500",
 			style: "normal",
 		},
@@ -55,7 +55,7 @@ const Left = styled.div`
 	width: 1rem;
 	/* right: 2rem; */
 	top: 1rem;
-	border-radius: 99rem 0 0 99rem;
+	/* border-radius: 99rem 0 0 99rem; */
 	background-color: ${({ theme }) => theme.hamMenu.color};
 
 	&:before {
@@ -63,7 +63,7 @@ const Left = styled.div`
 		position: absolute;
 		width: 1rem;
 		height: 0.2rem;
-		border-radius: 99rem 0 0 99rem;
+		/* border-radius: 99rem 0 0 99rem; */
 		background-color: ${({ theme }) => theme.hamMenu.color};
 
 		content: "";
@@ -76,7 +76,7 @@ const Left = styled.div`
 		position: absolute;
 		width: 1rem;
 		height: 0.2rem;
-		border-radius: 99rem 0 0 99rem;
+		/* border-radius: 99rem 0 0 99rem; */
 		background-color: transparent;
 		content: "";
 		top: 0.7rem;
@@ -95,7 +95,7 @@ const Right = styled.div`
 	width: 1rem;
 	left: 1rem;
 	top: 1rem;
-	border-radius: 0 99rem 99rem 0;
+	/* border-radius: 0 99rem 99rem 0; */
 	background-color: ${({ theme }) => theme.hamMenu.color};
 
 	&:before {
@@ -103,7 +103,7 @@ const Right = styled.div`
 		position: absolute;
 		width: 1rem;
 		height: 0.2rem;
-		border-radius: 0 99rem 99rem 0;
+		/* border-radius: 0 99rem 99rem 0; */
 		background-color: ${({ theme }) => theme.hamMenu.color};
 		content: "";
 		top: -0.7rem;
@@ -115,7 +115,7 @@ const Right = styled.div`
 		position: absolute;
 		width: 1rem;
 		height: 0.2rem;
-		border-radius: 0 99rem 99rem 0;
+		/* border-radius: 0 99rem 99rem 0; */
 		background-color: ${({ theme }) => theme.hamMenu.bottomColor};
 		content: "";
 		top: 0.7rem;
@@ -143,7 +143,7 @@ const Hamburger = styled.div`
 		${Left} {
 			transition-duration: 0.5s;
 			background: transparent;
-			border-radius: 99rem;
+			/* border-radius: 99rem; */
 
 			&:before {
 				transform: rotateZ(45deg) scaleX(1.2) translate(2px, 2px);
@@ -154,26 +154,26 @@ const Hamburger = styled.div`
 			&:after {
 				transform: rotateZ(-45deg) scaleX(1.3) translate(2px, -0.8px);
 				background-color: ${({ theme }) => theme.hamMenu.color};
-				border-radius: 1 99rem 99rem 1;
+				/* border-radius: 1 99rem 99rem 1; */
 			}
 		}
 
 		${Right} {
 			transition-duration: 0.5s;
 			background: transparent;
-			border-radius: 99rem;
+			/* border-radius: 99rem; */
 
 			&:before {
 				transform: rotateZ(-45deg) scaleX(1.2) translate(-2px, 2px);
 				background-color: ${({ theme }) => theme.hamMenu.color};
-				border-radius: 1 99rem 99rem 1;
+				/* border-radius: 1 99rem 99rem 1; */
 			}
 
 			&:after {
 				width: 0.7rem;
 				transform: rotateZ(45deg) scaleX(1.6) translate(-0.2px, 0px);
 				background-color: ${({ theme }) => theme.hamMenu.bottomColor};
-				border-radius: 99rem;
+				/* border-radius: 99rem; */
 			}
 		}
 	}
