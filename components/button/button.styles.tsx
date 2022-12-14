@@ -83,7 +83,10 @@ const PrimaryButtonStyles = css<IStyledProps>`
 
 const disabledStyles = css<IStyledProps>`
 	cursor: not-allowed;
-	opacity: 0.5;
+
+	background: rgba(246, 41, 124, 0.44);
+	box-shadow: 0px 0px 0px -1px rgba(195, 145, 200, 0.3),
+		0px 13px 47px -12px rgba(246, 41, 124, 0.66);
 `
 
 export const ButtonContainer = styled(motion.button)<IStyledProps>`

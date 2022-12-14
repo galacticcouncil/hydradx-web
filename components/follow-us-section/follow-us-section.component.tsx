@@ -1,18 +1,18 @@
 import styled from "styled-components"
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 
 import Image from "../image/image.component"
 import Link from "next/link"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/font_over/Font-Over.otf",
-			weight: "700",
-			style: "bold",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/font_over/Font-Over.otf",
+// 			weight: "700",
+// 			style: "bold",
+// 		},
+// 	],
+// })
 
 const FollowUsSection = () => {
 	const socials = [
@@ -89,7 +89,7 @@ const FollowUsSection = () => {
 
 			<Content>
 				<div className="content">
-					<H2 className={headerFont.className}>
+					<H2>
 						Stay Hydrated,
 						<br /> <span>not liquidated</span>
 					</H2>
@@ -210,6 +210,8 @@ const H2 = styled.h2`
 	letter-spacing: 0.005em;
 	text-transform: capitalize;
 	color: #9cddff;
+
+	font-family: "FontOver";
 
 	margin-bottom: 2.4rem;
 	font-size: 3.65966rem;

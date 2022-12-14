@@ -82,14 +82,14 @@ export const Button: React.FC<IButtonProps> = (props) => {
 	return (
 		<ButtonContainer
 			variants={variants}
-			initial={"initial"}
-			whileHover={"hover"}
-			whileTap={"active"}
+			initial={!props.disabled && "initial"}
+			whileHover={!props.disabled ? "hover" : undefined}
+			whileTap={!props.disabled ? "active" : undefined}
 			{...props}
 		>
 			<span>{props.children}</span>
-			<ButtonBorder variants={borderVariants} />
-			<ButtonBackground variants={backgroundVariants} />
+			{!props.disabled && <ButtonBorder variants={borderVariants} />}
+			{!props.disabled && <ButtonBackground variants={backgroundVariants} />}
 		</ButtonContainer>
 	)
 }

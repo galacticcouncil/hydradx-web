@@ -7,20 +7,20 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	isOpen: boolean
 }
 
-const labelFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
-			weight: "500",
-			style: "normal",
-		},
-	],
-})
+// const labelFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+// 			weight: "500",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
 const HamMenuButton: React.FC<IProps> = ({ isOpen, onClick, ...props }) => {
 	return (
 		<ToggleButton {...props} onClick={onClick}>
-			<Label className={labelFont.className}>Menu</Label>
+			<Label>Menu</Label>
 			<Hamburger className={isOpen ? "open" : ""}>
 				<Left />
 				<Right />
@@ -46,6 +46,10 @@ const Label = styled.p`
 	font-size: 1.6rem;
 	margin-top: 0.4rem;
 	text-transform: uppercase;
+
+	font-family: "HubotSans";
+	font-weight: 500;
+	font-style: normal;
 `
 
 const Left = styled.div`
