@@ -17,6 +17,31 @@ const OmnipoolSection = () => {
 		},
 	}
 
+	const contentVariants: Variants = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.3,
+			},
+		},
+	}
+
+	const headerVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			y: 20,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				ease: [0.22, 1.09, 0.59, 0.95],
+				duration: 0.8,
+				delay: 0.1,
+			},
+		},
+	}
+
 	const iluVariants: Variants = {
 		hidden: {
 			opacity: 0,
@@ -29,6 +54,22 @@ const OmnipoolSection = () => {
 				ease: [0.22, 1.09, 0.59, 0.95],
 				duration: 0.8,
 				delay: 0.3,
+			},
+		},
+	}
+
+	const chartVariants: Variants = {
+		hidden: {
+			opacity: 0,
+			// y: 50,
+		},
+		visible: {
+			// y: 0,
+			opacity: 1,
+			transition: {
+				ease: [0.44, 0, 0.56, 1],
+				duration: 0.6,
+				delay: 0.4,
 			},
 		},
 	}
@@ -49,7 +90,12 @@ const OmnipoolSection = () => {
 
 	return (
 		<Section>
-			<IluFigure>
+			<IluFigure
+				variants={iluVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
 				<Image
 					className="desktop-app-ilu"
 					src={"/assets/hero-section/destop-app-ilu-v2.png"}
@@ -87,14 +133,22 @@ const OmnipoolSection = () => {
 			<H2 variant="LIGHTBLUE" />
 
 			<GridContainer>
-				<Content>
-					<H3>Meet single-sided liquidity provisioning.</H3>
-					<P>
+				<Content
+					variants={contentVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<H3 variants={headerVariants}>
+						Meet single-sided liquidity provisioning.
+					</H3>
+					<P variants={headerVariants}>
 						Provide liquidity only for the asset you want. The Omnipool will
 						mint and burn a corresponding amount of the pool token LRNA.
 					</P>
 
 					<Button
+						variants={headerVariants}
 						href="https://docs.hydradx.io/omnipool_lp"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -132,14 +186,22 @@ const OmnipoolSection = () => {
 			</GridContainer>
 
 			<GridContainer>
-				<Content>
-					<H3>Discover efficient trading like no other AMM.</H3>
-					<P>
+				<Content
+					variants={contentVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<H3 variants={headerVariants}>
+						Discover efficient trading like no other AMM.
+					</H3>
+					<P variants={headerVariants}>
 						Deep, diversified and unfragmented liquidity enables 2-4x more
 						capital-efficient trading thanks to lower slippage and fewer hops.
 					</P>
 
 					<Button
+						variants={headerVariants}
 						href="https://docs.hydradx.io/omnipool_trading"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -175,7 +237,7 @@ const OmnipoolSection = () => {
 							/>
 						</LineFigure>
 					</SecondIlu>
-					<ChartFigure>
+					<ChartFigure variants={chartVariants}>
 						<Image
 							src="/assets/omnipool/second-ilu-chart.svg"
 							alt="chart ilu"
@@ -190,9 +252,14 @@ const OmnipoolSection = () => {
 			</GridContainer>
 
 			<GridContainer>
-				<Content>
-					<H3>Hydrate your Treasury.</H3>
-					<P>
+				<Content
+					variants={contentVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<H3 variants={headerVariants}>Hydrate your Treasury.</H3>
+					<P variants={headerVariants}>
 						Built for B2B. Any project/DAO Treasury can provide liquidity using
 						XCM and gain instant exposure to an ocean of assets. Trustless,
 						without hidden costs and while accumulating (diversified) POL from
@@ -200,6 +267,7 @@ const OmnipoolSection = () => {
 					</P>
 
 					<Button
+						variants={headerVariants}
 						href="https://docs.hydradx.io/omnipool_treasuries"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -246,14 +314,20 @@ const OmnipoolSection = () => {
 				/>
 			</BlueBlur2>
 			<GridContainer>
-				<Content>
-					<H3>Experience less impermanent loss.</H3>
-					<P>
+				<Content
+					variants={contentVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<H3 variants={headerVariants}>Experience less impermanent loss.</H3>
+					<P variants={headerVariants}>
 						Liquidity Providers are supported by several non-inflationary
 						mechanisms for mitigating impermanent loss.
 					</P>
 
 					<Button
+						variants={headerVariants}
 						href="https://docs.hydradx.io/omnipool_impermanent_loss"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -279,14 +353,20 @@ const OmnipoolSection = () => {
 			</GridContainer>
 
 			<GridContainer>
-				<Content>
-					<H3>Earn rewards from Hydrated Farms</H3>
-					<P>
+				<Content
+					variants={contentVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+				>
+					<H3 variants={headerVariants}>Earn rewards from Hydrated Farms</H3>
+					<P variants={headerVariants}>
 						Provide liquidity for selected assets and receive additional rewards
 						on top of trading fees. Paid out HDX or any other supported asset.
 					</P>
 
 					<Button
+						variants={headerVariants}
 						href="https://docs.hydradx.io/omnipool_hydrated_farms"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -407,7 +487,7 @@ const Section = styled.section`
 	}
 `
 
-const IluFigure = styled.figure`
+const IluFigure = styled(motion.figure)`
 	width: 100%;
 	max-width: 34.543rem;
 	margin: 0 auto 4rem;
@@ -457,7 +537,7 @@ const buttonStyles = css`
 	transition: all 0.3s ease-out;
 `
 
-const Button = styled.a`
+const Button = styled(motion.a)`
 	${buttonStyles}
 
 	text-align: center;
@@ -467,6 +547,7 @@ const Button = styled.a`
 const GridContainer = styled(motion.div)`
 	/* max-width: 32.4rem;
 	margin: 0 auto; */
+	min-height: 48.5rem;
 
 	display: flex;
 	justify-content: space-evenly;

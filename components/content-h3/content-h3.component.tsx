@@ -37,8 +37,8 @@ const H3Styles = styled(motion.h3)`
 	font-stretch: 125;
 
 	font-family: "HubotSans";
-	font-weight: 900;
-	font-style: bold;
+	font-weight: 550;
+	font-style: medium;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
