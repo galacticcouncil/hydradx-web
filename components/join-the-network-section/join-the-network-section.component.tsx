@@ -52,7 +52,7 @@ const JoinTheNetworkSection = () => {
 							<br /> Hydra<sup>DX</sup> docs
 						</H3>
 						<P>
-							Learn more about Hydra<sup>DX</sup> Protocol & join the fun!
+							Learn more about the Hydra<sup>DX</sup> Protocol.
 						</P>
 						<Button
 							href="https://docs.hydradx.io/"
@@ -96,7 +96,10 @@ const JoinTheNetworkSection = () => {
 							Join
 							<br /> discord community
 						</H3>
-						<P>Innovative control panel for all your spendings is here.</P>
+						<P>
+							A tribe of Hydraheads is looking forward to meet you.A tribe of
+							Hydraheads is looking forward to meet you.
+						</P>
 						<Button
 							href="https://discord.gg/kkmY35UxAG"
 							target="_blank"
