@@ -94,7 +94,13 @@ const OmnipoolSection = () => {
 						mint and burn a corresponding amount of the pool token LRNA.
 					</P>
 
-					<Button>LEARN MORE</Button>
+					<Button
+						href="https://docs.hydradx.io/omnipool_lp"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						LEARN MORE
+					</Button>
 				</Content>
 				<ContentFigure
 					variants={variants}
@@ -127,13 +133,19 @@ const OmnipoolSection = () => {
 
 			<GridContainer>
 				<Content>
-					<H3>Dive into deeper liquidity with efficiency gains.</H3>
+					<H3>Discover efficient trading like no other AMM.</H3>
 					<P>
-						By combining all assets into a single trading pool, the HydraDX
-						brings unparalleled efficiencies to AMMs.
+						Deep, diversified and unfragmented liquidity enables 2-4x more
+						capital-efficient trading thanks to lower slippage and fewer hops.
 					</P>
 
-					<Button>LEARN MORE</Button>
+					<Button
+						href="https://docs.hydradx.io/omnipool_trading"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						LEARN MORE
+					</Button>
 				</Content>
 				<ContentFigure
 					variants={variants}
@@ -187,7 +199,13 @@ const OmnipoolSection = () => {
 						trading fees.
 					</P>
 
-					<Button>LEARN MORE</Button>
+					<Button
+						href="https://docs.hydradx.io/omnipool_treasuries"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						LEARN MORE
+					</Button>
 				</Content>
 				<ContentFigure
 					variants={variants}
@@ -235,7 +253,13 @@ const OmnipoolSection = () => {
 						mechanisms for mitigating impermanent loss.
 					</P>
 
-					<Button>LEARN MORE</Button>
+					<Button
+						href="https://docs.hydradx.io/omnipool_impermanent_loss"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						LEARN MORE
+					</Button>
 				</Content>
 				<ContentFigure
 					variants={variants}
@@ -262,7 +286,13 @@ const OmnipoolSection = () => {
 						on top of trading fees. Paid out HDX or any other supported asset.
 					</P>
 
-					<Button>LEARN MORE</Button>
+					<Button
+						href="https://docs.hydradx.io/omnipool_hydrated_farms"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						LEARN MORE
+					</Button>
 				</Content>
 				<ContentFigure
 					variants={variants}
@@ -409,7 +439,7 @@ const IluFigure = styled.figure`
 const buttonStyles = css`
 	cursor: pointer;
 	background: transparent;
-	display: block;
+	display: inline-block;
 
 	border-radius: 0.4rem;
 	padding: 12px 3.7rem;
@@ -427,20 +457,21 @@ const buttonStyles = css`
 	transition: all 0.3s ease-out;
 `
 
-const Button = styled.button`
+const Button = styled.a`
 	${buttonStyles}
 
 	text-align: center;
 	text-transform: uppercase;
 `
 
-const GridContainer = styled.div`
+const GridContainer = styled(motion.div)`
 	/* max-width: 32.4rem;
 	margin: 0 auto; */
 
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	/* border: 1px solid red; */
 
 	gap: 6rem;
 	margin-bottom: 10rem;
@@ -567,7 +598,7 @@ const GridContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			gap: 5rem;
-			max-width: 110rem;
+			max-width: 102rem;
 			margin-bottom: 9.2rem;
 
 			&:nth-of-type(1) {
@@ -612,6 +643,7 @@ const Content = styled(motion.div)`
 const ContentFigure = styled(motion.figure)`
 	/* border: 1px solid blue; */
 	position: relative;
+	flex-grow: 1;
 `
 
 const FirstIlu = styled(motion.figure)`

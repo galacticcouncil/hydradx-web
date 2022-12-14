@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 import { AnimatePresence, motion, Variants } from "framer-motion"
 
 import Image from "../image/image.component"
@@ -17,15 +17,15 @@ export interface IProps {
 	navItems: INavItem[]
 }
 
-const navFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/blender-pro/BlenderPro-Book.woff2",
-			weight: "500",
-			style: "normal",
-		},
-	],
-})
+// const navFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/blender-pro/BlenderPro-Book.woff2",
+// 			weight: "500",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
 const Header = ({ navItems }: IProps) => {
 	const { value: isOpen, toggle: toggleMenu } = useBoolean(false)
@@ -55,19 +55,19 @@ const Header = ({ navItems }: IProps) => {
 	const MOBILE_NAV_ITEMS = [
 		{
 			label: "Docs",
-			href: "/",
+			href: "https://docs.hydradx.io/",
 		},
 		{
 			label: "Tokenomics",
-			href: "/",
+			href: "https://docs.hydradx.io/tokenomics",
 		},
 		{
 			label: "Github",
-			href: "/",
+			href: "https://github.com/galacticcouncil",
 		},
 		{
 			label: "Newsletter",
-			href: "/",
+			href: "https://hydradx.substack.com/",
 		},
 		{
 			// ref: socialRefButton,
@@ -78,7 +78,7 @@ const Header = ({ navItems }: IProps) => {
 			list: [
 				{
 					label: "Discord",
-					href: "/",
+					href: "https://discord.gg/kkmY35UxAG",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -89,7 +89,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Twitter",
-					href: "/",
+					href: "https://twitter.com/hydra_dx",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -99,7 +99,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Telegram",
-					href: "/",
+					href: "https://t.me/hydradx",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -109,7 +109,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Substack",
-					href: "/",
+					href: "https://hydradx.substack.com/",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -119,7 +119,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Reddit",
-					href: "/",
+					href: "https://www.reddit.com/r/hdx/",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -131,9 +131,9 @@ const Header = ({ navItems }: IProps) => {
 		},
 		{
 			label: "Blog",
-			// rel: "noopener noreferrer",
-			// target: "_blank",
-			href: "/",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			href: "https://hydradx.substack.com/",
 		},
 	]
 
@@ -173,7 +173,7 @@ const Header = ({ navItems }: IProps) => {
 						/>
 					</LogoFigure>
 
-					<Nav className={navFont.className}>
+					<Nav>
 						<Ul>
 							{navItems.map((item, index) => (
 								<Li key={index}>
@@ -202,7 +202,9 @@ const Header = ({ navItems }: IProps) => {
 									animate={"visible"}
 									exit={"hidden"}
 								>
-									<Button className="btn">ENTER OMNIPOOL</Button>
+									<Button disabled className="btn">
+										ENTER OMNIPOOL
+									</Button>
 								</motion.div>
 							)}
 						</AnimatePresence>
@@ -237,7 +239,7 @@ const Header = ({ navItems }: IProps) => {
 						}}
 					>
 						<MobileNav>
-							<MobileNavList className={navFont.className}>
+							<MobileNavList>
 								{MOBILE_NAV_ITEMS.map((item, index) => (
 									<MobileNavItem key={index}>
 										{item.href && <Link href={item.href}>{item.label}</Link>}
@@ -387,6 +389,10 @@ const Nav = styled.nav`
 			display: block;
 			visibility: visible;
 
+			font-family: "BlenderProBook";
+			font-weight: 500;
+			font-style: normal;
+
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			}
 		}
@@ -480,7 +486,11 @@ const MobileNav = styled.nav`
 	overflow-y: auto;
 `
 
-const MobileNavList = styled.ul``
+const MobileNavList = styled.ul`
+	font-family: "BlenderProBook";
+	font-weight: 500;
+	font-style: normal;
+`
 
 const MobileNavItem = styled.li`
 	a {

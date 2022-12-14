@@ -1,19 +1,19 @@
 import styled, { css } from "styled-components"
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 
 import H2 from "../h2/content-h2.component"
 // import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-Medium.woff2",
-			weight: "550",
-			style: "normal",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-Medium.woff2",
+// 			weight: "550",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
 const ProtocolSection = () => {
 	return (
@@ -58,7 +58,7 @@ const ProtocolSection = () => {
 						/>
 					</TowerFigure>
 					<ContentContainer>
-						<H3 className={headerFont.className}>
+						<H3>
 							Embrace sustainable
 							<br /> protocol design.
 						</H3>
@@ -75,9 +75,7 @@ const ProtocolSection = () => {
 					<OverlayBackground />
 
 					<ContentContainer>
-						<H3 className={headerFont.className}>
-							Enjoy state of the art security.
-						</H3>
+						<H3>Enjoy state of the art security.</H3>
 						<P>
 							The HydraDX Omnipool is fully audited and supported by a generous
 							bug bounty program. Cutting-edge mechanisms such as liquidity
@@ -85,8 +83,14 @@ const ProtocolSection = () => {
 							your liquidity.
 						</P>
 						<ButtonsContainer>
-							<Button>Learn more</Button>
-							<IconButton>
+							<Button
+								href="https://docs.hydradx.io/omnipool_security"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Learn more
+							</Button>
+							{/* <IconButton>
 								<figure>
 									<Image
 										src="/assets/protocol-section/bug-icon.svg"
@@ -96,7 +100,7 @@ const ProtocolSection = () => {
 									/>
 								</figure>
 								<p>bug bounties</p>
-							</IconButton>
+							</IconButton> */}
 						</ButtonsContainer>
 					</ContentContainer>
 
@@ -151,9 +155,7 @@ const ProtocolSection = () => {
 					</CoinFigure>
 
 					<ContentContainer>
-						<H3 className={headerFont.className}>
-							Decentralized and Community-first.
-						</H3>
+						<H3>Decentralized and Community-first.</H3>
 						<P>
 							HydraDX is a decentralized protocol with a community-first
 							approach. All decisions affecting the protocol are adopted in a
@@ -212,7 +214,7 @@ const Section = styled.section`
 const H3 = styled.h3`
 	font-size: 2.8rem;
 
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 
 	color: #ffffff;
 	font-stretch: 125;
@@ -220,6 +222,10 @@ const H3 = styled.h3`
 	text-shadow: 3px 3px 0px rgba(11, 2, 5, 0.66);
 
 	margin-bottom: 1.6rem;
+
+	font-family: "HubotSans";
+	font-weight: 550;
+	font-style: medium;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -397,7 +403,7 @@ const CoinFigure = styled.figure`
 const buttonStyles = css`
 	cursor: pointer;
 	background: transparent;
-	display: block;
+	display: inline-block;
 
 	border-radius: 0.4rem;
 	padding: 12px 3.7rem;
@@ -413,13 +419,13 @@ const buttonStyles = css`
 	color: #ffffff;
 
 	width: 100%;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			width: initial;
-			display: flex;
+			display: inline-flex;
 			justify-content: unset;
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -428,7 +434,7 @@ const buttonStyles = css`
 	}
 `
 
-const Button = styled.button`
+const Button = styled.a`
 	${buttonStyles}
 
 	text-align: center;

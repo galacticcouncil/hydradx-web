@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 import { motion, HTMLMotionProps } from "framer-motion"
 
 import Image from "../image/image.component"
@@ -9,25 +9,25 @@ export interface IProps extends HTMLMotionProps<"article"> {
 	article: IArticle
 }
 
-const pFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumSemi.woff2",
-			weight: "550",
-			style: "normal",
-		},
-	],
-})
+// const pFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumSemi.woff2",
+// 			weight: "550",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
-			weight: "600",
-			style: "normal",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
+// 			weight: "600",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
 const ResourcesArticle = ({ article, ...props }: IProps) => {
 	return (
@@ -40,12 +40,9 @@ const ResourcesArticle = ({ article, ...props }: IProps) => {
 					height={65}
 				/>
 			</IconFigure>
-			<P className={pFont.className}>{article.label}</P>
-			<H3
-				className={headerFont.className}
-				dangerouslySetInnerHTML={{ __html: article.heading }}
-			/>
-			<Button>
+			<P>{article.label}</P>
+			<H3 dangerouslySetInnerHTML={{ __html: article.heading }} />
+			<Button href={article.cta.href} target="_blank" rel="noopener noreferrer">
 				<p>{article.cta.label}</p>
 				<Arrow>
 					<Line />
@@ -108,6 +105,10 @@ const P = styled.p`
 
 	opacity: 0.7;
 	margin-bottom: 2.07rem;
+
+	font-family: "HubotSans";
+	font-weight: 550;
+	font-style: medium;
 `
 
 const H3 = styled.h3`
@@ -119,6 +120,10 @@ const H3 = styled.h3`
 	margin-bottom: 5rem;
 
 	color: #ffffff;
+
+	font-family: "MonaSans";
+	font-weight: 600;
+	font-style: normal;
 
 	sup {
 		vertical-align: top;
@@ -150,7 +155,7 @@ const Line = styled.span`
 	background-color: #85d1ff;
 `
 
-const Button = styled.button`
+const Button = styled.a`
 	cursor: pointer;
 	background: rgba(76, 213, 243, 0.12);
 	display: grid;

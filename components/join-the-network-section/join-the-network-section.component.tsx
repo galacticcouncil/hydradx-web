@@ -3,30 +3,30 @@ import localFont from "@next/font/local"
 
 import Image from "../image/image.component"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
-			weight: "700",
-			style: "bold",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+// 			weight: "700",
+// 			style: "bold",
+// 		},
+// 	],
+// })
 
-const articleHFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
-			weight: "799",
-			style: "bold",
-		},
-	],
-})
+// const articleHFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+// 			weight: "700",
+// 			style: "bold",
+// 		},
+// 	],
+// })
 
 const JoinTheNetworkSection = () => {
 	return (
 		<Section>
-			<H2 className={headerFont.className}>Join the network.</H2>
+			<H2>Join the network.</H2>
 
 			<Grid>
 				<Article>
@@ -47,14 +47,18 @@ const JoinTheNetworkSection = () => {
 						/>
 					</IconFigure>
 					<Content>
-						<H3 className={articleHFont.className}>
+						<H3>
 							Explore
 							<br /> Hydra<sup>DX</sup> docs
 						</H3>
 						<P>
 							Learn more about Hydra<sup>DX</sup> Protocol & join the fun!
 						</P>
-						<Button>
+						<Button
+							href="https://docs.hydradx.io/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<p>explore</p>{" "}
 							<Arrow>
 								<Line />
@@ -88,12 +92,16 @@ const JoinTheNetworkSection = () => {
 						/>
 					</IconFigure>
 					<Content>
-						<H3 className={articleHFont.className}>
+						<H3>
 							Join
 							<br /> discord community
 						</H3>
 						<P>Innovative control panel for all your spendings is here.</P>
-						<Button>
+						<Button
+							href="https://discord.gg/kkmY35UxAG"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<p>JOIN DISCORD</p>
 							<Arrow>
 								<Line />
@@ -153,6 +161,10 @@ const H2 = styled.h2`
 
 	color: #ffffff;
 
+	font-family: "MonaSans";
+	font-weight: 700;
+	font-style: bold;
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			margin-bottom: 1.5rem;
@@ -188,6 +200,10 @@ const H3 = styled.h3`
 	text-transform: capitalize;
 
 	margin-bottom: 1.6rem;
+
+	font-family: "MonaSans";
+	font-weight: 600;
+	font-style: normal;
 
 	sup {
 		vertical-align: top;
@@ -254,7 +270,7 @@ const IluFigure = styled.figure`
 	z-index: -1;
 `
 
-const Button = styled.button`
+const Button = styled.a`
 	cursor: pointer;
 	background: transparent;
 	display: grid;

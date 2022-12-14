@@ -1,6 +1,65 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
+    @font-face {
+      font-family: 'FontOver';
+      src: url('/fonts/font_over/Font-Over.otf');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'HubotSans';
+      src: url('/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'HubotSans';
+      src: url('/fonts/hubot-sans/WOFF-2/Hubot-Sans-Medium.woff2');
+      font-weight: 550;
+      font-style: medium;
+    }
+
+    @font-face {
+      font-family: 'HubotSans';
+      src: url('/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2');
+      font-weight: 900;
+      font-style: bold;
+    }
+
+    @font-face {
+      font-family: 'MonaSans';
+      src: url('/fonts/mona-sans/WOFF-2/Mona-Sans-RegularWide.woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'MonaSans';
+      src: url('/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2');
+      font-weight: 600;
+      font-style: medium;
+    }
+
+    @font-face {
+      font-family: 'MonaSans';
+      src: url('/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2');
+      font-weight: 700;
+      font-style: bold;
+    }
+
+    @font-face {
+      font-family: 'BlenderProBook';
+      src: url('/fonts/blender-pro/BlenderPro-Book.woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+
+
+
   *, *:before, *:after {
     margin: 0;
     padding: 0;

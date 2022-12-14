@@ -6,15 +6,15 @@ import ResourcesArticle from "../resourcess-article/resourcess-article.component
 
 import { IArticle } from "../../types/resources.types"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
-			weight: "700",
-			style: "bold",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-BoldWide.woff2",
+// 			weight: "700",
+// 			style: "bold",
+// 		},
+// 	],
+// })
 
 const ResourcessSection = () => {
 	const articles: IArticle[] = [
@@ -27,6 +27,7 @@ const ResourcessSection = () => {
 			heading: "hydra<sup>DX</sup> tokenomics",
 			cta: {
 				label: "open",
+				href: "https://docs.hydradx.io/tokenomics",
 			},
 		},
 		{
@@ -38,6 +39,7 @@ const ResourcessSection = () => {
 			heading: "press kit resourcess",
 			cta: {
 				label: "open",
+				href: "https://github.com/galacticcouncil/HydraDX-assets/tree/main/images",
 			},
 		},
 		{
@@ -49,13 +51,14 @@ const ResourcessSection = () => {
 			heading: "Follow our Newsletter",
 			cta: {
 				label: "open",
+				href: "https://github.com/galacticcouncil",
 			},
 		},
 	]
 
 	return (
 		<Section>
-			<H2 className={headerFont.className}>
+			<H2>
 				Hydra<sup>DX</sup> Resourcess
 			</H2>
 
@@ -93,6 +96,10 @@ const H2 = styled.h2`
 	color: #ffffff;
 
 	margin-bottom: 4.4rem;
+
+	font-family: "MonaSans";
+	font-weight: 700;
+	font-style: bold;
 
 	sup {
 		vertical-align: top;

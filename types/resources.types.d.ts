@@ -7,5 +7,6 @@ export interface IArticle {
   heading: string
   cta: {
     label: string
+    href: string
   },
 }

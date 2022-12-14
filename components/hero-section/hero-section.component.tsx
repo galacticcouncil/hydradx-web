@@ -1,20 +1,20 @@
 import styled from "styled-components"
-import localFont from "@next/font/local"
+// import localFont from "@next/font/local"
 import { motion, Variants } from "framer-motion"
 
 import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 import Link from "next/link"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2",
-			weight: "900",
-			style: "bold",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2",
+// 			weight: "900",
+// 			style: "bold",
+// 		},
+// 	],
+// })
 
 const HeroSection = () => {
 	const socials = [
@@ -30,7 +30,7 @@ const HeroSection = () => {
 		// 	},
 		// },
 		{
-			href: "#",
+			href: "https://hydradx.substack.com/",
 			icon: {
 				src: "/assets/hero-section/socials/substack-desktop.svg",
 				alt: "substack",
@@ -41,7 +41,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://twitter.com/hydra_dx",
 			icon: {
 				src: "/assets/hero-section/socials/twitter-desktop-v4.png",
 				alt: "twitter",
@@ -52,7 +52,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://discord.gg/kkmY35UxAG",
 			icon: {
 				src: "/assets/hero-section/socials/discord-desktop.svg",
 				alt: "discord",
@@ -64,7 +64,7 @@ const HeroSection = () => {
 		},
 
 		{
-			href: "#",
+			href: "https://t.me/hydradx",
 			icon: {
 				src: "/assets/hero-section/socials/telegram-desktop.svg",
 				alt: "telegram",
@@ -75,7 +75,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://github.com/galacticcouncil",
 			icon: {
 				src: "/assets/hero-section/socials/github-desktop.svg",
 				alt: "github",
@@ -251,7 +251,7 @@ const HeroSection = () => {
 						/>
 					</LogoFigure>
 
-					<H1 variants={titleVariants} className={headerFont.className}>
+					<H1 variants={titleVariants}>
 						An Ocean of
 						<br /> Liquidity for Polkadot
 					</H1>
@@ -262,7 +262,8 @@ const HeroSection = () => {
 					</P>
 
 					<ButtonsContainer variants={buttonsContainerVariants}>
-						<Button>ENTER OMNIPOOL</Button>
+						{/* <Button>ENTER OMNIPOOL</Button> */}
+						<Button disabled>COMING SOON</Button>
 					</ButtonsContainer>
 
 					<Footer variants={footerVariants}>
@@ -400,6 +401,10 @@ const H1 = styled(motion.h1)`
 
 	font-size: 3.4rem;
 	line-height: 130%;
+
+	font-family: "HubotSans";
+	font-weight: 900;
+	font-style: bold;
 
 	background: linear-gradient(233.13deg, #ffffff 28.57%, #9bbdff 101.94%);
 	-webkit-background-clip: text;
