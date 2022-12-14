@@ -19,35 +19,43 @@ const headerFont = localFont({
 const Footer = () => {
 	const aboutItems = [
 		{
-			label: "About us",
-			href: "#",
+			label: "Documentation",
+			href: "https://docs.hydradx.io/",
 		},
 		{
-			label: "Terms",
-			href: "#",
+			label: "Tokenomics",
+			href: "https://docs.hydradx.io/tokenomics",
 		},
 		{
-			label: "FAQ",
-			href: "#",
-		},
-		{
-			label: "Contact us",
-			href: "#",
+			label: "Press Kit",
+			href: "https://github.com/galacticcouncil/HydraDX-assets/tree/main/images",
 		},
 	]
 
 	const socialItems = [
 		{
-			label: "Privacy",
-			href: "#",
+			label: "Github",
+			href: "https://github.com/galacticcouncil",
 		},
 		{
-			label: "Support",
-			href: "#",
+			label: "Discord",
+			href: "https://discord.gg/kkmY35UxAG",
 		},
 		{
-			label: "Downloads",
-			href: "#",
+			label: "Twitter",
+			href: "https://twitter.com/hydra_dx",
+		},
+		{
+			label: "Telegram",
+			href: "https://t.me/hydradx",
+		},
+		{
+			label: "Substack",
+			href: "https://hydradx.substack.com/",
+		},
+		{
+			label: "Reddit",
+			href: "https://www.reddit.com/r/hdx/",
 		},
 	]
 
