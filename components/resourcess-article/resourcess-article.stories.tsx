@@ -23,6 +23,7 @@ Default.args = {
 		heading: "hydra tokenomics",
 		cta: {
 			label: "open",
+			href: "#",
 		},
 	},
 }
