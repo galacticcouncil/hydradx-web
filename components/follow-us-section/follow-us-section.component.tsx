@@ -17,35 +17,45 @@ import Link from "next/link"
 const FollowUsSection = () => {
 	const socials = [
 		{
-			href: "#",
+			href: "https://hydradx.substack.com/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/socials/substack-circle.svg",
 				alt: "substack",
 			},
 		},
 		{
-			href: "#",
+			href: "https://twitter.com/hydra_dx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/socials/twitter-circle.svg",
 				alt: "twitter",
 			},
 		},
 		{
-			href: "#",
+			href: "https://discord.gg/kkmY35UxAG",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/socials/discord-circle.svg",
 				alt: "discord",
 			},
 		},
 		{
-			href: "#",
+			href: "https://t.me/hydradx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/socials/telegram-circle.svg",
 				alt: "telegram",
 			},
 		},
 		{
-			href: "#",
+			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/socials/github-circle.svg",
 				alt: "github",
