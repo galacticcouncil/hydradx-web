@@ -6,16 +6,6 @@ import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 import Link from "next/link"
 
-// const headerFont = localFont({
-// 	src: [
-// 		{
-// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-BoldWide.woff2",
-// 			weight: "900",
-// 			style: "bold",
-// 		},
-// 	],
-// })
-
 const HeroSection = () => {
 	const socials = [
 		// {
@@ -256,7 +246,7 @@ const HeroSection = () => {
 						<br /> Liquidity for Polkadot
 					</H1>
 					<P variants={pVariants}>
-						Trade abundance of assets in a single pool.
+						Trade an abundance of assets in a single pool.
 						<br /> The HydraDX Omnipool is efficient,
 						<br /> sustainable and trustless.
 					</P>
