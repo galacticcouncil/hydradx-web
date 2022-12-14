@@ -161,7 +161,13 @@ const ProtocolSection = () => {
 							approach. All decisions affecting the protocol are adopted in a
 							democratic process.
 						</P>
-						<Button>Learn more</Button>
+						<Button
+							href="https://docs.hydradx.io/democracy_intro"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Learn more
+						</Button>
 					</ContentContainer>
 				</Article3>
 			</Section>

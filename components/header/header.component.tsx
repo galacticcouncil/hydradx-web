@@ -203,7 +203,7 @@ const Header = ({ navItems }: IProps) => {
 									exit={"hidden"}
 								>
 									<Button disabled className="btn">
-										ENTER OMNIPOOL
+										COMING SOON
 									</Button>
 								</motion.div>
 							)}
