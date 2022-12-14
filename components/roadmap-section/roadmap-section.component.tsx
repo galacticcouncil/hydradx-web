@@ -118,7 +118,7 @@ const RoadmapSection = () => {
 		},
 		{
 			titleColor: "#1263FF",
-			title: "Slip-based Fees",
+			title: "Dynamic fees",
 			status: "Working on it",
 			process: "45%",
 			barColor:
@@ -128,30 +128,30 @@ const RoadmapSection = () => {
 				alt: "10",
 			},
 		},
-		{
-			titleColor: "#0057FF",
-			title: "Fee Disribution 2.0",
-			status: "Working on it",
-			process: "45%",
-			barColor:
-				"linear-gradient(270deg, #0057FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
-			icon: {
-				src: "/assets/roadmap-section/11.svg",
-				alt: "11",
-			},
-		},
-		{
-			titleColor: "#0047FF",
-			title: "Omnipool Bond AMM",
-			status: "Working on it",
-			process: "35%",
-			barColor:
-				"linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
-			icon: {
-				src: "/assets/roadmap-section/12.svg",
-				alt: "12",
-			},
-		},
+		// {
+		// 	titleColor: "#0057FF",
+		// 	title: "Fee Disribution 2.0",
+		// 	status: "Working on it",
+		// 	process: "45%",
+		// 	barColor:
+		// 		"linear-gradient(270deg, #0057FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+		// 	icon: {
+		// 		src: "/assets/roadmap-section/11.svg",
+		// 		alt: "11",
+		// 	},
+		// },
+		// {
+		// 	titleColor: "#0047FF",
+		// 	title: "Omnipool Bond AMM",
+		// 	status: "Working on it",
+		// 	process: "35%",
+		// 	barColor:
+		// 		"linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+		// 	icon: {
+		// 		src: "/assets/roadmap-section/12.svg",
+		// 		alt: "12",
+		// 	},
+		// },
 		{
 			titleColor: "#0047FF",
 			title: "Order Batching",
@@ -176,18 +176,18 @@ const RoadmapSection = () => {
 				alt: "14",
 			},
 		},
-		{
-			titleColor: "#1425BB",
-			title: "Lending",
-			status: "Working on it",
-			process: "20%",
-			barColor:
-				"linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
-			icon: {
-				src: "/assets/roadmap-section/15.svg",
-				alt: "15",
-			},
-		},
+		// {
+		// 	titleColor: "#1425BB",
+		// 	title: "Lending",
+		// 	status: "Working on it",
+		// 	process: "20%",
+		// 	barColor:
+		// 		"linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
+		// 	icon: {
+		// 		src: "/assets/roadmap-section/15.svg",
+		// 		alt: "15",
+		// 	},
+		// },
 	]
 
 	return (
