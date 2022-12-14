@@ -127,10 +127,10 @@ const OmnipoolSection = () => {
 
 			<GridContainer>
 				<Content>
-					<H3>Dive into deeper liquidity with efficiency gains.</H3>
+					<H3>Discover efficient trading like no other AMM.</H3>
 					<P>
-						By combining all assets into a single trading pool, the HydraDX
-						brings unparalleled efficiencies to AMMs.
+					    Deep, diversified and unfragmented liquidity enables 2-4x more 
+						capital-efficient trading thanks to lower slippage and fewer hops.
 					</P>
 
 					<Button>LEARN MORE</Button>

@@ -30,7 +30,7 @@ const HeroSection = () => {
 		// 	},
 		// },
 		{
-			href: "#",
+			href: "https://hydradx.substack.com/",
 			icon: {
 				src: "/assets/hero-section/socials/substack-desktop.svg",
 				alt: "substack",
@@ -41,7 +41,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://twitter.com/hydra_dx",
 			icon: {
 				src: "/assets/hero-section/socials/twitter-desktop-v4.png",
 				alt: "twitter",
@@ -52,7 +52,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://discord.gg/kkmY35UxAG",
 			icon: {
 				src: "/assets/hero-section/socials/discord-desktop.svg",
 				alt: "discord",
@@ -64,7 +64,7 @@ const HeroSection = () => {
 		},
 
 		{
-			href: "#",
+			href: "https://t.me/hydradx",
 			icon: {
 				src: "/assets/hero-section/socials/telegram-desktop.svg",
 				alt: "telegram",
@@ -75,7 +75,7 @@ const HeroSection = () => {
 			},
 		},
 		{
-			href: "#",
+			href: "https://github.com/galacticcouncil",
 			icon: {
 				src: "/assets/hero-section/socials/github-desktop.svg",
 				alt: "github",

@@ -55,19 +55,19 @@ const Header = ({ navItems }: IProps) => {
 	const MOBILE_NAV_ITEMS = [
 		{
 			label: "Docs",
-			href: "/",
+			href: "https://docs.hydradx.io/",
 		},
 		{
 			label: "Tokenomics",
-			href: "/",
+			href: "https://docs.hydradx.io/tokenomics",
 		},
 		{
 			label: "Github",
-			href: "/",
+			href: "https://github.com/galacticcouncil",
 		},
 		{
 			label: "Newsletter",
-			href: "/",
+			href: "https://hydradx.substack.com/",
 		},
 		{
 			// ref: socialRefButton,
@@ -78,7 +78,7 @@ const Header = ({ navItems }: IProps) => {
 			list: [
 				{
 					label: "Discord",
-					href: "/",
+					href: "https://discord.gg/kkmY35UxAG",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -89,7 +89,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Twitter",
-					href: "/",
+					href: "https://twitter.com/hydra_dx",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -99,7 +99,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Telegram",
-					href: "/",
+					href: "https://t.me/hydradx",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -109,7 +109,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Substack",
-					href: "/",
+					href: "https://hydradx.substack.com/",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
@@ -119,7 +119,7 @@ const Header = ({ navItems }: IProps) => {
 				},
 				{
 					label: "Reddit",
-					href: "/",
+					href: "https://www.reddit.com/r/hdx/",
 					rel: "noopener noreferrer",
 					target: "_blank",
 					icon: {
