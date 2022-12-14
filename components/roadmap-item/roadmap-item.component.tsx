@@ -9,15 +9,15 @@ export interface IProps {
 	item: IRoadmapItem
 }
 
-const titleFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
-			weight: "600",
-			style: "medium",
-		},
-	],
-})
+// const titleFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/mona-sans/WOFF-2/Mona-Sans-MediumWide.woff2",
+// 			weight: "600",
+// 			style: "medium",
+// 		},
+// 	],
+// })
 
 const RoadmapItem = ({ item }: IProps) => {
 	const itemVariants: Variants = {
@@ -96,7 +96,6 @@ const RoadmapItem = ({ item }: IProps) => {
 				viewport={{ once: true }}
 			>
 				<Title
-					className={titleFont.className}
 					color={item.titleColor}
 					dangerouslySetInnerHTML={{ __html: item.title }}
 				/>
@@ -165,6 +164,10 @@ const Title = styled(motion.h3)<ITitle>`
 
 	font-size: 2rem;
 	line-height: 100%;
+
+	font-family: "MonaSans";
+	font-weight: 600;
+	font-style: normal;
 
 	sup {
 		vertical-align: top;

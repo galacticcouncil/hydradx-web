@@ -1,34 +1,43 @@
 import styled, { css } from "styled-components"
-import localFont from "@next/font/local"
-import { AnimatePresence, motion } from "framer-motion"
+// import localFont from "@next/font/local"
+import {
+	// AnimatePresence,
+	motion,
+} from "framer-motion"
 
-import { GoPlus } from "react-icons/go"
+// import { GoPlus } from "react-icons/go"
 import Image from "../image/image.component"
 import Link from "next/link"
 
-const headerFont = localFont({
-	src: [
-		{
-			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
-			weight: "500",
-			style: "normal",
-		},
-	],
-})
+// const headerFont = localFont({
+// 	src: [
+// 		{
+// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
+// 			weight: "500",
+// 			style: "normal",
+// 		},
+// 	],
+// })
 
 const Footer = () => {
 	const aboutItems = [
 		{
 			label: "Documentation",
 			href: "https://docs.hydradx.io/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Tokenomics",
 			href: "https://docs.hydradx.io/tokenomics",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Press Kit",
 			href: "https://github.com/galacticcouncil/HydraDX-assets/tree/main/images",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 	]
 
@@ -36,55 +45,71 @@ const Footer = () => {
 		{
 			label: "Github",
 			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Discord",
 			href: "https://discord.gg/kkmY35UxAG",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Twitter",
 			href: "https://twitter.com/hydra_dx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Telegram",
 			href: "https://t.me/hydradx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Substack",
 			href: "https://hydradx.substack.com/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Reddit",
 			href: "https://www.reddit.com/r/hdx/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 	]
 
 	const MOBILE_NAV_ITEMS = [
 		{
 			label: "Docs",
-			href: "/",
+			href: "https://docs.hydradx.io/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Tokenomics",
-			href: "/",
+			href: "https://docs.hydradx.io/tokenomics",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Github",
-			href: "/",
-			// rel: "noopener noreferrer",
-			// target: "_blank",
+			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Newsletter",
 			rel: "noopener noreferrer",
 			target: "_blank",
-			href: "/",
+			href: "ttps://hydradx.substack.com/",
 		},
 		{
 			label: "Blog",
-			// rel: "noopener noreferrer",
-			// target: "_blank",
-			href: "/",
+			rel: "noopener noreferrer",
+			target: "_blank",
+			href: "https://hydradx.substack.com/",
 		},
 	]
 
@@ -203,7 +228,7 @@ const Footer = () => {
 				<Nav>
 					<Ul>
 						<Li>
-							<h3 className={headerFont.className}>About</h3>
+							<h3>About</h3>
 						</Li>
 						{aboutItems.map((item, index) => (
 							<Li key={index}>
@@ -213,7 +238,7 @@ const Footer = () => {
 					</Ul>
 					<Ul>
 						<Li>
-							<h3 className={headerFont.className}>Find us on</h3>
+							<h3>Find us on</h3>
 						</Li>
 
 						{socialItems.map((item, index) => (
@@ -348,6 +373,10 @@ const Li = styled.li`
 	h3 {
 		font-size: 1.5rem;
 		line-height: 130%;
+
+		font-family: "HubotSans";
+		font-weight: 500;
+		font-style: normal;
 
 		display: flex;
 		align-items: center;
