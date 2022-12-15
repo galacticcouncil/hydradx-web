@@ -58,21 +58,9 @@ const RoadmapSection = () => {
 		},
 		{
 			titleColor: "#07A8FF",
-			title: "Liquidity Mining",
-			status: "Soon<sup>TM</sup>",
-			process: "65%",
-			barColor:
-				"linear-gradient(270deg, #2A99FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
-			icon: {
-				src: "/assets/roadmap-section/6.svg",
-				alt: "6",
-			},
-		},
-		{
-			titleColor: "#07A8FF",
 			title: "USDT <sup>(Native)</sup>",
 			status: "Soon<sup>TM</sup>",
-			process: "60%",
+			process: "65%",
 			barColor:
 				"linear-gradient(270deg, #07A8FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
 			icon: {
@@ -80,7 +68,18 @@ const RoadmapSection = () => {
 				alt: "5",
 			},
 		},
-
+		{
+			titleColor: "#07A8FF",
+			title: "Liquidity Mining",
+			status: "Soon<sup>TM</sup>",
+			process: "60%",
+			barColor:
+				"linear-gradient(270deg, #2A99FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+			icon: {
+				src: "/assets/roadmap-section/6.svg",
+				alt: "6",
+			},
+		},
 		{
 			titleColor: "#127FFF",
 			title: "Stableswap Pool",
