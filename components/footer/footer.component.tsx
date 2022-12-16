@@ -105,12 +105,12 @@ const Footer = () => {
 			target: "_blank",
 			href: "ttps://hydradx.substack.com/",
 		},
-		{
-			label: "Blog",
-			rel: "noopener noreferrer",
-			target: "_blank",
-			href: "https://hydradx.substack.com/",
-		},
+		// {
+		// 	label: "Blog",
+		// 	rel: "noopener noreferrer",
+		// 	target: "_blank",
+		// 	href: "https://hydradx.substack.com/",
+		// },
 	]
 
 	return (
