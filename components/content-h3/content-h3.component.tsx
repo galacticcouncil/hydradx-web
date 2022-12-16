@@ -24,17 +24,12 @@ export default H3
 
 const H3Styles = styled(motion.h3)`
 	color: #ebebeb;
-	font-stretch: 125;
 	font-size: 2.8rem;
 	line-height: 130%;
 	margin-bottom: 1.6rem;
 
-	/* or 36px */
-
-	/* basic/gray-soft */
-
 	color: #ebebeb;
-	font-stretch: 125;
+	font-stretch: 125%;
 
 	font-family: "HubotSans";
 	font-weight: 550;
