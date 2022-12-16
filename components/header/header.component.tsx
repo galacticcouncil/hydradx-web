@@ -56,18 +56,26 @@ const Header = ({ navItems }: IProps) => {
 		{
 			label: "Docs",
 			href: "https://docs.hydradx.io/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Tokenomics",
 			href: "https://docs.hydradx.io/tokenomics",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Github",
 			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			label: "Newsletter",
 			href: "https://hydradx.substack.com/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 		},
 		{
 			// ref: socialRefButton,
@@ -154,24 +162,26 @@ const Header = ({ navItems }: IProps) => {
 		<>
 			<HeaderContainer>
 				<Container>
-					<LogoFigure>
-						<Image
-							className="desktop"
-							src="/assets/logo-v2.svg"
-							alt="HydraDX"
-							width={"100%"}
-							height={"100%"}
-							style={{ objectFit: "contain" }}
-						/>
-						<Image
-							className="mobile"
-							src="/assets/logo-mobile.svg"
-							alt="HydraDX"
-							width={"100%"}
-							height={"100%"}
-							style={{ objectFit: "contain" }}
-						/>
-					</LogoFigure>
+					<Link href={"/"}>
+						<LogoFigure>
+							<Image
+								className="desktop"
+								src="/assets/logo-v2.svg"
+								alt="HydraDX"
+								width={"100%"}
+								height={"100%"}
+								style={{ objectFit: "contain" }}
+							/>
+							<Image
+								className="mobile"
+								src="/assets/logo-mobile.svg"
+								alt="HydraDX"
+								width={"100%"}
+								height={"100%"}
+								style={{ objectFit: "contain" }}
+							/>
+						</LogoFigure>
+					</Link>
 
 					<Nav>
 						<Ul>
@@ -242,7 +252,15 @@ const Header = ({ navItems }: IProps) => {
 							<MobileNavList>
 								{MOBILE_NAV_ITEMS.map((item, index) => (
 									<MobileNavItem key={index}>
-										{item.href && <Link href={item.href}>{item.label}</Link>}
+										{item.href && (
+											<Link
+												href={item.href}
+												rel={item.rel}
+												target={item.target}
+											>
+												{item.label}
+											</Link>
+										)}
 										{item.list && (
 											<MobileDropdownButton
 												isOpen={item.isOpen}
@@ -283,8 +301,8 @@ const Header = ({ navItems }: IProps) => {
 															<MobileDropdownMenuItem key={index}>
 																<Link
 																	href={listItem.href}
-																	// ref={listItem.rel}
-																	// target={listItem.target}
+																	rel={listItem.rel}
+																	target={listItem.target}
 																>
 																	<Image
 																		src={listItem.icon.src}
