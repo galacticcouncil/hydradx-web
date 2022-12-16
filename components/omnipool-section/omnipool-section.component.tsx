@@ -88,6 +88,22 @@ const OmnipoolSection = () => {
 		},
 	}
 
+	const blurVariants: Variants = {
+		hidden: {
+			opacity: 1,
+			backdropFilter: "blur(15px)",
+		},
+		visible: {
+			opacity: 1,
+			backdropFilter: "blur(15px)",
+			transition: {
+				ease: [0.5, 0, 0.88, 0.77],
+				duration: 0.6,
+				delay: 0.6,
+			},
+		},
+	}
+
 	return (
 		<Section>
 			<IluFigure
@@ -162,8 +178,8 @@ const OmnipoolSection = () => {
 					whileInView="visible"
 					viewport={{ once: true }}
 				>
+					<Blur variants={blurVariants} initial="hidden" animate="visible" />
 					<FirstIlu variants={iluVariants}>
-						<Blur />
 						<Image
 							src="/assets/omnipool/first-ilu-v2.png"
 							alt="first ilu"
@@ -391,7 +407,6 @@ const OmnipoolSection = () => {
 						/>
 					</FourthIluCoin>
 					<FourthIlu variants={iluVariants}>
-						<Blur />
 						<Image
 							src="/assets/omnipool/fourth-ilu-v2.png"
 							alt="fourth ilu"
@@ -399,6 +414,7 @@ const OmnipoolSection = () => {
 							height={"100%"}
 						/>
 					</FourthIlu>
+					<Blur />
 				</ContentFigure>
 			</GridContainer>
 		</Section>
@@ -737,8 +753,9 @@ const Blur = styled(motion.div)`
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	background-color: #04071301;
 	backdrop-filter: blur(1.5rem);
+	background-color: #04071301;
+	border: 1px solid #04071301;
 `
 
 const FirstIlu = styled(motion.figure)`
@@ -749,6 +766,18 @@ const FirstIlu = styled(motion.figure)`
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
+
+	/* &:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: #04071301;
+		backdrop-filter: blur(1.5rem);
+	} */
 `
 
 const FirstIluCoin = styled(motion.figure)`
@@ -757,7 +786,7 @@ const FirstIluCoin = styled(motion.figure)`
 	justify-content: center;
 
 	position: absolute;
-	z-index: -2;
+	z-index: -3;
 
 	width: 18.252rem;
 	height: 18.173rem;
