@@ -109,7 +109,7 @@ const FollowUsSection = () => {
 					materials on regular basis.
 				</P> */}
 
-					<SocialsDirectory>
+					{/* <SocialsDirectory>
 						{socials.map((social, index) => (
 							<SocialFigure key={index}>
 								<Link href={social.href}>
@@ -122,7 +122,7 @@ const FollowUsSection = () => {
 								</Link>
 							</SocialFigure>
 						))}
-					</SocialsDirectory>
+					</SocialsDirectory> */}
 				</div>
 			</Content>
 			<MobileIluFigure>

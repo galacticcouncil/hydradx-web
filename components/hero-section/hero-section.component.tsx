@@ -8,19 +8,21 @@ import Link from "next/link"
 
 const HeroSection = () => {
 	const socials = [
-		// {
-		// 	href: "#",
-		// 	icon: {
-		// 		src: "/assets/hero-section/socials/substack-desktop.svg",
-		// 		alt: "reddit",
-		// 	},
-		// 	mobileIcon: {
-		// 		src: "/assets/socials/reddit.svg",
-		// 		alt: "reddit",
-		// 	},
-		// },
+		{
+			href: "https://www.reddit.com/r/hdx/",
+			icon: {
+				src: "/assets/hero-section/socials/reddit.svg",
+				alt: "reddit",
+			},
+			mobileIcon: {
+				src: "/assets/socials/reddit.svg",
+				alt: "reddit",
+			},
+		},
 		{
 			href: "https://hydradx.substack.com/",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/hero-section/socials/substack-desktop.svg",
 				alt: "substack",
@@ -32,6 +34,8 @@ const HeroSection = () => {
 		},
 		{
 			href: "https://twitter.com/hydra_dx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/hero-section/socials/twitter-desktop-v4.png",
 				alt: "twitter",
@@ -43,6 +47,8 @@ const HeroSection = () => {
 		},
 		{
 			href: "https://discord.gg/kkmY35UxAG",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/hero-section/socials/discord-desktop.svg",
 				alt: "discord",
@@ -55,6 +61,8 @@ const HeroSection = () => {
 
 		{
 			href: "https://t.me/hydradx",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/hero-section/socials/telegram-desktop.svg",
 				alt: "telegram",
@@ -66,6 +74,8 @@ const HeroSection = () => {
 		},
 		{
 			href: "https://github.com/galacticcouncil",
+			rel: "noopener noreferrer",
+			target: "_blank",
 			icon: {
 				src: "/assets/hero-section/socials/github-desktop.svg",
 				alt: "github",
@@ -275,7 +285,12 @@ const HeroSection = () => {
 				animate="visible"
 			>
 				{socials.map((social, index) => (
-					<Link href={social.href} key={index}>
+					<Link
+						href={social.href}
+						key={index}
+						rel={social.rel}
+						target={social.target}
+					>
 						<SocialFigure>
 							<Image
 								src={social.icon.src}
@@ -289,7 +304,12 @@ const HeroSection = () => {
 			</SocialDirectory>
 			<MobileSocialDirectory>
 				{socials.map((social, index) => (
-					<Link href={social.href} key={index}>
+					<Link
+						href={social.href}
+						key={index}
+						rel={social.rel}
+						target={social.target}
+					>
 						<SocialFigure>
 							<Image
 								src={social.mobileIcon.src}

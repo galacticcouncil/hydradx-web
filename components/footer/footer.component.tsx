@@ -203,15 +203,17 @@ const Footer = () => {
 
 			<Container>
 				<LogoContainer>
-					<LogoFigure>
-						<Image
-							src="/assets/logo-v2.svg"
-							alt="HydraDX"
-							width={"100%"}
-							height={"100%"}
-							style={{ objectFit: "contain" }}
-						/>
-					</LogoFigure>
+					<Link href={"/"} scroll>
+						<LogoFigure>
+							<Image
+								src="/assets/logo-v2.svg"
+								alt="HydraDX"
+								width={"100%"}
+								height={"100%"}
+								style={{ objectFit: "contain" }}
+							/>
+						</LogoFigure>
+					</Link>
 					<PContainer>
 						<p>Secured by</p>
 						<figure>
@@ -232,7 +234,9 @@ const Footer = () => {
 						</Li>
 						{aboutItems.map((item, index) => (
 							<Li key={index}>
-								<Link href={item.href}>{item.label}</Link>
+								<Link href={item.href} rel={item.rel} target={item.target}>
+									{item.label}
+								</Link>
 							</Li>
 						))}
 					</Ul>
@@ -243,7 +247,9 @@ const Footer = () => {
 
 						{socialItems.map((item, index) => (
 							<Li key={index}>
-								<Link href={item.href}>{item.label}</Link>
+								<Link href={item.href} rel={item.rel} target={item.target}>
+									{item.label}
+								</Link>
 							</Li>
 						))}
 					</Ul>
