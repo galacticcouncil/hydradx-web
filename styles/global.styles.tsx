@@ -67,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-    /* scroll-behavior: smooth !important; */
+    scroll-behavior: smooth !important;
   }
   body {
     line-height: 1.5;
