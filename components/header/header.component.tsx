@@ -137,12 +137,12 @@ const Header = ({ navItems }: IProps) => {
 				},
 			],
 		},
-		{
-			label: "Blog",
-			rel: "noopener noreferrer",
-			target: "_blank",
-			href: "https://hydradx.substack.com/",
-		},
+		// {
+		// 	label: "Blog",
+		// 	rel: "noopener noreferrer",
+		// 	target: "_blank",
+		// 	href: "https://hydradx.substack.com/",
+		// },
 	]
 
 	useEffect(() => {
