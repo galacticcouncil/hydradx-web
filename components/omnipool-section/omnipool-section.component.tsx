@@ -180,6 +180,7 @@ const OmnipoolSection = () => {
 				>
 					<Blur variants={blurVariants} initial="hidden" animate="visible" />
 					<FirstIlu variants={iluVariants}>
+						<Blur />
 						<Image
 							src="/assets/omnipool/first-ilu-v2.png"
 							alt="first ilu"
@@ -407,6 +408,7 @@ const OmnipoolSection = () => {
 						/>
 					</FourthIluCoin>
 					<FourthIlu variants={iluVariants}>
+						<Blur />
 						<Image
 							src="/assets/omnipool/fourth-ilu-v2.png"
 							alt="fourth ilu"
@@ -756,6 +758,7 @@ const Blur = styled(motion.div)`
 	backdrop-filter: blur(1.5rem);
 	background-color: #04071301;
 	border: 1px solid #04071301;
+
 `
 
 const FirstIlu = styled(motion.figure)`
@@ -766,7 +769,7 @@ const FirstIlu = styled(motion.figure)`
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-
+  
 	/* &:before {
 		content: "";
 		position: absolute;
@@ -778,6 +781,7 @@ const FirstIlu = styled(motion.figure)`
 		background-color: #04071301;
 		backdrop-filter: blur(1.5rem);
 	} */
+
 `
 
 const FirstIluCoin = styled(motion.figure)`
@@ -786,6 +790,7 @@ const FirstIluCoin = styled(motion.figure)`
 	justify-content: center;
 
 	position: absolute;
+
 	z-index: -3;
 
 	width: 18.252rem;
