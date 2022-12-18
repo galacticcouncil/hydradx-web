@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { motion, Variants } from "framer-motion"
+import { motion, Variants, useScroll, useTransform } from "framer-motion"
 
 // import { Button } from "../button/button.component"
 import H2 from "../h2/content-h2.component"
@@ -8,6 +8,10 @@ import P from "../content-p/content-p.component"
 import Image from "../image/image.component"
 
 const OmnipoolSection = () => {
+	const { scrollYProgress } = useScroll()
+
+	const transformIlu = useTransform(scrollYProgress, [0, 0.3], [100, -300])
+
 	const variants: Variants = {
 		hidden: {},
 		visible: {
@@ -45,10 +49,10 @@ const OmnipoolSection = () => {
 	const iluVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 50,
+			// y: 50,
 		},
 		visible: {
-			y: 0,
+			// y: 0,
 			opacity: 1,
 			transition: {
 				ease: [0.22, 1.09, 0.59, 0.95],
@@ -111,6 +115,9 @@ const OmnipoolSection = () => {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
+				style={{
+					y: transformIlu,
+				}}
 			>
 				<Image
 					className="desktop-app-ilu"
