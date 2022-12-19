@@ -1,12 +1,16 @@
 import styled from "styled-components"
 // import localFont from "@next/font/local"
-import { motion, Variants } from "framer-motion"
+import { motion, Variants, useScroll, useTransform } from "framer-motion"
 
 import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 import Link from "next/link"
 
 const HeroSection = () => {
+	const { scrollYProgress } = useScroll()
+
+	const transformIlu = useTransform(scrollYProgress, [0, 0.3], [1, 1.3])
+
 	const socials = [
 		{
 			href: "https://www.reddit.com/r/hdx/",
@@ -213,31 +217,30 @@ const HeroSection = () => {
 					variants={bgVariants}
 					initial="hidden"
 					animate="visible"
+					style={{
+						scale: transformIlu,
+					}}
 				>
-					<Image
-						className="desktop"
-						src={"/assets/hero-section/bg-ilu-v2.png"}
-						alt={"Background ilu"}
-						width={"100%"}
-						height={"100%"}
-						style={{ objectFit: "cover" }}
-					/>
-					<Image
-						className="mobile"
-						src={"/assets/hero-section/bg-ilu-mobile-v2.png"}
-						alt={"Background ilu"}
-						width={"100%"}
-						height={"100%"}
-						style={{ objectFit: "cover" }}
-					/>
-					<Image
-						className="snake"
-						src={"/assets/hero-section/snake-ilu.png"}
-						alt={"Background ilu"}
-						width={"100%"}
-						height={"100%"}
-						style={{ objectFit: "cover" }}
-					/>
+					<BackgroundFigure className="desktop">
+						<Image
+							className="desktop back"
+							src={"/assets/hero-section/bg-ilu-v4-min.png"}
+							alt={"Background ilu"}
+							width={"100%"}
+							height={"100%"}
+							style={{ objectFit: "cover" }}
+						/>
+					</BackgroundFigure>
+					<BackgroundFigure className="mobile">
+						<Image
+							className="back"
+							src={"/assets/hero-section/bg-ilu-mobile-v2.png"}
+							alt={"Background ilu"}
+							width={"100%"}
+							height={"100%"}
+							style={{ objectFit: "cover" }}
+						/>
+					</BackgroundFigure>
 				</OverlayBackground>
 
 				<motion.div variants={heroVariants} initial="hidden" animate="visible">
@@ -344,6 +347,14 @@ const Section = styled.section`
 	}
 `
 
+const BackgroundFigure = styled(motion.figure)`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+`
+
 const OverlayBackground = styled(motion.div)`
 	position: absolute;
 	top: 0;
@@ -362,6 +373,17 @@ const OverlayBackground = styled(motion.div)`
 		visibility: hidden;
 	}
 
+	.back {
+		position: relative;
+		z-index: -2;
+		/* border: 1px solid blue; */
+	}
+
+	.front {
+		position: relative;
+		z-index: -1;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		.snake {
 			display: block;
@@ -377,6 +399,7 @@ const OverlayBackground = styled(motion.div)`
 			display: flex;
 			visibility: visible;
 		}
+
 		.mobile {
 			display: none;
 			visibility: hidden;
