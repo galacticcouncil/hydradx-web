@@ -1,7 +1,9 @@
 import styled from "styled-components"
 // import localFont from "@next/font/local"
 import { motion, Variants, useScroll, useTransform } from "framer-motion"
+
 import { Tooltip } from "react-tooltip"
+
 
 import { Button } from "../button/button.component"
 import Image from "../image/image.component"
