@@ -8,10 +8,13 @@ import Image from "../image/image.component"
 import Link from "next/link"
 import { useState } from "react"
 
+import { useBoolean } from "usehooks-ts"
+
 import "react-tooltip/dist/react-tooltip.css"
 
 const HeroSection = () => {
 	const [isAnimationDone, setIsAnimationDone] = useState(false)
+
 
 	const { scrollYProgress } = useScroll()
 
@@ -227,6 +230,8 @@ const HeroSection = () => {
 			},
 		},
 	}
+
+	console.log("isAnimationDone", isAnimationDone)
 
 	return (
 		<>
