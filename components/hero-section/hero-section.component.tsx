@@ -6,14 +6,15 @@ import { Tooltip } from "react-tooltip"
 import { Button } from "../button/button.component"
 import Image from "../image/image.component"
 import Link from "next/link"
+import { useState } from "react"
 
 import { useBoolean } from "usehooks-ts"
 
 import "react-tooltip/dist/react-tooltip.css"
 
 const HeroSection = () => {
-	const { value: isAnimationDone, setValue: setIsAnimationDone } =
-		useBoolean(false)
+	const [isAnimationDone, setIsAnimationDone] = useState(false)
+
 
 	const { scrollYProgress } = useScroll()
 
@@ -240,7 +241,7 @@ const HeroSection = () => {
 					initial="hidden"
 					animate="visible"
 					style={{
-						scale: isAnimationDone ? transformIlu : 0,
+						scale: isAnimationDone ? transformIlu : 1,
 					}}
 					onAnimationComplete={() => {
 						setIsAnimationDone(true)
