@@ -214,6 +214,7 @@ const RoadmapSection = () => {
     // },
   ]
 
+
   return (
     <Section>
       <H2 variant="BLUE" />
