@@ -11,7 +11,7 @@ const RoadmapSection = () => {
 		{
 			titleColor: "#9CDDFF",
 			title: "Omnipool",
-			status: "Soon<sup>TM</sup>",
+			status: "Completed",
 			process: "100%",
 			barColor:
 				"linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
@@ -23,7 +23,7 @@ const RoadmapSection = () => {
 		{
 			titleColor: "#9CDDFF",
 			title: "DAI <sup>(Wormhole)</sup>",
-			status: "Soon<sup>TM</sup>",
+			status: "Completed",
 			process: "100%",
 			barColor:
 				"linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
@@ -35,7 +35,7 @@ const RoadmapSection = () => {
 		{
 			titleColor: "#5FC7FF",
 			title: "DOT",
-			status: "Soon<sup>TM</sup>",
+			status: "Completed",
 			process: "100%",
 			barColor:
 				"linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
