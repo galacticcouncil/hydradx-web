@@ -52,7 +52,7 @@ const ProtocolSection = () => {
 							<br /> protocol design.
 						</H3>
 						<P>
-							HydraDX is designed and built to last.
+							HydraDX protocol is designed and built to last.
 							<br /> Offering a value proposition for everyone: Traders, LPs and
 							HDX hodlers.
 						</P>
