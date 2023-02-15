@@ -51,7 +51,7 @@ const ResourcessSection = () => {
 			heading: "Follow our Newsletter",
 			cta: {
 				label: "open",
-				href: "https://github.com/galacticcouncil",
+				href: "https://hydradx.substack.com/",
 			},
 		},
 	]
