@@ -247,7 +247,7 @@ const RoadmapSection = () => {
     },
     {
       titleColor: "#1425BB",
-      title: "Staking HDX",
+      title: "Liquidation engine",
       status: "Big Idea",
       process: "20%",
       barColor:
@@ -259,7 +259,7 @@ const RoadmapSection = () => {
     },
     {
       titleColor: "#1425BB",
-      title: "Liquidation engine",
+      title: "Staking HDX",
       status: "Big Idea",
       process: "20%",
       barColor:
