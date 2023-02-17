@@ -21,22 +21,17 @@ const RoadmapSection = () => {
       },
     },
     {
-      titleColor: "#9CDDFF",
-      title: "DAI <sup>(wormhole)</sup>",
-      status: "Completed",
-      process: "100%",
-      barColor:
-        "linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
-      icon: {
-        src: "/assets/roadmap-section/2.svg",
-        alt: "2",
-      },
-    },
-    {
       titleColor: "#5FC7FF",
-      title: "DOT",
+      // titleColor: "#9CDDFF",
+      title: "DOT, DAI, wETH, wBTC <sup>(wormhole)</sup>",
       status: "Completed",
       process: "100%",
+      // barColor:
+      //   "linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+      // icon: {
+      //   src: "/assets/roadmap-section/2.svg",
+      //   alt: "2",
+      // },
       barColor:
         "linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
       icon: {
@@ -44,6 +39,18 @@ const RoadmapSection = () => {
         alt: "3",
       },
     },
+    // {
+    //   titleColor: "#5FC7FF",
+    //   title: "DOT",
+    //   status: "Completed",
+    //   process: "100%",
+    //   barColor:
+    //     "linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+    //   icon: {
+    //     src: "/assets/roadmap-section/3.svg",
+    //     alt: "3",
+    //   },
+    // },
     {
       titleColor: "#2AB4FF",
       title: "Liquidity provisioning",
@@ -56,28 +63,40 @@ const RoadmapSection = () => {
         alt: "4",
       },
     },
+    // {
+    //   titleColor: "#2AB4FF",
+    //   title: "wETH <sup>(wormhole)</sup>",
+    //   status: "Completed",
+    //   process: "100%",
+    //   barColor:
+    //     "linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+    //   icon: {
+    //     src: "/assets/roadmap-section/4.svg",
+    //     alt: "4",
+    //   },
+    // },
+    // {
+    //   titleColor: "#2AB4FF",
+    //   title: "wBTC <sup>(wormhole)</sup>",
+    //   status: "Completed",
+    //   process: "100%",
+    //   barColor:
+    //     "linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+    //   icon: {
+    //     src: "/assets/roadmap-section/4.svg",
+    //     alt: "4",
+    //   },
+    // },
     {
-      titleColor: "#2AB4FF",
-      title: "wETH <sup>(wormhole)</sup>",
-      status: "Completed",
-      process: "100%",
+      titleColor: "#07A8FF",
+      title: "OTC desk",
+      status: "Soon<sup>TM</sup>",
+      process: "90%",
       barColor:
-        "linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        "linear-gradient(270deg, #07A8FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
       icon: {
-        src: "/assets/roadmap-section/4.svg",
-        alt: "4",
-      },
-    },
-    {
-      titleColor: "#2AB4FF",
-      title: "wBTC <sup>(wormhole)</sup>",
-      status: "Completed",
-      process: "100%",
-      barColor:
-        "linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
-      icon: {
-        src: "/assets/roadmap-section/4.svg",
-        alt: "4",
+        src: "/assets/roadmap-section/5.svg",
+        alt: "5",
       },
     },
     {
@@ -117,6 +136,18 @@ const RoadmapSection = () => {
       },
     },
     {
+      titleColor: "#127FFF",
+      title: "Dollar-cost averaging",
+      status: "Working on it",
+      process: "60%",
+      barColor:
+        "linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+      icon: {
+        src: "/assets/roadmap-section/7.svg",
+        alt: "7",
+      },
+    },
+    {
       titleColor: "#1263FF",
       title: "USDC <sup>(native)</sup>",
       status: "Working on it",
@@ -141,15 +172,22 @@ const RoadmapSection = () => {
       },
     },
     {
-      titleColor: "#1263FF",
+      // titleColor: "#033AFF",
+      titleColor: "#0047FF",
       title: "Dynamic fees",
       status: "Working on it",
-      process: "50%",
+      process: "45%",
+      // barColor:
+      //   "linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+      // icon: {
+      //   src: "/assets/roadmap-section/10.svg",
+      //   alt: "10",
+      // },
       barColor:
-        "linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        "linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
       icon: {
-        src: "/assets/roadmap-section/10.svg",
-        alt: "10%",
+        src: "/assets/roadmap-section/13.svg",
+        alt: "13",
       },
     },
     // {
@@ -177,20 +215,51 @@ const RoadmapSection = () => {
     // 	},
     // },
     {
-      titleColor: "#0047FF",
+      titleColor: "#033AFF",
+      // titleColor: "#0047FF",
       title: "Order batching",
       status: "Working on it",
       process: "40%",
+      // barColor:
+      //   "linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+      // icon: {
+      //   src: "/assets/roadmap-section/13.svg",
+      //   alt: "13",
+      // },
       barColor:
-        "linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        "linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
       icon: {
-        src: "/assets/roadmap-section/13.svg",
-        alt: "13",
+        src: "/assets/roadmap-section/10.svg",
+        alt: "10",
+      },
+    },
+    {
+      titleColor: "#1425BB",
+      title: "Lending and borrowing",
+      status: "Big Idea",
+      process: "20%",
+      barColor:
+        "linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
+      icon: {
+        src: "/assets/roadmap-section/14.svg",
+        alt: "14",
       },
     },
     {
       titleColor: "#1425BB",
       title: "Liquidation engine",
+      status: "Big Idea",
+      process: "20%",
+      barColor:
+        "linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
+      icon: {
+        src: "/assets/roadmap-section/14.svg",
+        alt: "14",
+      },
+    },
+    {
+      titleColor: "#1425BB",
+      title: "Staking HDX",
       status: "Big Idea",
       process: "20%",
       barColor:
@@ -213,7 +282,6 @@ const RoadmapSection = () => {
     // 	},
     // },
   ]
-
 
   return (
     <Section>
