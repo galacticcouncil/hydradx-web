@@ -1,121 +1,106 @@
-import styled, { css } from "styled-components"
-// import localFont from "@next/font/local"
-import {
-  // AnimatePresence,
-  motion,
-} from "framer-motion"
+import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
-// import { GoPlus } from "react-icons/go"
-import Image from "../image/image.component"
-import Link from "next/link"
-
-// const headerFont = localFont({
-// 	src: [
-// 		{
-// 			path: "../../assets/fonts/hubot-sans/WOFF-2/Hubot-Sans-MediumWide.woff2",
-// 			weight: "500",
-// 			style: "normal",
-// 		},
-// 	],
-// })
+import Image from '../image/image.component'
+import Link from 'next/link'
 
 const Footer = () => {
   const aboutItems = [
     {
-      label: "Documentation",
-      href: "https://docs.hydradx.io/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Documentation',
+      href: 'https://docs.hydradx.io/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Tokenomics",
-      href: "https://docs.hydradx.io/tokenomics",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Tokenomics',
+      href: 'https://docs.hydradx.io/tokenomics',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Press Kit",
-      href: "https://github.com/galacticcouncil/HydraDX-assets/tree/main/images",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Press Kit',
+      href: 'https://github.com/galacticcouncil/HydraDX-assets/tree/main/images',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Bug bounties",
-      href: "https://immunefi.com/bounty/hydradx/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Bug bounties',
+      href: 'https://immunefi.com/bounty/hydradx/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
   ]
 
   const socialItems = [
     {
-      label: "Github",
-      href: "https://github.com/galacticcouncil",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Github',
+      href: 'https://github.com/galacticcouncil',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Discord",
-      href: "https://discord.gg/kkmY35UxAG",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Discord',
+      href: 'https://discord.gg/kkmY35UxAG',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Twitter",
-      href: "https://twitter.com/hydra_dx",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Twitter',
+      href: 'https://twitter.com/hydra_dx',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Telegram",
-      href: "https://t.me/hydradx",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Telegram',
+      href: 'https://t.me/hydradx',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Substack",
-      href: "https://hydradx.substack.com/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Substack',
+      href: 'https://hydradx.substack.com/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Reddit",
-      href: "https://www.reddit.com/r/hdx/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Reddit',
+      href: 'https://www.reddit.com/r/hdx/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
   ]
 
   const MOBILE_NAV_ITEMS = [
     {
-      label: "Docs",
-      href: "https://docs.hydradx.io/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Docs',
+      href: 'https://docs.hydradx.io/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Tokenomics",
-      href: "https://docs.hydradx.io/tokenomics",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Tokenomics',
+      href: 'https://docs.hydradx.io/tokenomics',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Github",
-      href: "https://github.com/galacticcouncil",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Github',
+      href: 'https://github.com/galacticcouncil',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
     {
-      label: "Newsletter",
-      rel: "noopener noreferrer",
-      target: "_blank",
-      href: "ttps://hydradx.substack.com/",
+      label: 'Newsletter',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+      href: 'https://hydradx.substack.com/',
     },
     {
-      label: "Bug bounties",
-      href: "https://immunefi.com/bounty/hydradx/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      label: 'Bug bounties',
+      href: 'https://immunefi.com/bounty/hydradx/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
     },
   ]
 
@@ -135,7 +120,7 @@ const Footer = () => {
           y: -200,
         }}
         transition={{
-          type: "spring",
+          type: 'spring',
           mass: 1,
           stiffness: 100,
           damping: 15,
@@ -150,57 +135,6 @@ const Footer = () => {
                     {item.label}
                   </Link>
                 )}
-                {/* {item.list && (
-									<MobileDropdownButton
-										isOpen={false}
-										// isOpen={item.isOpen}
-										// onClick={() => item.toggle()}
-									>
-										<span>{item.label}</span>
-										<IconSpan
-											isOpen={false}
-											// isOpen={item.isOpen}
-											// animate={
-											// 	item.isOpen ? { rotate: "-45deg" } : { rotate: 0 }
-											// }
-											transition={{
-												type: "spring",
-												mass: 1,
-												stiffness: 256,
-												damping: 24,
-											}}
-										>
-											<GoPlus />
-										</IconSpan>
-									</MobileDropdownButton>
-								)} */}
-                {/* <AnimatePresence>
-									{item.list && item.isOpen && (
-										<MobileDropdownMenu
-											initial={{ opacity: 0, height: 0 }}
-											animate={{ opacity: 1, height: "auto" }}
-											exit={{ opacity: 0, height: 0 }}
-											transition={{
-												type: "spring",
-												mass: 1,
-												stiffness: 256,
-												damping: 24,
-											}}
-										>
-											<MobileDropdownList>
-												{item.list.map((listItem, index) => (
-													<MobileDropdownMenuItem key={index}>
-														<Link href={listItem.href} passHref>
-															<LabelA rel={item.rel} target={item.target}>
-																<LabelSpan>{listItem.label}</LabelSpan>
-															</LabelA>
-														</Link>
-													</MobileDropdownMenuItem>
-												))}
-											</MobileDropdownList>
-										</MobileDropdownMenu>
-									)}
-								</AnimatePresence> */}
               </MobileNavItem>
             ))}
           </MobileNavList>
@@ -209,14 +143,14 @@ const Footer = () => {
 
       <Container>
         <LogoContainer>
-          <Link href={"/"} scroll>
+          <Link href={'/'} scroll>
             <LogoFigure>
               <Image
                 src="/assets/logo-v2.svg"
                 alt="HydraDX"
-                width={"100%"}
-                height={"100%"}
-                style={{ objectFit: "contain" }}
+                width={'100%'}
+                height={'100%'}
+                style={{ objectFit: 'contain' }}
               />
             </LogoFigure>
           </Link>
@@ -224,10 +158,10 @@ const Footer = () => {
             <p>Secured by</p>
             <figure>
               <Image
-                src={"/assets/hero-section/polkadot-v2.svg"}
-                alt={"polkadot logo"}
-                width={"100%"}
-                height={"100%"}
+                src={'/assets/hero-section/polkadot-v2.svg'}
+                alt={'polkadot logo'}
+                width={'100%'}
+                height={'100%'}
               />
             </figure>
           </PContainer>
@@ -287,7 +221,7 @@ const LogoContainer = styled.div`
   margin: 0 auto;
 
   p {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
@@ -337,13 +271,10 @@ const Nav = styled.div`
 
 const PContainer = styled.div`
   visibility: visible;
-  /* margin-top: 8.6rem; */
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   gap: 0.83rem;
 
-  font-family: "Chakra Petch";
+  font-family: 'Chakra Petch';
   font-style: normal;
   font-weight: 500;
   font-size: 1.44553rem;
@@ -373,7 +304,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   a {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
@@ -386,7 +317,7 @@ const Li = styled.li`
     font-size: 1.5rem;
     line-height: 130%;
 
-    font-family: "HubotSans";
+    font-family: 'HubotSans';
     font-weight: 500;
     font-style: normal;
 
@@ -400,7 +331,7 @@ const Li = styled.li`
 
 const navLinksStyles = css`
   cursor: pointer;
-  font-family: "Chakra Petch";
+  font-family: 'Chakra Petch';
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -412,43 +343,8 @@ const navLinksStyles = css`
   }
 `
 
-// const LabelA = styled.a`
-// 	position: relative;
-
-// 	gap: 0.5rem;
-// 	font-weight: 400;
-// 	font-size: 1.3rem;
-// 	color: #fff;
-
-// 	transition: all 0.3s ease-in;
-
-// 	&:hover {
-// 		color: #ff99c2;
-// 	}
-
-// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-// 		font-size: 0.78rem;
-// 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-// 			font-size: 1.3rem;
-// 		}
-// 	}
-// `
-
-// const LabelSpan = styled.span`
-// 	position: relative;
-// 	transition: all 0.3s ease-out;
-// `
-
 const MobileMenuContainer = styled(motion.div)`
-  /* position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 99; */
-
   width: 100%;
-  /* height: 100vh; */
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -482,62 +378,3 @@ const MobileNavItem = styled.li`
     border-bottom: 0.461563px solid rgba(76, 243, 168, 0.12);
   }
 `
-
-// const MobileDropdownButton = styled.button<{ isOpen: boolean }>`
-// 	${navLinksStyles};
-// 	background-color: transparent;
-// 	outline: none;
-// 	border: none;
-// 	padding: 2rem 0;
-
-// 	width: 100%;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: space-between;
-// 	gap: 0.5rem;
-
-// 	span {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		color: ${({ isOpen }) => (isOpen ? "#FC408C" : "#fff")};
-// 	}
-// `
-
-// const IconSpan = styled(motion.span)<{ isOpen: boolean }>`
-// 	/* transition: 0.3s; */
-// 	color: ${({ isOpen }) => (isOpen ? "#FC408C" : "#fff")};
-// `
-
-// const MobileDropdownMenu = styled(motion.div)`
-// 	overflow: hidden;
-// `
-
-// const MobileDropdownList = styled.ul`
-// 	margin: 0 1rem;
-// `
-
-// const MobileDropdownMenuItem = styled(motion.li)`
-// 	/* padding: 2rem 0; */
-
-// 	a {
-// 		${navLinksStyles};
-
-// 		display: flex;
-// 		align-items: center;
-// 		gap: 1.5rem;
-// 		padding: 1rem 0.4rem;
-// 		font-size: 1.3rem;
-
-// 		transition: all 0.3s ease-in;
-// 	}
-
-// 	span {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 	}
-// 	&:last-child {
-// 		margin-bottom: 2rem;
-// 	}
-// `
