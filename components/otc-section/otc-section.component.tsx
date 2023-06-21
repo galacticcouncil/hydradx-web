@@ -58,6 +58,22 @@ const OTCSection = () => {
     },
   }
 
+  const iluVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      // y: 50,
+    },
+    visible: {
+      // y: 0,
+      opacity: 1,
+      transition: {
+        ease: [0.22, 1.09, 0.59, 0.95],
+        duration: 0.8,
+        delay: 0.3,
+      },
+    },
+  }
+
   return (
     <Section
       variants={contentVariants}
@@ -86,15 +102,17 @@ const OTCSection = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <Image
-          src="/assets/otc-section/otc-illu.png"
-          alt="Over-the-counter trading"
-          width={'100%'}
-          height={'100%'}
-          style={{
-            objectFit: 'contain',
-          }}
-        />
+        <IluFigure variants={iluVariants}>
+          <Image
+            src="/assets/otc-section/otc-illu.png"
+            alt="Over-the-counter trading"
+            width={'100%'}
+            height={'100%'}
+            style={{
+              objectFit: 'contain',
+            }}
+          />
+        </IluFigure>
       </ContentFigure>
     </Section>
   )
@@ -130,6 +148,25 @@ const ContentFigure = styled(motion.figure)`
   /* border: 1px solid blue; */
   position: relative;
   flex-grow: 1;
+`
+
+const IluFigure = styled(motion.figure)`
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  margin-left: 1.5rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      margin-left: 2.5rem;
+      @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      }
+    }
+  }
 `
 
 const buttonStyles = css`
