@@ -291,7 +291,10 @@ const OmnipoolSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <H3 variants={headerVariants}>Rediscover efficient trading.</H3>
+          <H3 variants={headerVariants}>
+            Rediscover <br />
+            efficient trading.
+          </H3>
           <P variants={pVariants}>
             By combining all assets in a single pool, the Omnipool enables
             capital-efficient trading with fewer hops and lower slippage.
@@ -356,7 +359,7 @@ const OmnipoolSection = () => {
           viewport={{ once: true }}
         >
           <Tag label="New" />
-          <H3 variants={headerVariants}>DCA like a pro</H3>
+          <H3 variants={headerVariants}>DCA like a pro.</H3>
           <P variants={pVariants}>
             Don’t let market turbulence bring you down. Spread your trades over
             time to achieve average pricing and less slippage. As easy as never
@@ -397,7 +400,7 @@ const OmnipoolSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <H3 variants={headerVariants}>Earn rewards from Hydrated Farms</H3>
+          <H3 variants={headerVariants}>Earn rewards from Hydrated Farms.</H3>
           <P variants={pVariants}>
             Provide liquidity for selected assets and receive additional rewards
             on top of trading fees. Paid out HDX or any other supported asset.

@@ -286,7 +286,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               href="https://twitter.com/hydra_dx/status/1671117842157039617?s=20"
             >
-              <span>DCA is here</span>
+              <span>Introducing DCA trade</span>
               <figure>
                 <Image
                   src="/assets/icons/arrow-right.svg"
@@ -405,7 +405,7 @@ const TagContainer = styled(motion.a)`
     rgba(76, 213, 243, 0.12),
     rgba(76, 213, 243, 0.12)
   );
-  padding: 0.6rem 3.7rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 9999rem;
   border: 1px solid rgba(133, 209, 255, 1);
 
