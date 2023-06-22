@@ -428,12 +428,14 @@ const TagContainer = styled(motion.a)`
   &:hover {
     background-color: rgba(1, 107, 172, 0.9);
     color: #ffffff;
+    gap: 1.2rem;
   }
 
   &:active {
     background-color: #3192cd;
     border: 1px solid #a6ddff;
     color: #ffffff;
+    gap: 1.2rem;
   }
 `
 
