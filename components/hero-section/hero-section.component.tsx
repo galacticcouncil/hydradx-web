@@ -281,6 +281,7 @@ const HeroSection = () => {
 
           <TagWrapper>
             <TagContainer
+              variants={titleVariants}
               target="_blank"
               rel="noopener noreferrer"
               href="https://twitter.com/hydra_dx/status/1671117842157039617?s=20"
@@ -416,11 +417,24 @@ const TagContainer = styled(motion.a)`
     align-items: center;
   }
 
+  transition: all 0.3s ease-out;
+
   text-align: center;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 2rem;
+
+  &:hover {
+    background-color: rgba(1, 107, 172, 0.9);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #3192cd;
+    border: 1px solid #a6ddff;
+    color: #ffffff;
+  }
 `
 
 const Section = styled.section`
