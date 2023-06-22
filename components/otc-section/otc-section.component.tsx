@@ -122,8 +122,8 @@ export default OTCSection
 
 const Section = styled(motion.section)`
   position: relative;
-  padding-top: 6.6rem;
-  margin-bottom: 26.7rem;
+  padding-top: 0rem;
+  margin-bottom: 16.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,35 +134,51 @@ const Section = styled(motion.section)`
     margin: 0 auto 3rem;
   }
 
-  /* @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      margin-bottom: 10rem;
-      padding-top: 9.156rem;
+      padding-top: 6.6rem;
+      margin-bottom: 26.7rem;
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
     }
-  } */
+  }
 `
 
 const ContentFigure = styled(motion.figure)`
   /* border: 1px solid blue; */
   position: relative;
   flex-grow: 1;
+  overflow: hidden;
+  margin: 0 -2rem;
+
+  @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      margin: 0;
+      @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      }
+    }
+  }
 `
 
 const IluFigure = styled(motion.figure)`
   position: relative;
-  width: 100%;
   display: flex;
+  width: 150%;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   /* border: 1px solid red; */
-  margin-left: 1.5rem;
+  /* margin-left: -7rem; */
+  left: 52%;
+  transform: translateX(-50%);
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      width: 100%;
       margin-left: 2.5rem;
+
+      left: unset;
+      transform: unset;
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
     }
