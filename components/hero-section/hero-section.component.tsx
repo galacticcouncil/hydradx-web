@@ -1,16 +1,16 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 // import localFont from "@next/font/local"
-import { motion, Variants, useScroll, useTransform } from "framer-motion"
+import { motion, Variants, useScroll, useTransform } from 'framer-motion'
 
-import { Tooltip } from "react-tooltip"
-import { ButtonLink } from "../button/button.component"
-import Image from "../image/image.component"
-import Link from "next/link"
-import { useState } from "react"
+import { Tooltip } from 'react-tooltip'
+import { ButtonLink } from '../button/button.component'
+import Image from '../image/image.component'
+import Link from 'next/link'
+import { useState } from 'react'
 
 // import { useBoolean } from "usehooks-ts"
 
-import "react-tooltip/dist/react-tooltip.css"
+import 'react-tooltip/dist/react-tooltip.css'
 
 const HeroSection = () => {
   const [isAnimationDone, setIsAnimationDone] = useState(false)
@@ -21,92 +21,92 @@ const HeroSection = () => {
 
   const socials = [
     {
-      id: "substack",
-      tooltip: "Substack",
-      href: "https://hydradx.substack.com/",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      id: 'substack',
+      tooltip: 'Substack',
+      href: 'https://hydradx.substack.com/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
       icon: {
-        src: "/assets/hero-section/socials/substack-desktop.svg",
-        alt: "substack",
+        src: '/assets/hero-section/socials/substack-desktop.svg',
+        alt: 'substack',
       },
       mobileIcon: {
-        src: "/assets/socials/substack.svg",
-        alt: "substack",
+        src: '/assets/socials/substack.svg',
+        alt: 'substack',
       },
     },
     {
-      id: "twitter",
-      tooltip: "Twitter",
-      href: "https://twitter.com/hydra_dx",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      id: 'twitter',
+      tooltip: 'Twitter',
+      href: 'https://twitter.com/hydra_dx',
+      rel: 'noopener noreferrer',
+      target: '_blank',
       icon: {
-        src: "/assets/hero-section/socials/twitter-desktop-v4.png",
-        alt: "twitter",
+        src: '/assets/hero-section/socials/twitter-desktop-v4.png',
+        alt: 'twitter',
       },
       mobileIcon: {
-        src: "/assets/socials/twitter-v2.png",
-        alt: "twitter",
+        src: '/assets/socials/twitter-v2.png',
+        alt: 'twitter',
       },
     },
     {
-      id: "discord",
-      tooltip: "Discord",
-      href: "https://discord.gg/kkmY35UxAG",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      id: 'discord',
+      tooltip: 'Discord',
+      href: 'https://discord.gg/kkmY35UxAG',
+      rel: 'noopener noreferrer',
+      target: '_blank',
       icon: {
-        src: "/assets/hero-section/socials/discord-desktop.svg",
-        alt: "discord",
+        src: '/assets/hero-section/socials/discord-desktop.svg',
+        alt: 'discord',
       },
       mobileIcon: {
-        src: "/assets/socials/discord.svg",
-        alt: "discord",
+        src: '/assets/socials/discord.svg',
+        alt: 'discord',
       },
     },
 
     {
-      id: "telegram",
-      tooltip: "Telegram",
-      href: "https://t.me/hydradx",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      id: 'telegram',
+      tooltip: 'Telegram',
+      href: 'https://t.me/hydradx',
+      rel: 'noopener noreferrer',
+      target: '_blank',
       icon: {
-        src: "/assets/hero-section/socials/telegram-desktop.svg",
-        alt: "telegram",
+        src: '/assets/hero-section/socials/telegram-desktop.svg',
+        alt: 'telegram',
       },
       mobileIcon: {
-        src: "/assets/socials/telegram.svg",
-        alt: "telegram",
+        src: '/assets/socials/telegram.svg',
+        alt: 'telegram',
       },
     },
     {
-      id: "reddit",
-      tooltip: "Reddit",
-      href: "https://www.reddit.com/r/hdx/",
+      id: 'reddit',
+      tooltip: 'Reddit',
+      href: 'https://www.reddit.com/r/hdx/',
       icon: {
-        src: "/assets/hero-section/socials/reddit.svg",
-        alt: "reddit",
+        src: '/assets/hero-section/socials/reddit.svg',
+        alt: 'reddit',
       },
       mobileIcon: {
-        src: "/assets/socials/reddit.svg",
-        alt: "reddit",
+        src: '/assets/socials/reddit.svg',
+        alt: 'reddit',
       },
     },
     {
-      id: "github",
-      tooltip: "Github",
-      href: "https://github.com/galacticcouncil",
-      rel: "noopener noreferrer",
-      target: "_blank",
+      id: 'github',
+      tooltip: 'Github',
+      href: 'https://github.com/galacticcouncil',
+      rel: 'noopener noreferrer',
+      target: '_blank',
       icon: {
-        src: "/assets/hero-section/socials/github-desktop.svg",
-        alt: "github",
+        src: '/assets/hero-section/socials/github-desktop.svg',
+        alt: 'github',
       },
       mobileIcon: {
-        src: "/assets/socials/github.svg",
-        alt: "github",
+        src: '/assets/socials/github.svg',
+        alt: 'github',
       },
     },
   ]
@@ -230,7 +230,7 @@ const HeroSection = () => {
     },
   }
 
-  console.log("isAnimationDone", isAnimationDone)
+  console.log('isAnimationDone', isAnimationDone)
 
   return (
     <>
@@ -249,21 +249,21 @@ const HeroSection = () => {
           <BackgroundFigure className="desktop">
             <Image
               className="desktop back"
-              src={"/assets/hero-section/bg-ilu-v4-min.png"}
-              alt={"Background ilu"}
-              width={"100%"}
-              height={"100%"}
-              style={{ objectFit: "cover" }}
+              src={'/assets/hero-section/bg-ilu-v4-min.png'}
+              alt={'Background ilu'}
+              width={'100%'}
+              height={'100%'}
+              style={{ objectFit: 'cover' }}
             />
           </BackgroundFigure>
           <BackgroundFigure className="mobile">
             <Image
               className="back"
-              src={"/assets/hero-section/bg-ilu-mobile-v2.png"}
-              alt={"Background ilu"}
-              width={"100%"}
-              height={"100%"}
-              style={{ objectFit: "cover" }}
+              src={'/assets/hero-section/bg-ilu-mobile-v2.png'}
+              alt={'Background ilu'}
+              width={'100%'}
+              height={'100%'}
+              style={{ objectFit: 'cover' }}
             />
           </BackgroundFigure>
         </OverlayBackground>
@@ -271,13 +271,32 @@ const HeroSection = () => {
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
           <LogoFigure variants={logoVariants}>
             <Image
-              src={"/assets/hero-section/hydra-logo.svg"}
-              alt={"Hydra logo"}
-              width={"100%"}
-              height={"100%"}
-              style={{ objectFit: "contain" }}
+              src={'/assets/hero-section/hydra-logo.svg'}
+              alt={'Hydra logo'}
+              width={'100%'}
+              height={'100%'}
+              style={{ objectFit: 'contain' }}
             />
           </LogoFigure>
+
+          <TagWrapper>
+            <TagContainer
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/hydra_dx/status/1671117842157039617?s=20"
+            >
+              <span>DCA is here</span>
+              <figure>
+                <Image
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow right"
+                  width={15}
+                  height={15}
+                  style={{ objectFit: 'contain' }}
+                />
+              </figure>
+            </TagContainer>
+          </TagWrapper>
 
           <H1 variants={titleVariants}>
             An Ocean of
@@ -304,10 +323,10 @@ const HeroSection = () => {
             <p>Secured by</p>
             <figure>
               <Image
-                src={"/assets/hero-section/polkadot-v2.svg"}
-                alt={"polkadot logo"}
-                width={"100%"}
-                height={"100%"}
+                src={'/assets/hero-section/polkadot-v2.svg'}
+                alt={'polkadot logo'}
+                width={'100%'}
+                height={'100%'}
               />
             </figure>
           </Footer>
@@ -369,6 +388,40 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
+const TagWrapper = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+`
+
+const TagContainer = styled(motion.a)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(
+    0deg,
+    rgba(76, 213, 243, 0.12),
+    rgba(76, 213, 243, 0.12)
+  );
+  padding: 0.6rem 3.7rem;
+  border-radius: 9999rem;
+  border: 1px solid rgba(133, 209, 255, 1);
+
+  color: rgba(133, 209, 255, 1);
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  text-align: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+`
 
 const Section = styled.section`
   padding: 8.1rem 2rem 13.1rem 2rem;
@@ -475,7 +528,7 @@ const H1 = styled(motion.h1)`
   font-size: 3.4rem;
   line-height: 130%;
 
-  font-family: "HubotSans";
+  font-family: 'HubotSans';
   font-weight: 900;
   font-style: bold;
 
@@ -498,7 +551,7 @@ const H1 = styled(motion.h1)`
 
 const P = styled(motion.p)`
   text-align: center;
-  font-family: "Chakra Petch", sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 1.6rem;
   line-height: 150%;
 
@@ -594,7 +647,7 @@ const Footer = styled(motion.div)`
       align-items: center;
       gap: 0.83rem;
 
-      font-family: "Chakra Petch";
+      font-family: 'Chakra Petch';
       font-style: normal;
       font-weight: 500;
       font-size: 1.44553rem;
