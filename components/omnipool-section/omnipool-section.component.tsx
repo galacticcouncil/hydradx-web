@@ -183,8 +183,8 @@ const OmnipoolSection = () => {
             Meet single-sided liquidity provisioning.
           </H3>
           <P variants={pVariants}>
-            Provide liquidity only for the asset you want. The Omnipool will
-            mint and burn a corresponding amount of the pool token LRNA.
+            The innovative design of the Omnipool allows you to provide
+            liquidity only for the asset you want.
           </P>
 
           <Button
@@ -291,12 +291,10 @@ const OmnipoolSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <H3 variants={headerVariants}>
-            Discover efficient trading like no other AMM.
-          </H3>
+          <H3 variants={headerVariants}>Rediscover efficient trading.</H3>
           <P variants={pVariants}>
-            Deep, diversified and unfragmented liquidity enables 2-4x more
-            capital-efficient trading thanks to lower slippage and fewer hops.
+            By combining all assets in a single pool, the Omnipool enables
+            capital-efficient trading with fewer hops and lower slippage.
           </P>
 
           <Button
@@ -347,6 +345,48 @@ const OmnipoolSection = () => {
               }}
             />
           </ChartFigure>
+        </ContentFigure>
+      </GridContainer>
+
+      <GridContainer>
+        <Content
+          variants={contentVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Tag label="New" />
+          <H3 variants={headerVariants}>DCA like a pro</H3>
+          <P variants={pVariants}>
+            Don’t let market turbulence bring you down. Spread your trades over
+            time to achieve average pricing and less slippage. As easy as never
+            before.
+          </P>
+
+          <Button
+            variants={headerVariants}
+            href="https://app.hydradx.io/dca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LEARN MORE
+          </Button>
+        </Content>
+        <ContentFigure
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <FourthIlu variants={iluVariants}>
+            <Image
+              src="/assets/omnipool/DCA-ilu-3.png"
+              alt="DCA ilu"
+              width={'100%'}
+              height={'100%'}
+              style={{ objectFit: 'contain' }}
+            />
+          </FourthIlu>
         </ContentFigure>
       </GridContainer>
 
@@ -441,48 +481,6 @@ const OmnipoolSection = () => {
               }}
             />
           </HydrateIlu>
-        </ContentFigure>
-      </GridContainer>
-
-      <GridContainer>
-        <Content
-          variants={contentVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Tag label="New" />
-          <H3 variants={headerVariants}>DCA like a pro</H3>
-          <P variants={pVariants}>
-            Don’t let market turbulence bring you down. Spread your trades over
-            time to achieve average pricing and less slippage. As easy as never
-            before.
-          </P>
-
-          <Button
-            variants={headerVariants}
-            href="https://app.hydradx.io/dca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LEARN MORE
-          </Button>
-        </Content>
-        <ContentFigure
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <FourthIlu variants={iluVariants}>
-            <Image
-              src="/assets/omnipool/DCA-ilu-3.png"
-              alt="DCA ilu"
-              width={'100%'}
-              height={'100%'}
-              style={{ objectFit: 'contain' }}
-            />
-          </FourthIlu>
         </ContentFigure>
       </GridContainer>
     </Section>
