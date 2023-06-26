@@ -285,7 +285,7 @@ const HeroSection = () => {
         </OverlayBackground>
 
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
-          <LogoFigure variants={logoVariants}>
+          {/* <LogoFigure variants={logoVariants}>
             <Image
               src={'/assets/hero-section/hydra-logo.svg'}
               alt={'Hydra logo'}
@@ -293,7 +293,7 @@ const HeroSection = () => {
               height={'100%'}
               style={{ objectFit: 'contain' }}
             />
-          </LogoFigure>
+          </LogoFigure> */}
 
           <TagWrapper>
             <TagContainer
@@ -672,7 +672,7 @@ const Footer = styled(motion.div)`
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
       visibility: visible;
-      margin-top: 3.6rem;
+      margin-top: 8.6rem;
       display: flex;
       justify-content: center;
       align-items: center;
