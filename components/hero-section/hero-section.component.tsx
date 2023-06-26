@@ -162,7 +162,23 @@ const HeroSection = () => {
       transition: {
         ease: [0.12, 0.23, 0, 1.01],
         duration: 2.4,
-        delay: 1.2,
+        delay: 1.8,
+      },
+    },
+  }
+
+  const tagVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: -40,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: [0.12, 0.23, 0, 1.01],
+        duration: 1.4,
+        delay: 0.65,
       },
     },
   }
@@ -193,7 +209,7 @@ const HeroSection = () => {
       transition: {
         ease: [0.12, 0.23, 0, 1.01],
         duration: 1.8,
-        delay: 0.3,
+        delay: 0.7,
       },
     },
   }
@@ -209,7 +225,7 @@ const HeroSection = () => {
       transition: {
         ease: [0.12, 0.23, 0, 1.01],
         duration: 2,
-        delay: 0.6,
+        delay: 1,
       },
     },
   }
@@ -225,7 +241,7 @@ const HeroSection = () => {
       transition: {
         ease: [0.12, 0.23, 0, 1.01],
         duration: 1.8,
-        delay: 0.8,
+        delay: 1.2,
       },
     },
   }
@@ -281,7 +297,7 @@ const HeroSection = () => {
 
           <TagWrapper>
             <TagContainer
-              variants={titleVariants}
+              variants={tagVariants}
               target="_blank"
               rel="noopener noreferrer"
               href="https://twitter.com/hydra_dx/status/1671117842157039617?s=20"
@@ -305,8 +321,7 @@ const HeroSection = () => {
           </H1>
           <P variants={pVariants}>
             Trade an abundance of assets in a single pool.
-            <br /> The HydraDX Omnipool is efficient,
-            <br /> sustainable and trustless.
+            <br /> The HydraDX Omnipool is efficient, sustainable and trustless.
           </P>
 
           <ButtonsContainer variants={buttonsContainerVariants}>
@@ -448,7 +463,7 @@ const Section = styled.section`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      padding: 7.6rem 2rem 2rem 2rem;
+      padding: 3rem 2rem 2rem 2rem;
 
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
@@ -523,13 +538,13 @@ const OverlayBackground = styled(motion.div)`
 const LogoFigure = styled(motion.figure)`
   width: 5.808rem;
   height: 4.748rem;
-  margin: 0 auto 3.4rem;
+  margin: 0 auto 2rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
       width: 10.263rem;
       height: 8.391rem;
-      margin: 0 auto 4.1rem;
+      margin: 0 auto 2rem;
 
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
@@ -574,7 +589,7 @@ const P = styled(motion.p)`
   text-align: center;
   color: #ffffff;
   opacity: 0.8;
-  margin-bottom: 4.8rem;
+  margin-bottom: 2.8rem;
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -657,7 +672,7 @@ const Footer = styled(motion.div)`
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
       visibility: visible;
-      margin-top: 8.6rem;
+      margin-top: 3.6rem;
       display: flex;
       justify-content: center;
       align-items: center;
