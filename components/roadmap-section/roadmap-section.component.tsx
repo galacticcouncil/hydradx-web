@@ -1,143 +1,156 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import H2 from "../h2/content-h2.component"
-import RoadmapItem from "../roadmap-item/roadmap-item.component"
-import Image from "../image/image.component"
+import H2 from '../h2/content-h2.component'
+import RoadmapItem from '../roadmap-item/roadmap-item.component'
+import Image from '../image/image.component'
 
-import { IRoadmapItem } from "../../types/roadmap-item.types"
+import { IRoadmapItem } from '../../types/roadmap-item.types'
 
 const RoadmapSection = () => {
   const roadmapItems: IRoadmapItem[] = [
     {
-      titleColor: "#9CDDFF",
-      title: "Omnipool",
-      status: "Completed",
-      process: "100%",
+      titleColor: '#9CDDFF',
+      title: 'Omnipool',
+      status: 'Completed',
+      process: '100%',
       barColor:
-        "linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #9CDDFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/1.svg",
-        alt: "1",
+        src: '/assets/roadmap-section/1.svg',
+        alt: '1',
       },
     },
     {
-      titleColor: "#5FC7FF",
-      title: "Liquidity provisioning",
-      status: "Completed",
-      process: "100%",
+      titleColor: '#5FC7FF',
+      title: 'liquidity provisioning',
+      status: 'Completed',
+      process: '100%',
       barColor:
-        "linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #5FC7FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/3.svg",
-        alt: "3",
+        src: '/assets/roadmap-section/3.svg',
+        alt: '3',
       },
     },
     {
-      titleColor: "#2AB4FF",
-      title: "OTC desk",
-      status: "Soon<sup>TM</sup>",
-      process: "90%",
+      titleColor: '#2AB4FF',
+      title: 'Over-the-counter trading',
+      status: 'Completed',
+      process: '100%',
       barColor:
-        "linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #2AB4FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/4.svg",
-        alt: "4",
+        src: '/assets/roadmap-section/4.svg',
+        alt: '4',
       },
     },
     {
-      titleColor: "#07A8FF",
-      title: "Liquidity mining",
-      status: "Soon<sup>TM</sup>",
-      process: "77%",
+      titleColor: '#07A8FF',
+      title: 'Hydrated Farms',
+      status: 'Completed',
+      process: '100%',
       barColor:
-        "linear-gradient(270deg, #2A99FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #2A99FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/6.svg",
-        alt: "6",
+        src: '/assets/roadmap-section/6.svg',
+        alt: '6',
       },
     },
     {
-      titleColor: "#127FFF",
-      title: "Stableswap pool",
-      status: "Soon<sup>TM</sup>",
-      process: "65%",
+      titleColor: '#127FFF',
+      title: 'DCA trading',
+      status: 'Completed',
+      // status: "Soon<sup>TM</sup>",
+      process: '100%',
       barColor:
-        "linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/7.svg",
-        alt: "7",
+        src: '/assets/roadmap-section/7.svg',
+        alt: '7',
       },
     },
     {
-      titleColor: "#127FFF",
-      title: "Dollar-cost averaging",
-      status: "Working on it",
-      process: "60%",
+      titleColor: '#127FFF',
+      title: 'Stableswap pool',
+      status: 'Soon<sup>TM</sup>',
+      process: '90%',
       barColor:
-        "linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/7.svg",
-        alt: "7",
+        src: '/assets/roadmap-section/7.svg',
+        alt: '7',
       },
     },
     {
-      titleColor: "#1263FF",
-      title: "Dynamic fees",
-      status: "Working on it",
-      process: "45%",
+      titleColor: '#1263FF',
+      title: 'Dynamic fees',
+      status: 'Soon<sup>TM</sup>',
+      process: '80%',
       barColor:
-        "linear-gradient(270deg, #1246FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #1246FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/9.svg",
-        alt: "9",
+        src: '/assets/roadmap-section/9.svg',
+        alt: '9',
       },
     },
     {
-      titleColor: "#0047FF",
-      title: "Order batching",
-      status: "Working on it",
-      process: "40%",
+      titleColor: '#0047FF',
+      title: 'Staking HDX',
+      status: 'Soon<sup>TM</sup>',
+      process: '75%',
       barColor:
-        "linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/13.svg",
-        alt: "13",
+        src: '/assets/roadmap-section/13.svg',
+        alt: '13',
       },
     },
     {
-      titleColor: "#033AFF",
-      title: "Lending and borrowing",
-      status: "Big Idea",
-      process: "20%",
+      titleColor: '#033AFF',
+      title: 'Order batching',
+      status: 'Working on it',
+      process: '68%',
       barColor:
-        "linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)",
+        'linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/10.svg",
-        alt: "10",
+        src: '/assets/roadmap-section/10.svg',
+        alt: '10',
       },
     },
     {
-      titleColor: "#1425BB",
-      title: "Liquidation engine",
-      status: "Big Idea",
-      process: "20%",
+      titleColor: '#033AFF',
+      title: 'Lending & borrowing',
+      status: 'Working on it',
+      process: '60%',
       barColor:
-        "linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
+        'linear-gradient(270deg, #033AFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/14.svg",
-        alt: "14",
+        src: '/assets/roadmap-section/10.svg',
+        alt: '10',
       },
     },
     {
-      titleColor: "#1425BB",
-      title: "Staking HDX",
-      status: "Big Idea",
-      process: "20%",
+      titleColor: '#1425BB',
+      title: 'Liquidation engine',
+      status: 'Working on it',
+      process: '54%',
       barColor:
-        "linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)",
+        'linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)',
       icon: {
-        src: "/assets/roadmap-section/14.svg",
-        alt: "14",
+        src: '/assets/roadmap-section/14.svg',
+        alt: '14',
+      },
+    },
+    {
+      titleColor: '#1425BB',
+      title: 'backrunning auctions',
+      status: 'Working on it',
+      process: '45%',
+      barColor:
+        'linear-gradient(270deg, #1425BB 10.04%, rgba(20, 37, 187, 0) 97.53%)',
+      icon: {
+        src: '/assets/roadmap-section/14.svg',
+        alt: '14',
       },
     },
   ]
@@ -151,17 +164,17 @@ const RoadmapSection = () => {
           className="desktop"
           src="/assets/roadmap-section/blue-blur.svg"
           alt="blue blur"
-          width={"100%"}
-          height={"100%"}
-          style={{ objectFit: "contain" }}
+          width={'100%'}
+          height={'100%'}
+          style={{ objectFit: 'contain' }}
         />
         <Image
           className="mobile"
           src="/assets/roadmap-section/blue-blur-mobile.svg"
           alt="blue blur"
-          width={"100%"}
-          height={"100%"}
-          style={{ objectFit: "contain" }}
+          width={'100%'}
+          height={'100%'}
+          style={{ objectFit: 'contain' }}
         />
       </BlueBlur>
 
@@ -170,7 +183,7 @@ const RoadmapSection = () => {
           <Image
             src="/assets/roadmap-section/line.svg"
             alt="line"
-            height={"100%"}
+            height={'100%'}
           />
         </LineFigure>
         <Content>
@@ -216,7 +229,7 @@ const Container = styled.div`
       border-radius: 0.8rem;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -2;
         top: -1px;

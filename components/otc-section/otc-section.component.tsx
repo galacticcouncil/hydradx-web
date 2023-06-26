@@ -93,7 +93,7 @@ const OTCSection = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        LEARN MORE
+        GO OTC
       </Button>
 
       <ContentFigure

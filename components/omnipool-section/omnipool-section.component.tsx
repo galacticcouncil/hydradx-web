@@ -372,7 +372,7 @@ const OmnipoolSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LEARN MORE
+            TRADE DCA
           </Button>
         </Content>
         <ContentFigure
