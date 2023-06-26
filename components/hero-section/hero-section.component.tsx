@@ -463,7 +463,7 @@ const Section = styled.section`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      padding: 3rem 2rem 2rem 2rem;
+      padding: 8rem 2rem 2rem 2rem;
 
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
