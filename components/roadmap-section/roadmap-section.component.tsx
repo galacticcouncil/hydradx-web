@@ -22,7 +22,7 @@ const RoadmapSection = () => {
     },
     {
       titleColor: '#5FC7FF',
-      title: 'liquidity provisioning',
+      title: 'Liquidity provisioning',
       status: 'Completed',
       process: '100%',
       barColor:
@@ -143,7 +143,7 @@ const RoadmapSection = () => {
     },
     {
       titleColor: '#1425BB',
-      title: 'backrunning auctions',
+      title: 'Backrunning auctions',
       status: 'Working on it',
       process: '45%',
       barColor:
