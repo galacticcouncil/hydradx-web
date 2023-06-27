@@ -463,7 +463,7 @@ const Section = styled.section`
 
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-      padding: 8rem 2rem 2rem 2rem;
+      padding: 11rem 2rem 4rem 2rem;
 
       @media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       }
@@ -672,7 +672,7 @@ const Footer = styled(motion.div)`
   @media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
       visibility: visible;
-      margin-top: 8.6rem;
+      margin-top: 14.6rem;
       display: flex;
       justify-content: center;
       align-items: center;
