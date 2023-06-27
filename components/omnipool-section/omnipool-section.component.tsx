@@ -142,6 +142,7 @@ const OmnipoolSection = () => {
           alt={'desktop app ilu'}
           width="100%"
           height="100%"
+          effect="blur"
         />
         <Image
           className="mobile-app-ilu"
@@ -149,6 +150,7 @@ const OmnipoolSection = () => {
           alt={'mobile app ilu'}
           width="100%"
           height="100%"
+          effect="blur"
         />
       </IluFigure>
 
@@ -193,7 +195,7 @@ const OmnipoolSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LEARN MORE
+            EXPLORE LIQUIDITY
           </Button>
         </Content>
         <ContentFigure

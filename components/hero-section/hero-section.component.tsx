@@ -302,7 +302,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               href="https://twitter.com/hydra_dx/status/1671117842157039617?s=20"
             >
-              <span>Introducing DCA trade</span>
+              <span>Introducing DCA trading</span>
               <figure>
                 <Image
                   src="/assets/icons/arrow-right.svg"
