@@ -10,7 +10,7 @@ import OmnipoolSection from '../components/omnipool-section/omnipool-section.com
 import ProtocolSection from '../components/protocol-section/protocol-section.component'
 import RoadmapSection from '../components/roadmap-section/roadmap-section.component'
 import JoinTheNetworkSection from '../components/join-the-network-section/join-the-network-section.component'
-import ResourcessSection from '../components/resourcess-section/resourcess-section.component'
+import ResourcesSection from '../components/resources-section/resources-section.component'
 import FollowUsSection from '../components/follow-us-section/follow-us-section.component'
 import OTCSection from '../components/otc-section/otc-section.component'
 
@@ -66,7 +66,7 @@ export default function Home() {
       <ProtocolSection />
       <RoadmapSection />
       <JoinTheNetworkSection />
-      <ResourcessSection />
+      <ResourcesSection />
       <FollowUsSection />
     </>
   )

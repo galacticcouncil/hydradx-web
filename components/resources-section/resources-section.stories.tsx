@@ -1,10 +1,10 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 
-import ResourcessSection from "./resourcess-section.component"
+import ResourcessSection from './resources-section.component'
 
 const meta: Meta = {
-	title: "Sections/Resourcess",
-	component: ResourcessSection,
+  title: 'Sections/Resourcess',
+  component: ResourcessSection,
 }
 
 export default meta

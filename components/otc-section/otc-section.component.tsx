@@ -81,7 +81,7 @@ const OTCSection = () => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <H3 variants={headerVariants}>Over-the-counter trading</H3>
+      <H3 variants={headerVariants}>Over-the-counter trading.</H3>
       <P variants={pVariants}>
         Trade your favorite assets directly with other traders. No trusted third
         parties and no slippage. Set your price and let others fill your orders.
