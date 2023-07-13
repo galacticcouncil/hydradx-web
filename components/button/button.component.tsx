@@ -94,7 +94,12 @@ export const Button: React.FC<IButtonProps> = (props) => {
   )
 }
 
-export const ButtonLink: React.FC<IButtonLinkProps> = (props) => {
+export const ButtonLink: React.FC<IButtonLinkProps> = ({
+  href,
+  target,
+  rel,
+  ...props
+}) => {
   const variants: Variants = {
     initial: {
       top: 0,
@@ -172,7 +177,7 @@ export const ButtonLink: React.FC<IButtonLinkProps> = (props) => {
       whileTap={!props.disabled ? 'active' : undefined}
       {...props}
     >
-      <Link href={props.href || '#'} target={props.target} rel={props.rel}>
+      <Link href={href || '#'} target={target} rel={rel}>
         {props.children}
       </Link>
       {/* {!props.disabled && <ButtonBorder variants={borderVariants} />} */}

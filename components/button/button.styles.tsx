@@ -100,9 +100,9 @@ export const ButtonContainer = styled(motion.button)<IStyledProps>`
 
 export const AContainer = styled(motion.div)<IStyledProps>`
   position: relative;
-  ${PrimaryButtonStyles}
 
   a {
+    ${PrimaryButtonStyles}
     color: ${({ theme }) => theme.button.default.color};
     display: ${({ display }) => display || 'flex'};
 
