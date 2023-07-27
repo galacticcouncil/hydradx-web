@@ -30,6 +30,12 @@ const Footer = () => {
       rel: 'noopener noreferrer',
       target: '_blank',
     },
+    {
+      label: 'Polkassets.com',
+      href: 'https://www.polkassets.com/project/hydradx/',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+    },
   ]
 
   const socialItems = [
