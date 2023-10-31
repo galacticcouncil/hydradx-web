@@ -60,7 +60,6 @@ const RoadmapSection = () => {
       titleColor: '#127FFF',
       title: 'DCA trading',
       status: 'Completed',
-      // status: "Soon<sup>TM</sup>",
       process: '100%',
       barColor:
         'linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
@@ -72,8 +71,8 @@ const RoadmapSection = () => {
     {
       titleColor: '#127FFF',
       title: 'Stableswap pool',
-      status: 'Soon<sup>TM</sup>',
-      process: '90%',
+      status: 'Completed',
+      process: '100%',
       barColor:
         'linear-gradient(270deg, #127FFF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
@@ -84,8 +83,8 @@ const RoadmapSection = () => {
     {
       titleColor: '#1263FF',
       title: 'Dynamic fees',
-      status: 'Soon<sup>TM</sup>',
-      process: '80%',
+      status: 'Completed',
+      process: '100%',
       barColor:
         'linear-gradient(270deg, #1246FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
@@ -96,8 +95,9 @@ const RoadmapSection = () => {
     {
       titleColor: '#0047FF',
       title: 'Staking HDX',
-      status: 'Soon<sup>TM</sup>',
-      process: '75%',
+      status: 'Completed',
+      // status: 'Soon<sup>TM</sup>',
+      process: '100%',
       barColor:
         'linear-gradient(270deg, #0047FF 10.04%, rgba(55, 103, 128, 0) 97.53%)',
       icon: {
