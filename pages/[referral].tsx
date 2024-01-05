@@ -8,15 +8,17 @@ const PAGE_CANONICAL = 'https://hydradx.io'
 const PAGE_IMAGE = 'https://hydradx.io/assets/meta-referrals-image.jpg'
 
 const Referral = () => {
-  const { query, push } = useRouter()
+  const { query, push, isReady } = useRouter()
 
   useEffect(() => {
+    if (!isReady) return
+
     if (query.referral) {
-      push(`https://app.hydradx.io/referrals?referral=${query.referral}`)
+      push(`https://app.hydradx.io/trade/swap?referral=${query.referral}`)
     } else {
       push('/')
     }
-  }, [push, query.referral])
+  }, [isReady, push, query.referral])
 
   return (
     <Head>
