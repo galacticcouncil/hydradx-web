@@ -218,7 +218,7 @@ const Header = ({ navItems }: IProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    ENTER OMNIPOOL
+                    START TRADING
                   </ButtonLink>
                 </motion.div>
               )}

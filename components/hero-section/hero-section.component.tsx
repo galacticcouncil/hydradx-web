@@ -330,7 +330,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              ENTER OMNIPOOL
+              START TRADING
             </ButtonLink>
             {/* <Button disabled>COMING SOON</Button> */}
           </ButtonsContainer>
