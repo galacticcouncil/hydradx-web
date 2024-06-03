@@ -4,8 +4,8 @@ import { useEffect } from "react"
 
 const PAGE_TITLE = 'You are invited to a pool party'
 const PAGE_DESCRIPTION = 'Start trading on HydraDX with cashback'
-const PAGE_CANONICAL = 'https://hydradx.io'
-const PAGE_IMAGE = 'https://hydradx.io/assets/meta-referrals-image.jpg?v2'
+const PAGE_CANONICAL = 'https://hydration.net'
+const PAGE_IMAGE = 'https://hydration.net/assets/meta-referrals-image.jpg?v2'
 
 const Referral = () => {
   const { query, push, isReady } = useRouter()
@@ -14,7 +14,7 @@ const Referral = () => {
     if (!isReady) return
 
     if (query.referral) {
-      push(`https://app.hydradx.io/trade/swap?referral=${query.referral}`)
+      push(`https://app.hydration.net/trade/swap?referral=${query.referral}`)
     } else {
       push('/')
     }
