@@ -108,13 +108,14 @@ export default function Popup() {
                 marginBottom: 0,
                 fontWeight: 400,
                 fontSize: "16px",
+                textAlign: "center",
               }}
             >
               Open the app to transfer your settings.
             </P>
           </div>
         </div>
-        <div
+        <ButtonCont
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -126,12 +127,31 @@ export default function Popup() {
           <a href="https://app.hydration.net">
             <Button>OPEN APP</Button>
           </a>
-        </div>
+        </ButtonCont>
       </div>
     </div>,
     document.body
   );
 }
+
+const ButtonCont = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 24px;
+  padding: 26px;
+
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    flex-direction: column;
+    & > a {
+      width: 100%;
+    }
+
+    & > a > button {
+      width: 100%;
+    }
+  }
+`;
 
 const buttonStyles = css`
   cursor: crosshair;
